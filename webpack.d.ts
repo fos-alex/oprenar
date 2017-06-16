@@ -25,6 +25,7 @@ interface WebpackConfig {
     unsafeCache?: boolean | Array<string>;
     root?: string;
     extensions?: Array<string>;
+    modules?: Array<string>;
   };
   devServer?: {
     staticOptions?: any;
