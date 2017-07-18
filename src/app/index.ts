@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import HomeModule from './home';
 
 export const ROUTER_CONFIG = [
-  { path: '', loadChildren: () => HomeModule },
-  { path: 'about', loadChildren: () => System.import('./+about') },
+  { path: '', loadChildren: () => System.import('./desk') },
+  { path: '', loadChildren: () => System.import('./cuaderno') }
+
 ];
 
 @NgModule({

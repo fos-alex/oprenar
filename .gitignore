@@ -40,3 +40,4 @@ node_modules
 /generated
 .awcache
 .DS_Store
+.idea

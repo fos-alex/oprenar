@@ -7,16 +7,3 @@ export class Home {
     console.log('Home');
   }
 }
-
-@Component({
-  template: `
-    <div>
-      YOLO
-    </div>
-  `
-})
-export class Yolo {
-  constructor() {
-    console.log('Yolo');
-  }
-}

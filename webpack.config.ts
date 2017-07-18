@@ -85,6 +85,7 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
         { test: /\.json$/, loader: 'json-loader', include: [root('./src')] },
         { test: /\.html/,  loader: 'raw-loader', include: [root('./src')] },
         { test: /\.css$/,  loader: 'raw-loader', include: [root('./src')] },
+        { test: /\.scss$/, loaders: ['raw-loader','sass-loader'], include: [root('./src')]}
       ]
 
     },
