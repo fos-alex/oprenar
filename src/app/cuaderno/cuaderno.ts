@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    styleUrls: ['./desk.scss']
+    styleUrls: ['./cuaderno.scss']
 })
-export class Desk {
+export class Cuaderno {
 
 }

@@ -1,0 +1,50 @@
+.carpetas {
+  background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .carpeta-object {
+    position: absolute;
+    cursor: pointer;
+    max-width: 19.8%;
+  }
+
+  .ob-carpeta-1 {
+    top: 0%;
+    left: 2%;
+  }
+
+  .ob-carpeta-2 {
+    top: 0%;
+    left: 32%;
+  }
+
+  .ob-carpeta-3 {
+    top: 0%;
+    right: 14%;
+  }
+
+  .ob-carpeta-4 {
+    bottom: 0%;
+    left: 20%;
+  }
+
+  .ob-carpeta-5 {
+    bottom: 0%;
+    left: 50%;
+  }
+
+  .ob-lapiceras {
+    bottom: 10%;
+    left: 1%;
+    max-width: 17%;
+  }
+
+  .ob-cafe {
+    bottom: 17%;
+    right: 10%;
+    max-width: 14%;
+  }
+}

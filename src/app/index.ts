@@ -5,7 +5,8 @@ import HomeModule from './home';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
-  { path: '', loadChildren: () => System.import('./cuaderno') }
+  { path: 'cuaderno', loadChildren: () => System.import('./cuaderno') },
+  { path: 'carpetas', loadChildren: () => System.import('./carpetas') }
 
 ];
 
