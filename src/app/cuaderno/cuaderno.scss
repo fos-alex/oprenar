@@ -1,73 +1,74 @@
-.cuaderno {
-  background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+cuaderno {
+  .cuaderno {
+    background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 
-  .cuaderno-object {
-    position: absolute;
-    cursor: pointer;
-  }
-
-  .ob-carpeta {
-    bottom: 0;
-    left: 0;
-    max-width: 12%;
-  }
-
-  .ob-lapicera {
-    top: 14%;
-    left: -4%;
-    max-width: 12%;
-  }
-
-  .ob-clips {
-    bottom: 2%;
-    right: 0;
-    max-width: 20%;
-  }
-
-  .cuaderno-container {
-    position: absolute;
-    bottom: -3%;
-    right: 18%;
-    width: 67%;
-
-    .ob-cuaderno {
-      position: relative;
+    .cuaderno-object {
+      position: absolute;
+      cursor: pointer;
     }
 
-    .title-container {
-      position: absolute;
-      top: 135px;
-      left: 10%;
+    .ob-carpeta {
+      bottom: 0;
+      left: 0;
+      max-width: 12%;
+    }
 
-      .cuaderno-subtitle {
-        margin-top: 30px;
+    .ob-lapicera {
+      top: 14%;
+      left: -4%;
+      max-width: 12%;
+    }
+
+    .ob-clips {
+      bottom: 2%;
+      right: 0;
+      max-width: 20%;
+    }
+
+    .cuaderno-container {
+      position: absolute;
+      bottom: -3%;
+      right: 18%;
+      width: 67%;
+
+      .ob-cuaderno {
+        position: relative;
+      }
+
+      .title-container {
+        position: absolute;
+        top: 135px;
+        left: 10%;
+
+        .cuaderno-subtitle {
+          margin-top: 30px;
+        }
+      }
+
+      .text-right-container {
+        position: absolute;
+        top: 135px;
+        right: 23%;
+        width: 200px;
+        text-align: left;
+      }
+
+      .text-right-bottom-container {
+        position: absolute;
+        bottom: 250px;
+        right: 23%;
+        width: 200px;
+        text-align: left;
       }
     }
 
-    .text-right-container {
-      position: absolute;
-      top: 135px;
-      right: 23%;
-      width: 200px;
-      text-align: left;
+    .cuaderno-title {
+      text-transform: uppercase;
+      font-size: 20px;
     }
-
-    .text-right-bottom-container {
-      position: absolute;
-      bottom: 250px;
-      right: 23%;
-      width: 200px;
-      text-align: left;
-    }
-  }
-
-
-  .cuaderno-title {
-    text-transform: uppercase;
-    font-size: 20px;
   }
 }

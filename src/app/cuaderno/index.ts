@@ -3,15 +3,24 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { Cuaderno } from './cuaderno';
+import { CuadernoEmpresa } from '../cuaderno/cuaderno-empresa/cuaderno-empresa';
+import { CuadernoMision } from '../cuaderno/cuaderno-mision/cuaderno-mision';
+import { CuadernoMatriz } from '../cuaderno/cuaderno-matriz/cuaderno-matriz';
+import { CuadernoOprenar } from '../cuaderno/cuaderno-oprenar/cuaderno-oprenar';
 
 export const ROUTER_CONFIG = [
-    { path: '', component: Cuaderno, pathMatch: 'full' }
+    { path: 'cuaderno/:pagina', component: Cuaderno },
+    { path: 'cuaderno', component: Cuaderno, pathMatch: 'full' }
 ];
 
 @NgModule({
     declarations: [
         // Components / Directives/ Pipes
-        Cuaderno
+        Cuaderno,
+        CuadernoMision,
+        CuadernoEmpresa,
+        CuadernoMatriz,
+        CuadernoOprenar
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),

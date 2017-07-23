@@ -2,7 +2,6 @@
   <object class="cuaderno-object ob-carpeta" data="/assets/cuaderno/pantallas_03b-cuaderno_carpeta.svg" type="image/svg+xml">
     <img src="/assets/cuaderno/pantallas_03b-cuaderno_carpeta.svg" />
   </object>
-
   <object class="cuaderno-object ob-lapicera" data="/assets/cuaderno/pantallas_03b-cuaderno_lapicera.svg" type="image/svg+xml">
     <img src="/assets/cuaderno/pantallas_03b-cuaderno_lapicera.svg" />
   </object>
@@ -10,9 +9,10 @@
     <img src="/assets/cuaderno/pantallas_03b-cuaderno_clips.svg" />
   </object>
   <div class="cuaderno-container">
-    <object class="cuaderno-object ob-cuaderno" data="/assets/cuaderno/pantallas_03b-cuaderno_cuaderno.svg" type="image/svg+xml">
-      <img src="/assets/cuaderno/pantallas_03b-cuaderno_cuaderno.svg" />
-    </object>
+    <cuaderno-empresa *ngIf="pagina == 'empresa'"></cuaderno-empresa>
+    <cuaderno-mision *ngIf="pagina == 'mision'"></cuaderno-mision>
+    <cuaderno-matriz *ngIf="pagina == 'matriz'"></cuaderno-matriz>
+    <cuaderno-oprenar *ngIf="pagina == 'oprenar'"></cuaderno-oprenar>
     <div class="title-container">
       <p class="cuaderno-title">Visión / Misión</p>
       <p class="cuaderno-subtitle">Punto 1</p>

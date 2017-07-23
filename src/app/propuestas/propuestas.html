@@ -1,0 +1,9 @@
+<div class="propuestas">
+  <img class="propuestas-object ob-carpeta-fondo" src="/assets/propuestas/pantallas_05a-proyectos-pa_carpeta.svg" />
+  <img class="propuestas-object ob-foto" src="/assets/propuestas/pantallas_05a-proyectos-pa_fotoydesc.svg" />
+  <img class="propuestas-object clickable-svg" [ngClass]="propuestas[1]" (click)="propuestaClick(1, $event)" src="/assets/propuestas/pantallas_05a-proyectos-pa_propuesta1.svg" />
+  <img class="propuestas-object clickable-svg" [ngClass]="propuestas[2]" (click)="propuestaClick(2, $event)" src="/assets/propuestas/pantallas_05a-proyectos-pa_propuesta2.svg" />
+  <img class="propuestas-object clickable-svg" [ngClass]="propuestas[3]" (click)="propuestaClick(3, $event)" src="/assets/propuestas/pantallas_05a-proyectos-pa_propuesta3.svg" />
+  <img class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" src="/assets/propuestas/pantallas_05b-proy-pa-aum_propuesta-1-del.png" />
+  <img class="propuestas-object ob-lapiz" src="/assets/propuestas/pantallas_05a-proyectos-pa_lapiz.svg" />
+</div>

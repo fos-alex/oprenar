@@ -2,12 +2,12 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import HomeModule from './home';
+import PropuestasModule from './propuestas';
+import CuadernoModule from './cuaderno';
+import CarpetasModule from './carpetas';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
-  { path: 'cuaderno', loadChildren: () => System.import('./cuaderno') },
-  { path: 'carpetas', loadChildren: () => System.import('./carpetas') }
-
 ];
 
 @NgModule({
@@ -17,7 +17,10 @@ export const ROUTER_CONFIG = [
     // Components / Directives/ Pipes
   ],
   imports: [
-    RouterModule.forChild(ROUTER_CONFIG),
+    PropuestasModule,
+    CuadernoModule,
+    CarpetasModule,
+    RouterModule.forChild(ROUTER_CONFIG)
   ],
 })
 export default class AppModule {

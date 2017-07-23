@@ -1,0 +1,62 @@
+.propuestas {
+  background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .propuestas-object {
+    position: absolute;
+  }
+
+  .clickable-svg {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.1) drop-shadow( -3px -3px 6px #fff );
+    }
+  }
+
+  .ob-foto {
+    top: 2%;
+    left: 4%;
+    max-width: 27%;
+  }
+
+  .ob-carpeta-fondo {
+    top: 1%;
+    left: 5%;
+    max-width: 76%;
+  }
+
+  .ob-propuesta-izq {
+    top: 17%;
+    left: 3%;
+    max-width: 28%;
+  }
+
+  .ob-propuesta-cen {
+    top: 7%;
+    left: 29%;
+    max-width: 28%;
+    filter: brightness(1.1) drop-shadow( -3px -3px 6px #fff );
+  }
+
+  .ob-propuesta-der {
+    top: 11%;
+    left: 54%;
+    max-width: 28%;
+  }
+
+  .ob-lapiz {
+    right: 7%;
+    bottom: 9%;
+    max-width: 24%;
+  }
+
+  .ob-propuesta-descripcion {
+    top: 5%;
+    left: 27%;
+    max-width: 32%;
+  }
+
+}

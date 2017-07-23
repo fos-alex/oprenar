@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { Carpetas } from './carpetas';
 
 export const ROUTER_CONFIG = [
-    { path: '', component: Carpetas, pathMatch: 'full' }
+    { path: 'carpetas', component: Carpetas, pathMatch: 'full' }
 ];
 
 @NgModule({

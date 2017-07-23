@@ -7,32 +7,43 @@
 
   .carpeta-object {
     position: absolute;
-    cursor: pointer;
     max-width: 19.8%;
   }
 
+  div.carpeta-object {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .clickable-svg {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.1) drop-shadow( -3px -3px 6px #fff );
+    }
+  }
+
   .ob-carpeta-1 {
-    top: 0%;
+    top: 0;
     left: 2%;
   }
 
   .ob-carpeta-2 {
-    top: 0%;
+    top: 0;
     left: 32%;
   }
 
   .ob-carpeta-3 {
-    top: 0%;
+    top: 0;
     right: 14%;
   }
 
   .ob-carpeta-4 {
-    bottom: 0%;
+    bottom: 0;
     left: 20%;
   }
 
   .ob-carpeta-5 {
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
   }
 
@@ -47,4 +58,38 @@
     right: 10%;
     max-width: 14%;
   }
+
+  .proyecto-post-it {
+    &:after {
+      content: "";
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 33%;
+      bottom: 30px;
+      width: 38%;
+      height: 120px;
+    }
+  }
+
+  .proyecto-1 {
+    @extend .proyecto-post-it;
+    &:after {
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-1.png");
+    }
+  }
+
+  .proyecto-2 {
+    @extend .proyecto-post-it;
+    &:after {
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-2.png");
+    }
+  }
+
+  .proyecto-3 {
+    @extend .proyecto-post-it;
+    &:after {
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-3.png");
+    }
+  }
 }
+
