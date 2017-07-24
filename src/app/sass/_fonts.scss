@@ -1,5 +1,14 @@
-$font-family-kaushan: 'Kaushan Script', cursive;
+$font-family-kaushan: 'KaushanScript-Regular', cursive;
 $font-family-roboto: 'Roboto', sans-serif;
+
+
+@font-face {
+  font-family: 'KaushanScript-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IEd0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
 .font-kaushan {
   font-family: $font-family-kaushan;
