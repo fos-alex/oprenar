@@ -10,7 +10,6 @@ import { AppStore } from './app-store';
   }
 })
 export class App {
-
   bodyStyle: any;
 
   constructor(public appStore: AppStore) {}

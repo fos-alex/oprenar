@@ -17,4 +17,8 @@ export class Desk {
     carpetasClick() {
         this.router.navigate(['carpetas']);
     }
+
+    iphoneClick() {
+        this.router.navigate(['notificaciones']);
+    }
 }

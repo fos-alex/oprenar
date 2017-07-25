@@ -1,7 +1,11 @@
 @import '~normalize.css/normalize';
-@import './_fonts';
-
+@import '_fonts';
+@import '_colors';
 
 p {
   @extend .font-kaushan;
+}
+
+span {
+  @extend .font-roboto;
 }
