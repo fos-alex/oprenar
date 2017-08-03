@@ -38,7 +38,6 @@
     top: 7%;
     left: 29%;
     max-width: 28%;
-    filter: brightness(1.1) drop-shadow( -3px -3px 6px #fff );
   }
 
   .ob-propuesta-der {
@@ -53,10 +52,39 @@
     max-width: 24%;
   }
 
-  .ob-propuesta-descripcion {
+  detalle-propuesta-activa {
+    position: absolute;
+    z-index: 3;
+    width: 33%;
     top: 5%;
-    left: 27%;
-    max-width: 32%;
+
+    &[ob-propuesta-izq] {
+      left: 3%;
+    }
+    &[ob-propuesta-cen] {
+      left: 29%;
+    }
+    &[ob-propuesta-der] {
+      left: 55%;
+    }
+
+    svg {
+      width: 100%;
+      .seleccionada {
+        fill: blue;
+      }
+    }
+
+    &.ob-propuesta-izq {
+      left: 3%;
+    }
+    &.ob-propuesta-cen {
+      left: 29%;
+    }
+    &.ob-propuesta-der {
+      left: 55%;
+    }
+
   }
 
 }

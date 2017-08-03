@@ -1,11 +1,12 @@
 <div class="desk">
   <img class="desk-object ob-cafe" src="/assets/pantallas_02-05-cafe.svg" />
   <img class="desk-object ob-lampara" src="/assets/pantallas_02-04-lampara.svg" />
-  <img class="desk-object ob-carpetas" (click)="carpetasClick()" src="/assets/pantallas_02-06-carpetas.svg" />
-  <img class="desk-object ob-cuaderno" (click)="cuadernoClick()" src="/assets/pantallas_02-02-cuaderno.svg" />
-  <img class="desk-object ob-telefono" (click)="iphoneClick()" src="/assets/pantallas_02-08-telefono.svg" />
+  <img class="desk-object ob-carpetas clickable-svg" [ngClass]="carpetaStyle" (click)="carpetasClick()" src="/assets/pantallas_02-06-carpetas.svg" />
+  <img class="desk-object ob-cuaderno clickable-svg" [ngClass]="cuadernoStyle" (click)="cuadernoClick()" src="/assets/pantallas_02-02-cuaderno.svg" />
+  <img class="desk-object ob-telefono clickable-svg" (click)="iphoneClick()" src="/assets/pantallas_02-08-telefono.svg" />
   <img class="desk-object ob-lapicera" src="/assets/pantallas_02-07-lapicera.svg" />
   <img class="desk-object ob-clips" src="/assets/pantallas_02-09-clips.svg" />
   <img class="desk-object ob-anotador" src="/assets/pantallas_02-10-anotador.svg" />
   <img class="desk-object ob-lapices" src="/assets/pantallas_02-11-lapices.svg" />
 </div>
+<div class="bg-overlay" [ngStyle]="{'display': displayOverlay}"></div>

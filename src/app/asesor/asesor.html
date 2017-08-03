@@ -1,0 +1,33 @@
+<div class="columna-asesor">
+  <div class="item-asesor">
+    <a (click)="toggleNotificaciones()" [ngStyle]="itemsStyle" *ngIf="exclude !== 'celular'">
+      <img src="/assets/menu-lateral/menu-lateral-03.svg">
+      <span class="asesor-item-name">Celular</span>
+    </a>
+  </div>
+  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'cuaderno'">
+    <a [routerLink]="'/cuaderno'">
+      <img src="/assets/menu-lateral/menu-lateral-05.svg">
+      <span class="asesor-item-name">Cuaderno</span>
+    </a>
+  </div>
+  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'carpetas'">
+    <a [routerLink]="'/carpetas'">
+      <img src="/assets/menu-lateral/menu-lateral-06.svg">
+      <span class="asesor-item-name">Carpetas</span>
+    </a>
+  </div>
+  <div class="item-asesor" *ngIf="exclude !== 'escritorio'">
+    <a [routerLink]="'/'">
+      <img src="/assets/menu-lateral/menu-lateral-07.svg">
+      <span class="asesor-item-name">Escritorio</span>
+    </a>
+  </div>
+  <div class="item-asesor" *ngIf="exclude !== 'susi'">
+    <a [routerLink]="'/escritorio'">
+      <img class="susi-border" src="/assets/menu-lateral/menu-lateral-08-08.svg">
+      <span class="asesor-item-name">SUSI</span>
+    </a>
+  </div>
+</div>
+<notificaciones-popup [show]="showNotificaciones"></notificaciones-popup>

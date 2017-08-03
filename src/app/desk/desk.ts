@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AppStorage } from '../storage/app-storage';
 
 @Component({
     styleUrls: ['./desk.scss']
@@ -8,7 +8,33 @@ import { Router } from '@angular/router';
 
 export class Desk {
 
-    constructor(private router: Router) { }
+    carpetaStyle: string;
+    cuadernoStyle: string;
+    displayOverlay: string = 'none';
+
+    constructor(private router: Router) {
+        let state = AppStorage.getState();
+
+        if (!state || !state['viewCuaderno']) {
+            this.highlightCuaderno();
+        } else if (!state['viewCarpetas']) {
+            this.highlightCarpetas();
+        }
+    }
+
+    highlightCarpetas() {
+        this.showOverlay();
+        this.carpetaStyle = 'highlight';
+    }
+    
+    highlightCuaderno() {
+        this.showOverlay();
+        this.cuadernoStyle = 'highlight';
+    }
+
+    showOverlay() {
+        this.displayOverlay = 'block';
+    }
 
     cuadernoClick() {
         this.router.navigate(['cuaderno']);

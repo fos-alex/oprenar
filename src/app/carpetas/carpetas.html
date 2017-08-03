@@ -1,19 +1,20 @@
 <div class="carpetas">
-  <div class="carpeta-object ob-carpeta-1 proyecto-2 clickable-svg" (click)="carpetasClick()">
+  <div class="carpeta-object ob-carpeta-1 clickable-svg" (click)="carpetasClick('pa')" [ngClass]="getPropuestaSeleccionada('pa')">
     <img src="/assets/carpetas/pantallas_04-carpetas_carpeta-pa.svg" />
   </div>
-  <div class="carpeta-object ob-carpeta-2 proyecto-2 clickable-svg" (click)="carpetasClick()">
+  <div class="carpeta-object ob-carpeta-2 clickable-svg" (click)="carpetasClick('pe')" [ngClass]="getPropuestaSeleccionada('pe')">
     <img src="/assets/carpetas/pantallas_04-carpetas_carpeta-pe.svg" />
   </div>
-  <div class="carpeta-object ob-carpeta-3 proyecto-1 clickable-svg" (click)="carpetasClick()">
+  <div class="carpeta-object ob-carpeta-3 clickable-svg" (click)="carpetasClick('ps')" [ngClass]="getPropuestaSeleccionada('ps')">
     <img src="/assets/carpetas/pantallas_04-carpetas_carpeta-ps.svg" />
   </div>
-  <div class="carpeta-object ob-carpeta-4 proyecto-1 clickable-svg" (click)="carpetasClick()">
+  <div class="carpeta-object ob-carpeta-4 clickable-svg" (click)="carpetasClick('pld')" [ngClass]="getPropuestaSeleccionada('pld')">
     <img src="/assets/carpetas/pantallas_04-carpetas_carpeta-pld.svg" />
   </div>
-  <div class="carpeta-object ob-carpeta-5 proyecto-3 clickable-svg" (click)="carpetasClick()" >
+  <div class="carpeta-object ob-carpeta-5 clickable-svg" (click)="carpetasClick('fpj')" [ngClass]="getPropuestaSeleccionada('fpj')">
     <img src="/assets/carpetas/pantallas_04-carpetas_carpeta-fpj.svg" />
   </div>
   <img class="carpeta-object ob-lapiceras" src="/assets/carpetas/pantallas_04-carpetas_lapiz-lapic.svg" />
   <img class="carpeta-object ob-cafe" src="/assets/carpetas/pantallas_04-carpetas_cafe.svg" />
 </div>
+<asesor [exclude]="'carpetas'"></asesor>

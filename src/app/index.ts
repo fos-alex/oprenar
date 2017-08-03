@@ -6,6 +6,7 @@ import PropuestasModule from './propuestas';
 import CuadernoModule from './cuaderno';
 import CarpetasModule from './carpetas';
 import NotificacionesModule from './notificaciones';
+import AsesorModule from './asesor';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
@@ -18,10 +19,11 @@ export const ROUTER_CONFIG = [
     // Components / Directives/ Pipes
   ],
   imports: [
+    NotificacionesModule,
+    AsesorModule,
     PropuestasModule,
     CuadernoModule,
     CarpetasModule,
-    NotificacionesModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
 })

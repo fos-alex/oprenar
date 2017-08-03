@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { AppStorage } from '../storage/app-storage';
 
 @Component({
     styleUrls: ['./cuaderno.scss'],
@@ -8,22 +9,41 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class Cuaderno implements OnInit {
 
     pagina: string;
-    defaultPagina: string = "mision";
+    defaultPage: string = "mision";
+    svgStyle: any;
 
-    constructor(private route: ActivatedRoute,
-                private router: Router) {}
+    constructor(protected route: ActivatedRoute,
+                protected router: Router) {
+        AppStorage.addToState('viewCuaderno', true);
+
+    }
+
+    switchPage(pagina) {
+        this.router.navigate(['/cuaderno', pagina]);
+    }
+
+    initPage(pagina) {
+        this.pagina = pagina;
+    }
 
     ngOnInit() {
+        this.svgStyle = {
+            empresa: {
+                cursor: 'pointer'
+            },
+            matriz: {
+                cursor: 'pointer'
+            },
+            oprenar: {
+                cursor: 'pointer'
+            },
+            mision: {
+                cursor: 'pointer'
+            }
+        };
+
         this.route.paramMap
-            .subscribe((params: ParamMap) => this.initPagina(params.get('pagina') || this.defaultPagina));
-    }
-
-    switchPagina(pagina) {
-        this.router.navigate(['/propuestas', pagina]);
-    }
-
-    initPagina(pagina) {
-        this.pagina = pagina;
+            .subscribe((params: ParamMap) => this.initPage(params.get('pagina') || this.defaultPage));
     }
 
 

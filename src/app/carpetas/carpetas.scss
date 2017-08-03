@@ -72,21 +72,21 @@
     }
   }
 
-  .proyecto-1 {
+  .seleccion-1 {
     @extend .proyecto-post-it;
     &:after {
       background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-1.png");
     }
   }
 
-  .proyecto-2 {
+  .seleccion-2 {
     @extend .proyecto-post-it;
     &:after {
       background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-2.png");
     }
   }
 
-  .proyecto-3 {
+  .seleccion-3 {
     @extend .proyecto-post-it;
     &:after {
       background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-3.png");

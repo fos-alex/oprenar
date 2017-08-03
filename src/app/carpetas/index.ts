@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { Carpetas } from './carpetas';
+import AsesorModule from '../asesor';
 
 export const ROUTER_CONFIG = [
     { path: 'carpetas', component: Carpetas, pathMatch: 'full' }
@@ -15,7 +16,8 @@ export const ROUTER_CONFIG = [
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),
-        CommonModule
+        CommonModule,
+        AsesorModule
     ]
 })
 export default class CarpetasModule {

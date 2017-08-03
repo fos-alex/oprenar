@@ -1,5 +1,7 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { AppStorage } from '../storage/app-storage';
+
 import 'rxjs/add/operator/switchMap';
 import * as _ from "lodash";
 
@@ -7,13 +9,19 @@ import * as _ from "lodash";
     styleUrls: ['./propuestas.scss'],
     host: {
         '(document:click)': 'onClick($event)',
-    }
+    },
+    encapsulation: ViewEncapsulation.None
 })
 export class Propuestas implements OnInit {
 
     propuestas: any;
-    propuestaActual: number;
+    position: string;
+    proyecto: string;
+    propuesta: number;
     detalle: boolean;
+    propuestaSeleccionada: number;
+    propuestaUrl: string;
+    seleccionado: boolean;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
@@ -22,13 +30,18 @@ export class Propuestas implements OnInit {
             1: 'ob-propuesta-izq',
             2: 'ob-propuesta-cen',
             3: 'ob-propuesta-der',
-        }
-
+        };
     }
 
     ngOnInit() {
         this.route.paramMap
-            .subscribe((params: ParamMap) => this.switchPropuesta(params.get('id')));
+            .subscribe((params: ParamMap) => {
+                this.proyecto = params.get('proyecto');
+                let state = AppStorage.getState();
+                this.propuestaSeleccionada = state.propuestas[this.proyecto];
+
+                this.detallePropuesta(params.get('id'));
+            });
     }
 
     onClick($event) {
@@ -37,10 +50,7 @@ export class Propuestas implements OnInit {
     }
 
     propuestaClick(idPropuesta, event) {
-        if (this.propuestaActual == idPropuesta) {
-            return this.mostrarDetalle();
-        }
-        this.router.navigate(['/propuestas', idPropuesta]);
+        this.router.navigate(['/propuestas', this.proyecto, idPropuesta]);
         event.stopPropagation();
     }
 
@@ -52,13 +62,24 @@ export class Propuestas implements OnInit {
         this.detalle = false;
     }
 
-    switchPropuesta(idPropuesta) {
+    detallePropuesta(idPropuesta: string) {
         if (!idPropuesta) return;
-        this.ocultarDetalle();
-        let ix = _.findKey(this.propuestas, (o) => o == 'ob-propuesta-cen');
-        let tmp = this.propuestas[idPropuesta];
-        this.propuestaActual = idPropuesta;
-        this.propuestas[idPropuesta] = 'ob-propuesta-cen';
-        this.propuestas[ix] = tmp;
+
+        this.position = this.propuestas[+idPropuesta];
+        this.propuesta = +idPropuesta;
+        this.propuestaUrl = this.getPropuestaUrl();
+        this.seleccionado = (this.propuestaSeleccionada == +idPropuesta);
+        this.mostrarDetalle();
+    }
+
+    seleccionarPropuesta(event) {
+        let state = AppStorage.getState();
+        state.propuestas[this.proyecto] = event.id;
+        AppStorage.setState(state);
+        this.propuestaSeleccionada = +event.id;
+    }
+
+    getPropuestaUrl() {
+        return `/assets/propuestas/propuesta-${this.proyecto}/${this.propuesta}.html`;
     }
 }

@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-    styleUrls: ['./notificaciones.scss']
+    styleUrls: ['./notificaciones.scss'],
+    encapsulation: ViewEncapsulation.None
+
 })
 export class Notificaciones {
 
