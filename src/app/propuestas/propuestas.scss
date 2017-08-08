@@ -70,8 +70,12 @@
 
     svg {
       width: 100%;
-      .seleccionada {
-        fill: blue;
+
+      .tick {
+        display: none;
+        &.seleccionada {
+          display: block;
+        }
       }
     }
 

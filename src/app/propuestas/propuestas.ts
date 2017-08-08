@@ -74,7 +74,7 @@ export class Propuestas implements OnInit {
 
     seleccionarPropuesta(event) {
         let state = AppStorage.getState();
-        state.propuestas[this.proyecto] = event.id;
+        state.propuestas[this.proyecto] = event.seleccionada ? event.id : null;
         AppStorage.setState(state);
         this.propuestaSeleccionada = +event.id;
     }

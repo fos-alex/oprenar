@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppStorage } from '../storage/app-storage';
 
 @Component({
-    styleUrls: ['./final.scss']
+    styleUrls: ['./resumen.scss']
 })
 
-export class Final {
+export class Resumen {
 
     constructor(private router: Router) {}
 

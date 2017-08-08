@@ -7,6 +7,8 @@ import CuadernoModule from './cuaderno';
 import CarpetasModule from './carpetas';
 import NotificacionesModule from './notificaciones';
 import AsesorModule from './asesor';
+import FinalModule from './final';
+import ResumenModule from './resumen';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
@@ -24,6 +26,8 @@ export const ROUTER_CONFIG = [
     PropuestasModule,
     CuadernoModule,
     CarpetasModule,
+    FinalModule,
+    ResumenModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
 })
