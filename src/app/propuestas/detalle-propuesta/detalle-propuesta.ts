@@ -24,9 +24,10 @@ export class DetallePropuesta implements OnChanges {
     if (!url) return;
     this.getTemplate(this.url).subscribe(html => {
       let seleccionado = this.seleccionado;
+      let body = html['_body'];
       @Component({
         selector: 'detalle-propuesta-activa[' + this.position + ']',
-        templateUrl: html['_body']
+        templateUrl: body
       })
       class DynamicHtmlComponent  {
         @Output() update = new EventEmitter<any>();
