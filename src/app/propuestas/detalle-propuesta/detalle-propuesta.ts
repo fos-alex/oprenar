@@ -1,12 +1,11 @@
-import { Component, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Directive, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
-@Component({
-  selector: 'detalle-propuesta',
-  encapsulation: ViewEncapsulation.None
+@Directive({
+  selector: 'detalle-propuesta'
 })
 export class DetallePropuesta implements OnChanges {
   @Input() url: string;
@@ -14,6 +13,7 @@ export class DetallePropuesta implements OnChanges {
   @Input() seleccionado: boolean;
   @Output() propuestaSeleccionada = new EventEmitter<any>();
   cmpRef: any;
+  htmlPropuesta: string = "";
 
   constructor(private vcRef: ViewContainerRef, private compiler: Compiler, private http: Http) {}
 
@@ -24,10 +24,11 @@ export class DetallePropuesta implements OnChanges {
     if (!url) return;
     this.getTemplate(this.url).subscribe(html => {
       let seleccionado = this.seleccionado;
-      let body = html['_body'];
+      debugger;
+      this.htmlPropuesta = html['_body'];
       @Component({
         selector: 'detalle-propuesta-activa[' + this.position + ']',
-        templateUrl: body
+        templateUrl: this.htmlPropuesta
       })
       class DynamicHtmlComponent  {
         @Output() update = new EventEmitter<any>();
