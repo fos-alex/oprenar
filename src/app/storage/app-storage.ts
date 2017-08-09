@@ -7,7 +7,13 @@ export class AppStorage {
 
     private static storage = window.localStorage;
     private static defaultState = {
-        propuestas: {}
+        propuestas: {
+            fpj: null,
+            pa: null,
+            pe: null,
+            pld: null,
+            ps: null
+        }
     };
 
     // Called at the bottom of the file

@@ -15,7 +15,7 @@ const {
 
 } = require('webpack');
 const { ConcatSource } = require('webpack-sources');
-const { ForkCheckerPlugin, TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 const AssetsPlugin = require('assets-webpack-plugin');
 const path = require('path');
 const fs = require('fs');
@@ -107,7 +107,6 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
       }),
 
       new TsConfigPathsPlugin(/* { tsconfig, compiler } */),
-      new ForkCheckerPlugin(),
       new DefinePlugin(CONSTANTS),
       new ProgressPlugin({}),
 

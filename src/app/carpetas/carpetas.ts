@@ -12,6 +12,22 @@ export class Carpetas {
         this.state = AppStorage.getState();
         AppStorage.addToState('viewCarpetas', true);
 
+        let restanSeleccionar = 0;
+        for (let key in this.state.propuestas) {
+            let propuesta = this.state.propuestas[key];
+            if (!propuesta) {
+                restanSeleccionar++;
+            }
+        }
+
+        if (restanSeleccionar === 0) {
+            this.propuestasSeleccionadas();
+        }
+
+    }
+
+    propuestasSeleccionadas() {
+        this.router.navigate(['resumen']);
     }
 
     carpetasClick(id) {

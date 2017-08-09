@@ -1,10 +1,10 @@
-import { Component, Directive, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 
-@Directive({
+@Component({
   selector: 'detalle-propuesta',
   encapsulation: ViewEncapsulation.None
 })
@@ -26,7 +26,7 @@ export class DetallePropuesta implements OnChanges {
       let seleccionado = this.seleccionado;
       @Component({
         selector: 'detalle-propuesta-activa[' + this.position + ']',
-        templateUrl: html._body
+        templateUrl: html['_body']
       })
       class DynamicHtmlComponent  {
         @Output() update = new EventEmitter<any>();
@@ -60,7 +60,7 @@ export class DetallePropuesta implements OnChanges {
 
   getTemplate(html) {
     return this.http.get(html)
-        .map((data:Response) => data);
+        .map((data) => data);
   }
 
   ngOnDestroy() {
