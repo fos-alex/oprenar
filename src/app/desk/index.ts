@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { Desk } from './desk';
+import AsesorModule from '../asesor';
 
 export const ROUTER_CONFIG = [
     { path: '', component: Desk, pathMatch: 'full' },
@@ -16,7 +17,8 @@ export const ROUTER_CONFIG = [
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),
-        CommonModule
+        CommonModule,
+        AsesorModule
     ]
 })
 export default class DeskModule {

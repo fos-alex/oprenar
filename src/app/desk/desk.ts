@@ -8,6 +8,7 @@ import { AppStorage } from '../storage/app-storage';
 
 export class Desk {
 
+    showSusi: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
     displayOverlay: string = 'none';
@@ -15,7 +16,10 @@ export class Desk {
     constructor(private router: Router) {
         let state = AppStorage.getState();
 
-        if (!state || !state['viewCuaderno']) {
+        if (!state || !state['mensaje-1']) {
+            this.showOverlay();
+            this.showSusi = true;
+        } else if (!state['viewCuaderno']) {
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
             this.highlightCarpetas();
@@ -36,6 +40,10 @@ export class Desk {
         this.displayOverlay = 'block';
     }
 
+    hideOverlay() {
+        this.displayOverlay = 'none';
+    }
+
     cuadernoClick() {
         this.router.navigate(['cuaderno']);
     }
@@ -46,5 +54,21 @@ export class Desk {
 
     iphoneClick() {
         this.router.navigate(['notificaciones']);
+    }
+
+    overlayClick() {
+        if (this.showSusi) {
+            this.hideOverlay();
+            this.showSusi = false;
+            AppStorage.addToState('mensaje-1', true);
+
+            let state = AppStorage.getState();
+
+            if (!state['viewCuaderno']) {
+                this.highlightCuaderno();
+            } else if (!state['viewCarpetas']) {
+                this.highlightCarpetas();
+            }
+        }
     }
 }

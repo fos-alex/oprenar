@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { AppStorage } from '../storage/app-storage';
 
 @Component({
@@ -11,11 +11,15 @@ export class Asesor {
     carpetasStyle: any;
     itemsStyle: any;
     showNotificaciones: boolean = false;
+    mensajeSusi: string;
+    mostrarMensajeSusi: boolean = false;
 
     constructor() {
         let state = AppStorage.getState();
 
-        if (!state['viewCarpetas']) {
+        if (!state['mensaje-1']) {
+            this.showMensajeSusi("El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización.");
+        } else if (!state['viewCarpetas']) {
             this.showEscritorio();
         }
 
@@ -32,6 +36,19 @@ export class Asesor {
 
     toggleNotificaciones() {
         this.showNotificaciones = !this.showNotificaciones;
+    }
+
+    showMensajeSusi(mensaje: string) {
+        this.mostrarMensajeSusi = true;
+        if (mensaje) {
+            this.mensajeSusi = mensaje;
+        }
+    }
+
+    @HostListener('document:click', ['$event'])
+    hideMensajeSusi(event: Event): void {
+        this.mostrarMensajeSusi = false;
+        AppStorage.addToState('mensaje-1', true);
     }
 
 }

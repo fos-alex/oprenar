@@ -1,3 +1,5 @@
+@import '../sass/global';
+
 $susi-border: #163D57;
 
 .columna-asesor {
@@ -13,6 +15,7 @@ $susi-border: #163D57;
     margin-top: 20px;
     margin-bottom: 15px;
     text-align: center;
+    position: relative;
     a {
       display: block;
       img {
@@ -31,5 +34,22 @@ $susi-border: #163D57;
       border-radius: 100%;
       max-width: 90px;
     }
+
+    .sidebar-susi {
+      position: relative;
+    }
   }
+}
+
+.mensaje-susi {
+  position: absolute;
+  right: 200px;
+  width: 350px;
+  background: white;
+  padding: 25px 40px 25px 25px;
+  border: 1px solid gray;
+  border-radius: 35px;
+  bottom: 20px;
+  @extend .font-roboto;
+  text-align: left;
 }

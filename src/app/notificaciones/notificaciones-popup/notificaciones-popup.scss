@@ -4,16 +4,31 @@
   width: 85%;
   height: 92%;
   top: 0;
-  .inside-screen {
+  left: 4%;
+  &:before {
+    content: "";
+    background-image: url(/assets/notificaciones/triangulo.svg);
     position: absolute;
-    width: 76%;
+    right: 37px;
+    width: 61px;
+    top: 30px;
+    background-repeat: no-repeat;
+    height: 40px;
+    background-size: cover;
+    transform: scaleY(-1);
+    z-index: 2;
+  }
+  .inside-screen {
+    border: 1px solid $gray-light;
+    position: absolute;
+    width: 85%;
     top: 5%;
-    left: 12%;
+    left: 6%;
     height: 90%;
     overflow: hidden;
 
     .email-column {
-      width: 30%;
+      width: 22%;
       float: left;
       display: inline-block;
       background-color: $gray-light;
@@ -28,16 +43,22 @@
         img {
           width: 25%;
           float: left;
+          margin-top: 9px;
         }
         p {
           @extend .font-roboto;
           margin-left: 29%;
+          font-size: 13px;
+        }
+
+        &.active {
+          background-color: $gray-dark;
         }
       }
     }
 
     .email-screen {
-      width: 70%;
+      width: 78%;
       float: right;
       height: 100%;
       background-color: white;
@@ -51,7 +72,7 @@
 
         .email-from-pic-container {
           float: left;
-          width: 18%;
+          width: 16%;
           img {
             width: 100%;
           }
@@ -78,9 +99,20 @@
           .email-tag {
             @extend .font-roboto;
             padding: 5px 8px;
-            font-weight: bold;
-            font-size: 13px;
-            background-color: #C8D001;
+            font-size: 11px;
+            background-color: $gray-light;
+            position: relative;
+            &:before {
+              content: "";
+              background-image: url(/assets/notificaciones/carpeta.png);
+              position: absolute;
+              left: -27px;
+              background-size: contain;
+              width: 37px;
+              top: -10px;
+              background-repeat: no-repeat;
+              height: 42px;
+            }
           }
         }
       }
