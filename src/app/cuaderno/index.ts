@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import AsesorModule from '../asesor';
 
 import { Cuaderno } from './cuaderno';
-import { CuadernoEmpresa } from '../cuaderno/cuaderno-empresa/cuaderno-empresa';
+import { CuadernoOng } from '../cuaderno/cuaderno-ong/cuaderno-ong';
 import { CuadernoMision } from '../cuaderno/cuaderno-mision/cuaderno-mision';
 import { CuadernoMatriz } from '../cuaderno/cuaderno-matriz/cuaderno-matriz';
 import { CuadernoOprenar } from '../cuaderno/cuaderno-oprenar/cuaderno-oprenar';
@@ -21,7 +21,7 @@ export const ROUTER_CONFIG = [
         // Components / Directives/ Pipes
         Cuaderno,
         CuadernoMision,
-        CuadernoEmpresa,
+        CuadernoOng,
         CuadernoMatriz,
         CuadernoOprenar
     ],

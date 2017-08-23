@@ -28,9 +28,6 @@ export class Cuaderno implements OnInit {
 
     ngOnInit() {
         this.svgStyle = {
-            empresa: {
-                cursor: 'pointer'
-            },
             matriz: {
                 cursor: 'pointer'
             },
@@ -38,6 +35,9 @@ export class Cuaderno implements OnInit {
                 cursor: 'pointer'
             },
             mision: {
+                cursor: 'pointer'
+            },
+            ong: {
                 cursor: 'pointer'
             }
         };

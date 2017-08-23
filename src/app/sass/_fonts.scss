@@ -1,5 +1,6 @@
 $font-family-kaushan: 'KaushanScript-Regular', cursive;
 $font-family-roboto: 'Roboto', sans-serif;
+$font-family-zilla-slab: 'Zilla Slab', serif;
 
 
 @font-face {
@@ -10,10 +11,22 @@ $font-family-roboto: 'Roboto', sans-serif;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@font-face {
+  font-family: 'Zilla Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Zilla Slab'), local('ZillaSlab-Medium'), url(https://fonts.gstatic.com/s/kaushanscript/v5/qx1LSqts-NtiKcLw4N03IEd0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 .font-kaushan {
   font-family: $font-family-kaushan;
 }
 
 .font-roboto {
   font-family: $font-family-roboto;
+}
+
+.font-zilla-slab {
+  font-family: $font-family-zilla-slab;
 }
