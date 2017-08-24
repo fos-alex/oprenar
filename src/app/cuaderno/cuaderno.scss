@@ -5,6 +5,14 @@ cuaderno {
     position: relative;
     overflow: hidden;
 
+    svg {
+      background: url('/assets/desk-bg.png') no-repeat;
+      background-size: cover;
+      .switch-texto {
+        cursor: pointer;
+      }
+    }
+
     .cuaderno-object {
       position: absolute;
       cursor: pointer;

@@ -5,4 +5,13 @@ import { Cuaderno } from '../cuaderno';
     selector: 'cuaderno-matriz'
 })
 export class CuadernoMatriz extends Cuaderno {
+
+    showTexto: number = 1;
+
+    switchTexto(id: number) {
+        this.showTexto = id;
+    }
+
+
+
 }
