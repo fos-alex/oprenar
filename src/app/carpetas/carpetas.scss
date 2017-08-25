@@ -75,21 +75,21 @@
   .seleccion-1 {
     @extend .proyecto-post-it;
     &:after {
-      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-1.png");
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-1.svg");
     }
   }
 
   .seleccion-2 {
     @extend .proyecto-post-it;
     &:after {
-      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-2.png");
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-2.svg");
     }
   }
 
   .seleccion-3 {
     @extend .proyecto-post-it;
     &:after {
-      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-3.png");
+      background-image: url("/assets/carpetas/pantallas_12-carpetas-ok_OK-3.svg");
     }
   }
 }

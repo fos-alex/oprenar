@@ -1,0 +1,96 @@
+@import '../sass/global';
+
+$susi-border: #163D57;
+
+.objetivo-container {
+  z-index: 5;
+  display: inline-block;
+  width: 35%;
+  min-width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 35px;
+  left: 0;
+  top: 0;
+  height: 260px;
+  transform: translateY(50%);
+
+  .objetivo-title-container {
+    text-align: center;
+    .objetivo-title {
+      background-color: #2F5A8F;
+      @extend .font-roboto;
+      color: white;
+      margin: 25px 28px 0;
+      padding: 2px 0;
+    }
+  }
+
+  .objetivo-text-container {
+    padding: 5px 40px;
+    .objetivo-text {
+      @extend .font-roboto;
+      text-align: center;
+      margin: 12px 0 16px 0;
+    }
+  }
+
+  .objetivo-button-container {
+    text-align: center;
+    .objetivo-button {
+      cursor: pointer;
+      @extend .font-roboto;
+      background-color: #0071BC;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      padding: 6px 40px;
+    }
+  }
+}
+
+
+.susi-container {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  width: 10%;
+  .item-asesor {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    a {
+      display: block;
+      img {
+        max-height: 90px;
+      }
+    }
+
+    .susi-border {
+      border: 6px solid $susi-border;
+      border-radius: 100%;
+      max-width: 90px;
+    }
+
+    .sidebar-susi {
+      position: relative;
+    }
+  }
+  .mensaje-susi {
+    position: absolute;
+    right: 130px;
+    width: 300px;
+    background: white;
+    padding: 25px 40px 25px 25px;
+    border: 1px solid gray;
+    border-radius: 35px;
+    bottom: 15px;
+    @extend .font-roboto;
+    text-align: left;
+  }
+
+}

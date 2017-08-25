@@ -1,0 +1,21 @@
+<div class="objetivo-container">
+	<div class="objetivo-title-container">
+		<h2 class="objetivo-title">Objetivo</h2>
+	</div>
+	<div class="objetivo-text-container">
+		<p class="objetivo-text">¿Siempre pensó que la prevención de las adicciones y el narcotráfico requiere pensamiento estratégico y acción colaborativa?</p>
+		<p class="objetivo-text">¿Esta listo para convertirse en líder de una organización que busca reforzar el compromiso en la lucha contra las drogas?</p>
+	</div>
+	<div class="objetivo-button-container">
+		<button class="objetivo-button" (click)="aceptar($event)">Aceptar</button>
+	</div>
+</div>
+
+<div class="susi-container">
+	<div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi'">
+		<a href="#" (click)="showMensajeSusi()">
+			<img class="susi-border" src="/assets/menu-lateral/menu-lateral-08-08.svg">
+		</a>
+		<div class="mensaje-susi text-left" >Bienvenido! Mi nombre es Susi y a partir de este momento seré tu asistente.</div>
+	</div>
+</div>

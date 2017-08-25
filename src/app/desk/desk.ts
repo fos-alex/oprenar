@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
+
 @Component({
     styleUrls: ['./desk.scss']
 })
@@ -9,6 +10,7 @@ import { AppStorage } from '../storage/app-storage';
 export class Desk {
 
     showSusi: boolean;
+    showBienvenido: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
     displayOverlay: string = 'none';
@@ -16,7 +18,10 @@ export class Desk {
     constructor(private router: Router) {
         let state = AppStorage.getState();
 
-        if (!state || !state['mensaje-1']) {
+        if (!state || !state['viewObjetivo']) {
+            this.showOverlay();
+            this.showBienvenido = true;
+        } else if (!state['mensaje-1']) {
             this.showOverlay();
             this.showSusi = true;
         } else if (!state['viewCuaderno']) {
@@ -24,6 +29,7 @@ export class Desk {
         } else if (!state['viewCarpetas']) {
             this.highlightCarpetas();
         }
+
     }
 
     highlightCarpetas() {
@@ -70,5 +76,11 @@ export class Desk {
                 this.highlightCarpetas();
             }
         }
+    }
+
+    closeBienvenido() {
+        this.showBienvenido = false;
+        this.showSusi = true;
+        return false;
     }
 }

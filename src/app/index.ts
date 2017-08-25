@@ -7,6 +7,7 @@ import CuadernoModule from './cuaderno';
 import CarpetasModule from './carpetas';
 import NotificacionesModule from './notificaciones';
 import AsesorModule from './asesor';
+import BienvenidoModule from './bienvenido';
 import FinalModule from './final';
 import ResumenModule from './resumen';
 
@@ -23,6 +24,7 @@ export const ROUTER_CONFIG = [
   imports: [
     NotificacionesModule,
     AsesorModule,
+    BienvenidoModule,
     PropuestasModule,
     CuadernoModule,
     CarpetasModule,

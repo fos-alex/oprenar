@@ -13,4 +13,13 @@ export class Final {
     go(where) {
         this.router.navigate([where]);
     }
+
+    restart() {
+        let state = AppStorage.getState();
+        for (let key in state.propuestas) {
+            state.propuestas[key] = null;
+        }
+        AppStorage.setState(state);
+        this.go('desk');
+    }
 }

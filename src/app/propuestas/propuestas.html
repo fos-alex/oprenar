@@ -1,16 +1,10 @@
 <div class="propuestas">
   <img class="propuestas-object ob-carpeta-fondo" src="/assets/propuestas/pantallas_05a-proyectos-pa_carpeta.svg" />
-  <img class="propuestas-object ob-foto" src="/assets/propuestas/pantallas_05a-proyectos-pa_fotoydesc.svg" />
+  <img class="propuestas-object ob-foto" src="/assets/propuestas/propuesta-{{proyecto}}/notificacion.svg" />
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[1]" (click)="propuestaClick(1, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/1-bg.svg" />
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[2]" (click)="propuestaClick(2, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/2-bg.svg" />
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[3]" (click)="propuestaClick(3, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/3-bg.svg" />
   <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [url]="propuestaUrl" [position]="position"></detalle-propuesta>
-
-<!--
-  <object class="propuestas-object ob-propuesta-descripcion" [ngClass]="detalleClass" *ngIf="detalle && propuesta == '1'" [data]="getPropuestaUrl() | safe"></object>
-  <object class="propuestas-object ob-propuesta-descripcion" [ngClass]="detalleClass" *ngIf="detalle && propuesta == '2'" [data]="getPropuestaUrl() | safe"></object>
-  <object class="propuestas-object ob-propuesta-descripcion" [ngClass]="detalleClass" *ngIf="detalle && propuesta == '3'" [data]="getPropuestaUrl() | safe"></object>
--->
 
   <img class="propuestas-object ob-lapiz" src="/assets/propuestas/pantallas_05a-proyectos-pa_lapiz.svg" />
 </div>

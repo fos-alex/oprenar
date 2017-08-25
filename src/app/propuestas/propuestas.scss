@@ -17,9 +17,10 @@
   }
 
   .ob-foto {
-    top: 2%;
-    left: 4%;
-    max-width: 27%;
+    top: 0;
+    left: 2%;
+    max-width: 28%;
+    z-index: 1;
   }
 
   .ob-carpeta-fondo {
@@ -29,19 +30,20 @@
   }
 
   .ob-propuesta-izq {
-    top: 17%;
+    top: 22%;
     left: 3%;
     max-width: 28%;
+    transform: rotate(-5deg);
   }
 
   .ob-propuesta-cen {
-    top: 7%;
+    top: 10%;
     left: 29%;
     max-width: 28%;
   }
 
   .ob-propuesta-der {
-    top: 11%;
+    top: 12%;
     left: 54%;
     max-width: 28%;
   }
