@@ -7,15 +7,11 @@ import * as _ from "lodash";
 
 @Component({
     styleUrls: ['./propuestas.scss'],
-    host: {
-        '(document:click)': 'onClick($event)',
-    },
     encapsulation: ViewEncapsulation.None
 })
 export class Propuestas implements OnInit {
 
     propuestas: any;
-    position: string;
     proyecto: string;
     propuesta: number;
     detalle: boolean;
@@ -24,8 +20,7 @@ export class Propuestas implements OnInit {
     seleccionado: boolean;
 
     constructor(private route: ActivatedRoute,
-                private router: Router,
-                private _eref: ElementRef) {
+                private router: Router) {
         this.propuestas = {
             1: 'ob-propuesta-izq',
             2: 'ob-propuesta-cen',
@@ -44,14 +39,17 @@ export class Propuestas implements OnInit {
             });
     }
 
-    onClick($event) {
-        if (this.detalle && !this._eref.nativeElement.contains($event.target)) // or some similar check
-            this.ocultarDetalle();
-    }
-
     propuestaClick(idPropuesta, event) {
         this.router.navigate(['/propuestas', this.proyecto, idPropuesta]);
         event.stopPropagation();
+    }
+
+    siguientePropuesta() {
+        this.router.navigate(['/propuestas', this.proyecto, this.propuesta + 1]);
+    }
+
+    anteriorPropuesta() {
+        this.router.navigate(['/propuestas', this.proyecto, this.propuesta - 1]);
     }
 
     mostrarDetalle() {
@@ -65,7 +63,6 @@ export class Propuestas implements OnInit {
     detallePropuesta(idPropuesta: string) {
         if (!idPropuesta) return;
 
-        this.position = this.propuestas[+idPropuesta];
         this.propuesta = +idPropuesta;
         this.propuestaUrl = this.getPropuestaUrl();
         this.seleccionado = (this.propuestaSeleccionada == +idPropuesta);

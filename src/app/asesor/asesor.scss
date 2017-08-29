@@ -27,6 +27,14 @@ $susi-border: #163D57;
       color: white;
       font-weight: bold;
       display: block;
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+
+    &:hover {
+      .asesor-item-name {
+        opacity: 1;
+      }
     }
 
     .susi-border {

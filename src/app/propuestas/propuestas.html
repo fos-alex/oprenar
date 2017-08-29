@@ -4,7 +4,11 @@
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[1]" (click)="propuestaClick(1, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/1-bg.svg" />
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[2]" (click)="propuestaClick(2, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/2-bg.svg" />
   <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[3]" (click)="propuestaClick(3, $event)" src="/assets/propuestas/propuesta-{{proyecto}}/3-bg.svg" />
-  <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [url]="propuestaUrl" [position]="position"></detalle-propuesta>
+  <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [url]="propuestaUrl">
+    <img class="flecha-cambiar-propuesta flecha-izq" *ngIf="propuesta > '1'" (click)="anteriorPropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta.svg">
+    <img class="flecha-cambiar-propuesta flecha-der" *ngIf="propuesta < '3'" (click)="siguientePropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta-der.svg">
+  </detalle-propuesta>
+  <notificaciones-popup *ngIf="detalle" [propuestaSeleccionada]="propuesta" [proyecto]="proyecto"></notificaciones-popup>
 
   <img class="propuestas-object ob-lapiz" src="/assets/propuestas/pantallas_05a-proyectos-pa_lapiz.svg" />
 </div>

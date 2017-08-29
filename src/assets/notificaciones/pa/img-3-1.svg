@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579 698">
+    <defs>
+        <style>.cls-1,.cls-42,.cls-44,.cls-45{fill:none;}.cls-2,.cls-23{fill:#fff;}.cls-11,.cls-2,.cls-41,.cls-42,.cls-44,.cls-45{stroke:#b3b3b3;}.cls-11,.cls-2,.cls-41,.cls-42,.cls-44,.cls-45,.cls-46{stroke-miterlimit:10;}.cls-2{stroke-width:0.88px;}.cls-3{font-size:15px;}.cls-13,.cls-16,.cls-3{font-family:Roboto-Regular, Roboto;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:-0.01em;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:-0.01em;}.cls-9{letter-spacing:-0.02em;}.cls-10{letter-spacing:-0.01em;}.cls-11{fill:#fcfcfc;}.cls-12,.cls-41{fill:#b3b3b3;}.cls-13{font-size:17px;}.cls-13,.cls-18{fill:#666;}.cls-14{letter-spacing:-0.01em;}.cls-15{font-size:22px;fill:#006837;}.cls-15,.cls-18,.cls-49{font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-16,.cls-18{font-size:20px;}.cls-17{letter-spacing:-0.03em;}.cls-19{clip-path:url(#clip-path);}.cls-20{fill:#57381b;}.cls-21{fill:#c7aea1;}.cls-22{fill:#e0c4b5;}.cls-24{fill:#1a1a1a;}.cls-25,.cls-26{fill:#2d4454;}.cls-25{opacity:0.46;}.cls-26{opacity:0.16;}.cls-27{fill:#8c5e62;}.cls-28{fill:#734a24;}.cls-29{fill:#36739c;}.cls-30{letter-spacing:0.01em;}.cls-31{letter-spacing:-0.01em;}.cls-32{fill:#be637c;}.cls-33{clip-path:url(#clip-path-2);}.cls-34{fill:#e0d1ac;}.cls-35{fill:#c9bc9b;}.cls-36{fill:#e0e0e0;}.cls-37{fill:#c27173;}.cls-38{fill:#49708a;}.cls-39{fill:#3d5d73;}.cls-40{fill:#333;}.cls-41{stroke-width:0.86px;}.cls-42,.cls-44{stroke-linecap:round;}.cls-42{stroke-width:4.03px;}.cls-43{fill:#f2f2f2;}.cls-44{stroke-width:2.42px;}.cls-45{stroke-width:2px;}.cls-46,.cls-48{fill:#d3bd18;}.cls-46{stroke:#e6e6e6;stroke-width:0.79px;}.cls-47{fill:#bfab16;}.cls-49{font-size:12px;}.cls-50{letter-spacing:-0.04em;}</style>
+        <clipPath id="clip-path">
+            <rect class="cls-1" x="44" y="310.69" width="61.66" height="61.66"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <ellipse class="cls-1" cx="68.48" cy="121.7" rx="36.99" ry="38.58"/>
+        </clipPath>
+    </defs>
+    <title>notificacion_adicciones_03</title>
+    <g id="Layer_12" data-name="Layer 12">
+        <rect class="cls-11" x="17.24" y="289" width="492.76" height="236"/>
+        <rect class="cls-12" x="44" y="310.69" width="61.66" height="61.66"/>
+        <text class="cls-13" transform="translate(115.62 358.88)">
+            Mié
+            <tspan class="cls-14" x="27.97" y="0">r</tspan>
+            <tspan x="33.57" y="0">coles a las 15:30</tspan>
+        </text>
+        <text class="cls-15" transform="translate(115.62 335.88)">Juan Jackson</text>
+        <text class="cls-16" transform="translate(41.62 408.88)">
+            <tspan class="cls-17">Y</tspan>
+            <tspan x="11.38" y="0">o </tspan>
+            <tspan class="cls-5" x="27.73" y="0">vo</tspan>
+            <tspan x="48.54" y="0">y a bailar y nunca vi d</tspan>
+            <tspan class="cls-4" x="237.76" y="0">r</tspan>
+            <tspan x="244.34" y="0">ogas. Sólo un mon</tspan>
+            <tspan class="cls-4" x="409.83" y="0">t</tspan>
+            <tspan x="416.17" y="0">ón </tspan>
+            <tspan x="0" y="28">de gente con una actitud positi</tspan>
+            <tspan class="cls-5" x="273.21" y="28">v</tspan>
+            <tspan x="282.75" y="28">a y con ganas de </tspan>
+            <tspan x="0" y="56">disfrutar única y e</tspan>
+            <tspan class="cls-4" x="158.54" y="56">x</tspan>
+            <tspan x="168.25" y="56">clusi</tspan>
+            <tspan class="cls-5" x="209.77" y="56">v</tspan>
+            <tspan x="219.31" y="56">amente de la música.</tspan>
+        </text>
+        <text class="cls-18" transform="translate(42 503)">5</text>
+        <text class="cls-13" transform="translate(59.62 501.88)">me gusta</text>
+        <g class="cls-19">
+            <path class="cls-20" d="M69.32,317.73s-9.8-3.23-8.57,13.87c0,0-.62,17-1.39,17.19a2.18,2.18,0,0,0,1.8-1s-2,9.93,8,11.49c0,0,17.06,5.38,18-11.06q0-.29,0-.58c.59-17.14,1.88-19.49,1.6-23.24S74.41,310.06,69.32,317.73Z"/>
+            <path class="cls-21" d="M86.74,341.24s6.15-2-1.37,9.33Z"/>
+            <path class="cls-21" d="M61.93,340s-6-2.45.69,9.4Z"/>
+            <polygon class="cls-12" points="64.77 360.27 82.32 360.91 80.89 366.6 64.56 366.01 64.77 360.27"/>
+            <path class="cls-22" d="M97.28,371c-1.45-2.35-17.38-6.76-17.38-6.76l.43-11.86-6-.22h-.18l-6-.22-.43,11.86s-13.13,3-14.75,5.21-.36,9.95-.36,9.95l20.69,0,23.68,2S98.72,373.38,97.28,371Z"/>
+            <path class="cls-23" d="M74.5,380.5l-3-5L64,363.44S52.5,366.5,50.5,369.5s0,11,0,11l47,2s4-13-1-14-14-5-14-5Z"/>
+            <path class="cls-21" d="M67.65,363.82l.24-6.5,12.24.44S77.22,364.17,67.65,363.82Z"/>
+            <path class="cls-22" d="M86.9,340c-.7,8.79-1.16,15-4.46,17.46-3.63,2.66-6.66,4-8.57,3.9s-4.82-1.91-9.34-5.73c-3.3-2.78-2.59-8.83-2.54-16.39.09-13,5-21,13.43-20.74S87.83,328.32,86.9,340Z"/>
+            <ellipse class="cls-24" cx="67.96" cy="339.32" rx="1.53" ry="0.96" transform="translate(-273.59 394.98) rotate(-87.93)"/>
+            <ellipse class="cls-24" cx="81.36" cy="339.8" rx="1.53" ry="0.96" transform="translate(-261.16 408.83) rotate(-87.93)"/>
+            <polygon class="cls-12" points="71.26 369.96 71.46 375.07 67.32 373.01 70.12 369.66 71.26 369.96"/>
+            <polygon class="cls-12" points="78.13 370.71 77.99 374.54 81.12 372.74 78.53 370.35 78.13 370.71"/>
+            <polygon class="cls-25" points="66.17 372.96 67.21 376.07 71.27 369.7 66.17 372.96"/>
+            <polygon class="cls-23" points="64.8 360.27 71.27 369.7 64.23 375.96 61.53 362.84 64.8 360.27"/>
+            <polygon class="cls-25" points="78.13 370.71 81.75 376.59 83.01 373.57 78.13 370.71"/>
+            <polygon class="cls-23" points="82.32 360.91 84.81 363.87 84.05 376.68 78.13 370.71 82.32 360.91"/>
+            <polygon class="cls-26" points="80.12 366.05 85.27 364.08 82.32 360.91 80.12 366.05"/>
+            <polygon class="cls-26" points="67.86 365.29 62.15 362.56 64.77 360.27 67.86 365.29"/>
+            <polygon class="cls-23" points="70.05 351.87 78.6 352.18 76.52 354.41 72.27 354.08 70.05 351.87"/>
+            <path class="cls-27" d="M70,351.87s1.16,2.3,1.77,2.63a13.39,13.39,0,0,0,5,.18c.63-.29,1.8-2.5,1.8-2.5C75.81,354.56,73,354.64,70,351.87Z"/>
+            <path class="cls-20" d="M75,349H73l-6,1,1.72,8.88S71,362,73,362a8.3,8.3,0,0,0,7.13-3L82,351Zm5,8-4,1-.45-3.16H73.44L73,358l-3.61-.68V352L74,350h1l5,2Z"/>
+            <path class="cls-21" d="M70.79,348.63a5.23,5.23,0,0,0,6.51.32c.76-.58,0-1.88-.76-1.3a3.38,3.38,0,0,1-3.33.61,5.09,5.09,0,0,1-1-.47c-.08,0-.58-.4-.36-.22-.75-.59-1.82.46-1.06,1.06Z"/>
+            <path class="cls-20" d="M68,323.23S76.26,338.76,89.39,335c0,0-1.9-.26-2.23-.94a7.24,7.24,0,0,0,5.54-1.33s-5-.47-6.58-5-4.75-14-18-7.93c0,0-7.06,4.73-6,15.68A18.25,18.25,0,0,0,68,323.23Z"/>
+            <path class="cls-28" d="M76.09,324.39s3.76,5.4,9.93,5.82c0,0-1.35-4.74.23-6.31,0,0-.54-3.18-3.24-3.56C83,320.33,81.69,324.49,76.09,324.39Z"/>
+            <circle class="cls-29" cx="74.11" cy="379.18" r="1.67" transform="translate(-307.5 439.55) rotate(-87.93)"/>
+            <path class="cls-20" d="M65,335s3-3,6-1Z"/>
+        </g>
+    </g>
+</svg>

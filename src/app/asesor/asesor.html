@@ -5,16 +5,16 @@
       <span class="asesor-item-name">Celular</span>
     </a>
   </div>
-  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'cuaderno'">
-    <a [routerLink]="'/cuaderno'">
-      <img src="/assets/menu-lateral/menu-lateral-05.svg">
-      <span class="asesor-item-name">Cuaderno</span>
-    </a>
-  </div>
   <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'carpetas'">
     <a [routerLink]="'/carpetas'">
       <img src="/assets/menu-lateral/menu-lateral-06.svg">
       <span class="asesor-item-name">Carpetas</span>
+    </a>
+  </div>
+  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'cuaderno'">
+    <a [routerLink]="'/cuaderno'">
+      <img src="/assets/menu-lateral/menu-lateral-05.svg">
+      <span class="asesor-item-name">Cuaderno</span>
     </a>
   </div>
   <div class="item-asesor" *ngIf="exclude !== 'escritorio'">
@@ -31,4 +31,3 @@
     <div class="mensaje-susi text-left" *ngIf="mostrarMensajeSusi">{{mensajeSusi}}</div>
   </div>
 </div>
-<notificaciones-popup [show]="showNotificaciones"></notificaciones-popup>

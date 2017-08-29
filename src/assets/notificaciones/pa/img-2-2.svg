@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 698">
+    <defs>
+        <style>.cls-1,.cls-35,.cls-37,.cls-38,.cls-54{fill:none;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:#523a29;}.cls-5{fill:#543928;}.cls-6{clip-path:url(#clip-path-2);}.cls-7{opacity:0.09;mix-blend-mode:multiply;}.cls-8{fill:#c7b316;}.cls-31,.cls-9{fill:#fff;}.cls-34,.cls-35,.cls-37,.cls-38,.cls-44,.cls-45,.cls-9{stroke:#b3b3b3;}.cls-34,.cls-35,.cls-37,.cls-38,.cls-39,.cls-44,.cls-45,.cls-53,.cls-55,.cls-56,.cls-9{stroke-miterlimit:10;}.cls-9{stroke-width:0.88px;}.cls-10{font-size:15px;}.cls-10,.cls-46{font-family:Roboto-Regular, Roboto;}.cls-11{letter-spacing:0.01em;}.cls-12{letter-spacing:-0.01em;}.cls-13{letter-spacing:-0.02em;}.cls-14{letter-spacing:-0.01em;}.cls-15{letter-spacing:-0.01em;}.cls-16{letter-spacing:-0.01em;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:-0.01em;}.cls-19{letter-spacing:-0.01em;}.cls-20{fill:#be637c;}.cls-21{clip-path:url(#clip-path-3);}.cls-22{fill:#1a1a1a;}.cls-23,.cls-34{fill:#b3b3b3;}.cls-24{fill:#e0d1ac;}.cls-25{fill:#c9bc9b;}.cls-26{fill:#e0e0e0;}.cls-27{fill:#c27173;}.cls-28{fill:#49708a;}.cls-29{fill:#3d5d73;}.cls-30,.cls-32{fill:#2d4454;}.cls-30{opacity:0.46;}.cls-32{opacity:0.16;}.cls-33{fill:#333;}.cls-34{stroke-width:0.8px;}.cls-35,.cls-37,.cls-54{stroke-linecap:round;}.cls-35{stroke-width:4.03px;}.cls-36,.cls-44,.cls-45,.cls-53{fill:#f2f2f2;}.cls-37{stroke-width:2.42px;}.cls-38,.cls-45{stroke-width:2px;}.cls-39,.cls-41{fill:#d3bd18;}.cls-39{stroke:#e6e6e6;stroke-width:0.79px;}.cls-40{fill:#bfab16;}.cls-42,.cls-46{font-size:12px;}.cls-42{font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-43{letter-spacing:-0.01em;}.cls-44{stroke-width:3.99px;}.cls-47{letter-spacing:0.02em;}.cls-48{letter-spacing:-0.03em;}.cls-49{letter-spacing:0.02em;}.cls-50{fill:gray;}.cls-51{fill:#f7931e;}.cls-52{fill:#c6782a;}.cls-53,.cls-54{stroke:#c6782a;}.cls-54{stroke-linejoin:round;}.cls-55{fill:#999;stroke:#ccc;}.cls-55,.cls-56{stroke-width:0.91px;}.cls-56{fill:#ccc;stroke:#999;}</style>
+        <clipPath id="clip-path">
+            <rect class="cls-1" x="-1002.56" y="886.96" width="1388.87" height="780.86"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path class="cls-1" d="M231.12,1622.61l-19-694c-219,13.94-542.11,14-545,14v-.31l-517.69-13.9-27.69,19.75-1.19,151,26.24,14.84-7.41,499.52c141-6.49,522.71,14.09,522.71,14.09v-.54C-331,1626.79-52.33,1615.7,231.12,1622.61Z"/>
+        </clipPath>
+        <clipPath id="clip-path-3">
+            <ellipse class="cls-1" cx="68.48" cy="121.7" rx="36.99" ry="38.58"/>
+        </clipPath>
+    </defs>
+    <title>notificacion_adicciones_02</title>
+    <g class="cls-2">
+        <g id="fondo_05a">
+            <rect class="cls-45" x="44.88" y="269.85" width="448.9" height="184.84" rx="27.55" ry="27.55"/>
+            <text class="cls-46" transform="translate(137.33 306.67)">
+                Michel Lisso
+                <tspan class="cls-47" x="67.11" y="0">r</tspan>
+                <tspan x="71.46" y="0">ti</tspan>
+            </text>
+            <text class="cls-46" transform="translate(137.33 326.67)">
+                @Michel_Lisso
+                <tspan class="cls-47" x="80.33" y="0">r</tspan>
+                <tspan x="84.68" y="0">ti</tspan>
+            </text>
+            <circle cx="225" cy="303" r="6"/>
+            <path class="cls-36" d="M224.34,305l4.07-11.18h1.8L225,307.71H223.7l-2.34-6h1.77Z"/>
+            <text class="cls-10" transform="translate(81 365.25)">
+                <tspan class="cls-48">Y</tspan>
+                <tspan x="8.53" y="0">o opino que cie</tspan>
+                <tspan class="cls-49" x="109.85" y="0">r</tspan>
+                <tspan x="115.29" y="0">tas d</tspan>
+                <tspan class="cls-15" x="148.26" y="0">r</tspan>
+                <tspan x="153.19" y="0">ogas deberían legalizarse, pe</tspan>
+                <tspan class="cls-15" x="346.28" y="0">r</tspan>
+                <tspan x="351.21" y="0">o </tspan>
+                <tspan x="0" y="20">con la condición de que estuviesen sujetas a una fue</tspan>
+                <tspan class="cls-47" x="350.43" y="20">r</tspan>
+                <tspan x="355.88" y="20">te </tspan>
+                <tspan x="0" y="40">imposición.</tspan>
+            </text>
+            <path class="cls-50" d="M87,437.75v-2.86l1.35.49a18.13,18.13,0,0,1-2.85-5.13,18.12,18.12,0,0,1-2.85,5.13l1.35-.49v5.86H99.48v-3H87Z"/>
+            <path class="cls-50" d="M96.48,433.11l-1.35-.49A18.13,18.13,0,0,1,98,437.75a18.12,18.12,0,0,1,2.85-5.13l-1.35.49v-5.86H84v3H96.48Z"/>
+            <path class="cls-50" d="M123.63,434.27h0a4.16,4.16,0,0,0,1-2.77,3.86,3.86,0,0,0-3.7-4,3.7,3.7,0,0,0-3.39,2.41,3.7,3.7,0,0,0-3.39-2.41,3.86,3.86,0,0,0-3.7,4,4.16,4.16,0,0,0,1,2.77h0c.08.08.16.16.25.23l5.79,5.48,5.84-5.53.18-.17Z"/>
+            <path class="cls-50" d="M140.22,428.75l.49-1.35a18.12,18.12,0,0,1-5.13,2.85,18.13,18.13,0,0,1,5.13,2.85l-.49-1.35h6.34v7.5h3v-10.5Z"/>
+            <path class="cls-51" d="M457,314c0,7.18-10,8-10,8s-10-.82-10-8,0-18,10-18S457,306.82,457,314Z"/>
+            <polygon class="cls-52" points="459 300 453 300 456.44 302.7 459 300"/>
+            <polygon class="cls-52" points="435 300 441 300 437.56 302.7 435 300"/>
+            <circle class="cls-53" cx="442" cy="305" r="5"/>
+            <circle class="cls-53" cx="452" cy="305" r="5"/>
+            <path class="cls-36" d="M447,312s0-2-3-2c0,0,3-4,6,0C450,310,447,310,447,312Z"/>
+            <circle class="cls-51" cx="442" cy="305" r="2"/>
+            <circle class="cls-51" cx="452" cy="305" r="2"/>
+            <circle class="cls-52" cx="445" cy="321" r="1"/>
+            <circle class="cls-52" cx="443" cy="321" r="1"/>
+            <circle class="cls-52" cx="441" cy="321" r="1"/>
+            <circle class="cls-52" cx="453" cy="321" r="1"/>
+            <circle class="cls-52" cx="451" cy="321" r="1"/>
+            <circle class="cls-52" cx="449" cy="321" r="1"/>
+            <path class="cls-54" d="M439,309s1.68,7,0,9.75"/>
+            <path class="cls-54" d="M455.36,309s-1.68,7,0,9.75"/>
+            <rect class="cls-55" x="80.5" y="290.5" width="40.89" height="40.89"/>
+            <path class="cls-56" d="M99.5,297.5c-4,0-7,4-7,8s1,8,3,9,0,3-4,5-6.79,10.89-6.79,10.89H113.6s.9-5.89-5.1-10.89c0,0-8-2-6-4s5-5,4-11S99.5,297.5,99.5,297.5Z"/>
+        </g>
+    </g>
+</svg>

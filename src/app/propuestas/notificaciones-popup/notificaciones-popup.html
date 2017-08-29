@@ -1,0 +1,15 @@
+<div class="notificaciones-popup">
+  <div class="email-screen">
+    <div class="email-selection">
+      <div class="email-link" [ngClass]="{active: displayedMessage == '1'}" (click)="displayMessage('1')">
+        <img class="envelope-icon" src="/assets/notificaciones/{{headers[proyecto][propuestaSeleccionada][0]['icon']}}" />
+        <p>{{headers[proyecto][propuestaSeleccionada][0]['title']}}</p>
+      </div>
+      <div class="email-link" [ngClass]="{active: displayedMessage == '2'}" (click)="displayMessage('2')">
+        <img class="envelope-icon" src="/assets/notificaciones/{{headers[proyecto][propuestaSeleccionada][1]['icon']}}" />
+        <p>{{headers[proyecto][propuestaSeleccionada][1]['title']}}</p>
+      </div>
+    </div>
+    <ng-template #messageBody></ng-template>
+  </div>
+</div>

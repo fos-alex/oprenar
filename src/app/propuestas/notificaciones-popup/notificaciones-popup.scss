@@ -1,0 +1,168 @@
+@import '../../sass/global';
+
+.notificaciones-popup {
+  height: 90%;
+  top: 7%;
+  right: 15%;
+  position: absolute;
+  width: 40%;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    background-image: url(/assets/notificaciones/triangulo.svg);
+    position: absolute;
+    right: 37px;
+    width: 61px;
+    top: 30px;
+    background-repeat: no-repeat;
+    height: 40px;
+    background-size: cover;
+    transform: scaleY(-1);
+    z-index: 2;
+  }
+
+  .email-screen {
+    float: right;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    height: 100%;
+
+    .email-selection {
+      box-sizing: border-box;
+      display: inline-block;
+      .email-link {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 5px;
+        border-bottom: 2px solid $gray-dark;
+        font-size: 14px;
+        cursor: pointer;
+        img {
+          width: 20%;
+          float: left;
+          margin-top: 6px;
+        }
+        p {
+          @extend .font-roboto;
+          font-size: 14px;
+          max-width: 69%;
+          margin: 9px 0 9px 15px;
+          float: left;
+        }
+
+        &.active {
+          background-color: $gray-dark;
+        }
+      }
+    }
+
+    .email-header {
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $gray-dark;
+      margin-top: 8px;
+
+      .email-from-pic-container {
+        float: left;
+        width: 15%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .email-data {
+        width: 68%;
+        float: left;
+        margin-left: 20px;
+        p {
+          @extend .font-roboto;
+          font-size: 15px;
+          margin: 0;
+        }
+      }
+
+      .email-tag-container {
+        margin-top: 3px;
+        .email-tag {
+          @extend .font-roboto;
+          font-weight: bold;
+          padding: 5px 8px;
+          font-size: 11px;
+          margin-left: 20px;
+          position: relative;
+          &:before {
+            content: "";
+            background-image: url(/assets/notificaciones/carpeta.png);
+            position: absolute;
+            left: -21px;
+            background-size: contain;
+            width: 20px;
+            top: -1px;
+            background-repeat: no-repeat;
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    .email-body {
+      height: 70%;
+
+      p {
+        @extend .font-roboto;
+        font-size: 15px;
+      }
+
+      .email-body-article-container {
+        text-align: center;
+        .email-body-article {
+
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+.email-body.notificacion-quote {
+  p.top-email-text {
+    font-size: 15px;
+  }
+
+  p.quote {
+    padding: 4% 11%;
+    font-size: 18px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  p.bottom {
+    position: absolute;
+    bottom: 5px;
+    font-size: 13px;
+  }
+}
+
+.email-body.notificacion-quote-2 {
+  @extend .notificacion-quote;
+  p.quote {
+    padding: 2%;
+    font-size: 17px;
+  }
+}
+
+.email-body.svg-body {
+  img {
+    position: absolute;
+    height: 93%;
+    bottom: 0;
+  }
+}

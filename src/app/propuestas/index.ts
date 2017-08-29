@@ -7,6 +7,8 @@ import { Propuestas } from './propuestas';
 import AsesorModule from '../asesor';
 
 import { DetallePropuesta } from './detalle-propuesta/detalle-propuesta';
+import { NotificacionesPopup } from './notificaciones-popup/notificaciones-popup';
+
 
 export const ROUTER_CONFIG = [
     { path: 'propuestas/:proyecto/:id', component: Propuestas },
@@ -19,12 +21,16 @@ export const ROUTER_CONFIG = [
         // Components / Directives/ Pipes
         DetallePropuesta,
         Propuestas,
-        SafePipe
+        SafePipe,
+        NotificacionesPopup
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),
         CommonModule,
         AsesorModule
+    ],
+    exports: [
+        NotificacionesPopup
     ]
 })
 export default class PropuestasModule {

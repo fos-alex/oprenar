@@ -9,7 +9,6 @@ import 'rxjs/add/operator/map';
 })
 export class DetallePropuesta implements OnChanges {
   @Input() url: string;
-  @Input() position: string;
   @Input() seleccionado: boolean;
   @Output() propuestaSeleccionada = new EventEmitter<any>();
   cmpRef: any;
@@ -24,10 +23,9 @@ export class DetallePropuesta implements OnChanges {
     if (!url) return;
     this.getTemplate(this.url).subscribe(html => {
       let seleccionado = this.seleccionado;
-      debugger;
       this.htmlPropuesta = html['_body'];
       @Component({
-        selector: 'detalle-propuesta-activa[' + this.position + ']',
+        selector: 'detalle-propuesta-activa',
         templateUrl: this.htmlPropuesta
       })
       class DynamicHtmlComponent  {
@@ -52,7 +50,6 @@ export class DetallePropuesta implements OnChanges {
             const compFactory = factory.componentFactories
                 .find(x => x.componentType === DynamicHtmlComponent);
             this.cmpRef = this.vcRef.createComponent(compFactory, 0);
-            this.cmpRef.instance.position = this.position;
             this.cmpRef.instance.update.subscribe(event => {
               this.propuestaSeleccionada.emit(event);
             });
