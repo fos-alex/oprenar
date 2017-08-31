@@ -23,7 +23,41 @@ export class NotificacionesPopup {
                 {title: 'Entrevista radial a un funcionario', icon: 'envelope.png'}],
             '3': [{title: 'Fiestas Electrónicas “RAVE”', icon: 'envelope.png'},
                 {title: 'Un influyente en los videos online subió un comentario', icon: 'envelope.png'}]
+        },
+        ps: {
+            '1': [{title: 'Un experto en seguridad comenta', icon: 'envelope.png'},
+                {title: 'Narco-Menudeo: Economía de la Aniquilación', icon: 'envelope.png'}],
+            '2': [{title: 'Aparece una novedad en materia de política estatal', icon: 'envelope.png'},
+                {title: 'En drogas... No perder por goleada', icon: 'envelope.png'}],
+            '3': [{title: 'Lucha contra el Narcotráfico', icon: 'envelope.png'},
+                {title: 'El director de otra ONG realiza una publicación', icon: 'envelope.png'}]
+
+        },
+        pe: {
+            '1': [{title: 'Es clave combatir la demanda', icon: 'envelope.png'},
+                {title: 'La visión argentina de un flagelo internacional.', icon: 'envelope.png'}],
+            '2': [{title: 'Una famosa en los videos online publica una foto', icon: 'envelope.png'},
+                {title: 'Prevenir las adicciones desde la escuela', icon: 'envelope.png'}],
+            '3': [{title: 'La educación, clave en la lucha contra la droga', icon: 'envelope.png'},
+                {title: 'Un diario digital masivo publica una estadística', icon: 'envelope.png'}]
+        },
+        pld: {
+            '1': [{title: 'Radiografía de la unidad de información Financiera', icon: 'envelope.png'},
+                {title: 'Cómo funcionan los ROS', icon: 'envelope.png'}],
+            '2': [{title: 'Avances en lucha contra el narcotráfico', icon: 'envelope.png'},
+                {title: 'Investigación sobre narcotráfico y drogas', icon: 'envelope.png'}],
+            '3': [{title: 'Opiniones y percepciones', icon: 'envelope.png'},
+                {title: 'Un diario digital masivo publica una estadística', icon: 'envelope.png'}]
+        },
+        fpj: {
+            '1': [{title: 'Publicaciones', icon: 'envelope.png'},
+                {title: 'Un funcionario comenta', icon: 'envelope.png'}],
+            '2': [{title: 'Consumo en adolescentes', icon: 'envelope.png'},
+                {title: 'Expertos internacionales en narcotráfico', icon: 'envelope.png'}],
+            '3': [{title: 'Un estudio de CEPAL aparece en la web', icon: 'envelope.png'},
+                {title: 'Diputada Enrique', icon: 'globo.svg'}]
         }
+
     };
 
     constructor(
