@@ -10,7 +10,6 @@ import { AppStorage } from '../storage/app-storage';
 export class Desk {
 
     showSusi: boolean;
-    showBienvenido: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
     displayOverlay: string = 'none';
@@ -19,8 +18,7 @@ export class Desk {
         let state = AppStorage.getState();
 
         if (!state || !state['viewObjetivo']) {
-            this.showOverlay();
-            this.showBienvenido = true;
+            this.go('/bienvenido');
         } else if (!state['mensaje-1']) {
             this.showOverlay();
             this.showSusi = true;
@@ -29,7 +27,11 @@ export class Desk {
         } else if (!state['viewCarpetas']) {
             this.highlightCarpetas();
         }
+    }
 
+    go(where) {
+        AppStorage.addToState('viewObjetivo', true);
+        this.router.navigate([where]);
     }
 
     highlightCarpetas() {
@@ -79,7 +81,6 @@ export class Desk {
     }
 
     closeBienvenido() {
-        this.showBienvenido = false;
         this.showSusi = true;
         return false;
     }

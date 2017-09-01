@@ -1,7 +1,19 @@
+@import '../sass/fonts';
+
 .resumen-background {
   background-image: url(/assets/desk-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.right-text {
+  font-family: $font-family-roboto;
+  position: absolute;
+  top: 20%;
+  left: 58%;
+  width: 29%;
+  font-size: 14px;
+  line-height: 1.15;
 }
 
 svg {
