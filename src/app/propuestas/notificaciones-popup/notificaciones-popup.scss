@@ -12,7 +12,7 @@
     content: "";
     background-image: url(/assets/notificaciones/triangulo.svg);
     position: absolute;
-    right: 37px;
+    right: -60px;
     width: 61px;
     top: 30px;
     background-repeat: no-repeat;
@@ -189,6 +189,13 @@
     img {
       max-width: 72%;
     }
+  }
+}
+
+.email-body.svg-trimmed-body {
+  @extend .email-body.svg-body;
+  img {
+    height: 70%;
   }
 }
 

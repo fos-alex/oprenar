@@ -95,6 +95,16 @@
         cursor: pointer;
       }
     }
+
+    .post-it-svg {
+      position: absolute;
+      bottom: 15%;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0;
+      left: 0;
+    }
   }
 
 }

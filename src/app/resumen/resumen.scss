@@ -1,5 +1,14 @@
+.resumen-background {
+  background-image: url(/assets/desk-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 svg {
   #btn_x5F_finalizar_x5F_13 {
+    cursor: pointer;
+  }
+
+  .btn {
     cursor: pointer;
   }
 }

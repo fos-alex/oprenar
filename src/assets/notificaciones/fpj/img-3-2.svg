@@ -1,92 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579 702">
-    <defs>
-        <style>.cls-1,.cls-32,.cls-33,.cls-35,.cls-37,.cls-38{fill:none;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{fill:#523a29;}.cls-5{fill:#543928;}.cls-6{clip-path:url(#clip-path-2);}.cls-7{opacity:0.09;mix-blend-mode:multiply;}.cls-8{fill:#c7b316;}.cls-29,.cls-9{fill:#fff;}.cls-34,.cls-35,.cls-37,.cls-38,.cls-49,.cls-9{stroke:#b3b3b3;}.cls-32,.cls-33,.cls-34,.cls-35,.cls-37,.cls-38,.cls-39,.cls-49,.cls-9{stroke-miterlimit:10;}.cls-9{stroke-width:0.88px;}.cls-10{font-size:15px;}.cls-10,.cls-53{font-family:Roboto-Regular, Roboto;}.cls-11{letter-spacing:-0.03em;}.cls-12{letter-spacing:-0.01em;}.cls-13{letter-spacing:-0.02em;}.cls-14{letter-spacing:-0.01em;}.cls-15{letter-spacing:-0.01em;}.cls-16{letter-spacing:0.02em;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:0em;}.cls-19{fill:#cc8383;}.cls-20{clip-path:url(#clip-path-3);}.cls-21{clip-path:url(#clip-path-4);}.cls-22{fill:#c6aa6d;}.cls-23,.cls-31{fill:#6e6e6e;}.cls-24{fill:#7a7a7a;}.cls-25{fill:#f2ccc0;}.cls-26{fill:#eaae99;}.cls-27{fill:#1a1a1a;}.cls-28{fill:#ad9360;}.cls-30{fill:#5c5c5c;opacity:0.23;}.cls-31{opacity:0.31;}.cls-32,.cls-33{stroke:#eaae99;}.cls-32,.cls-33,.cls-35,.cls-37{stroke-linecap:round;}.cls-32{stroke-width:1.28px;}.cls-33{stroke-width:0.85px;}.cls-34{fill:#b3b3b3;stroke-width:0.85px;}.cls-35{stroke-width:4.03px;}.cls-36,.cls-49{fill:#f2f2f2;}.cls-37{stroke-width:2.42px;}.cls-38{stroke-width:2px;}.cls-39,.cls-41{fill:#d3bd18;}.cls-39{stroke:#e6e6e6;stroke-width:0.79px;}.cls-40{fill:#bfab16;}.cls-42{font-size:12px;}.cls-42,.cls-52{font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-43{letter-spacing:-0.02em;}.cls-44{letter-spacing:-0.06em;}.cls-45{letter-spacing:-0.01em;}.cls-46{letter-spacing:-0.01em;}.cls-47{letter-spacing:0.01em;}.cls-48{letter-spacing:-0.07em;}.cls-49{stroke-width:3.99px;}.cls-50{fill:#6f8fa3;}.cls-51{fill:#adadad;}.cls-52{font-size:15.77px;}.cls-53{font-size:12.27px;}.cls-54{letter-spacing:-0.01em;}.cls-55{letter-spacing:-0.01em;}.cls-56{letter-spacing:0em;}.cls-57{letter-spacing:0.01em;}.cls-58{letter-spacing:-0.01em;}.cls-59{letter-spacing:0.02em;}.cls-60{letter-spacing:-0.01em;}.cls-61{letter-spacing:-0.06em;}.cls-62{letter-spacing:-0.02em;}.cls-63{letter-spacing:-0.01em;}.cls-64{letter-spacing:-0.01em;}</style>
-        <clipPath id="clip-path">
-            <rect class="cls-1" x="-647.56" y="780.96" width="1388.87" height="780.86"/>
-        </clipPath>
-        <clipPath id="clip-path-2">
-            <path class="cls-1" d="M586.12,1516.61l-19-694c-219,13.94-542.11,14-545,14v-.31l-517.69-13.9-27.69,19.75-1.19,151,26.24,14.84-7.41,499.52c141-6.49,522.71,14.09,522.71,14.09v-.54C24,1520.79,302.67,1509.7,586.12,1516.61Z"/>
-        </clipPath>
-        <clipPath id="clip-path-3">
-            <ellipse class="cls-1" cx="68.48" cy="125.64" rx="36.99" ry="38.64"/>
-        </clipPath>
-        <clipPath id="clip-path-4">
-            <rect class="cls-1" x="33.56" y="93.57" width="70.59" height="70.7" transform="translate(-0.31 0.17) rotate(-0.14)"/>
-        </clipPath>
-    </defs>
-    <title>notificacion_juridico_03</title>
-    <g class="cls-2">
-        <g id="fondo_05a">
-            <path class="cls-50" d="M112.12,317.93H429.6s22,23.45,65.38,23.45c-30.4-4.2-31-23.45-31-23.45h29.43a19.54,19.54,0,0,0,19.54-19.54v-8a19.54,19.54,0,0,0-19.54-19.54H112.12a19.54,19.54,0,0,0-19.54,19.54v8A19.54,19.54,0,0,0,112.12,317.93Z"/>
-            <path class="cls-51" d="M420.8,255.81H103.32s-22,23.45-65.38,23.45c30.4-4.2,31-23.45,31-23.45H39.56A19.54,19.54,0,0,1,20,236.27V217.85a19.54,19.54,0,0,1,19.54-19.54H420.8a19.54,19.54,0,0,1,19.54,19.54v18.42A19.54,19.54,0,0,1,420.8,255.81Z"/>
-            <text class="cls-52" transform="translate(41.34 221.26)">Diputada Enrique</text>
-            <text class="cls-53" transform="translate(41.34 241.41)">
-                ¡Hola! ¿Cómo
-                <tspan class="cls-54" x="76.13" y="0">v</tspan>
-                <tspan x="81.99" y="0">a el armado del plan de la o</tspan>
-                <tspan class="cls-55" x="231.29" y="0">r</tspan>
-                <tspan class="cls-56" x="235.33" y="0">ganización?</tspan>
-            </text>
-            <path class="cls-51" d="M420.8,412.06H103.32s-22,23.45-65.38,23.45c30.4-4.2,31-23.45,31-23.45H39.56A19.54,19.54,0,0,1,20,392.51V354.09a19.54,19.54,0,0,1,19.54-19.54H420.8a19.54,19.54,0,0,1,19.54,19.54v38.42A19.54,19.54,0,0,1,420.8,412.06Z"/>
-            <text class="cls-52" transform="translate(41.34 357.5)">Diputada Enrique</text>
-            <text class="cls-53" transform="translate(41.34 377.65)">
-                No si
-                <tspan class="cls-57" x="28.08" y="0">r</tspan>
-                <tspan class="cls-58" x="32.33" y="0">v</tspan>
-                <tspan x="38.2" y="0">e impo</tspan>
-                <tspan class="cls-59" x="75.34" y="0">r</tspan>
-                <tspan x="79.79" y="0">tar fórmulas exi</tspan>
-                <tspan class="cls-60" x="165.13" y="0">t</tspan>
-                <tspan x="169.02" y="0">osas del exterio</tspan>
-                <tspan class="cls-61" x="255" y="0">r</tspan>
-                <tspan x="258.42" y="0">. H</tspan>
-                <tspan class="cls-54" x="273.43" y="0">a</tspan>
-                <tspan x="280.01" y="0">y que concent</tspan>
-                <tspan class="cls-62" x="355.99" y="0">r</tspan>
-                <tspan x="359.9" y="0">ar</tspan>
-                <tspan x="370.73" y="0">-</tspan>
-                <tspan x="0" y="14.72">se en combatir la corrupción</tspan>
-            </text>
-            <path class="cls-51" d="M426.5,604.55h-322S82.16,628,38.2,628c30.84-4.2,31.49-23.45,31.49-23.45H39.84A19.68,19.68,0,0,1,20,585V525.5A19.68,19.68,0,0,1,39.84,506H426.5a19.68,19.68,0,0,1,19.82,19.54V585A19.68,19.68,0,0,1,426.5,604.55Z"/>
-            <text class="cls-52" transform="translate(41.34 528.91)">Diputada Enrique</text>
-            <text class="cls-53" transform="translate(41.34 549.06)">
-                Es una pé
-                <tspan class="cls-55" x="52.95" y="0">r</tspan>
-                <tspan x="56.99" y="0">dida de tiempo. Dada la idiosinc</tspan>
-                <tspan class="cls-62" x="230.71" y="0">r</tspan>
-                <tspan x="234.63" y="0">asia de nuest</tspan>
-                <tspan class="cls-62" x="307.12" y="0">r</tspan>
-                <tspan x="311.03" y="0">as fuerzas de </tspan>
-                <tspan x="0" y="14.72">seguridad, debe llegar un saneamien</tspan>
-                <tspan class="cls-63" x="199.06" y="14.72">t</tspan>
-                <tspan x="202.95" y="14.72">o antes de cualquier inten</tspan>
-                <tspan class="cls-60" x="342.98" y="14.72">t</tspan>
-                <tspan x="346.87" y="14.72">o de </tspan>
-                <tspan x="0" y="29.44">formación.</tspan>
-            </text>
-            <text class="cls-53" transform="translate(111.55 293.26)">
-                ¡Estamos
-                <tspan class="cls-54" x="54.07" y="0">av</tspan>
-                <tspan x="66.5" y="0">anzando! Con </tspan>
-                <tspan class="cls-64" x="144.35" y="0">r</tspan>
-                <tspan x="148.39" y="0">espec</tspan>
-                <tspan class="cls-63" x="181.01" y="0">t</tspan>
-                <tspan x="184.9" y="0">o a las fuerzas de seguridad y la </tspan>
-                <tspan x="0" y="14.72">na</tspan>
-                <tspan class="cls-55" x="13.44" y="14.72">r</tspan>
-                <tspan x="17.48" y="14.72">cocriminalidad… ¿Qué opinas?</tspan>
-            </text>
-            <path class="cls-50" d="M110.88,478.88H428.36s22,23.45,65.38,23.45c-30.4-4.2-31-23.45-31-23.45h29.43a19.54,19.54,0,0,0,19.54-19.54v-12a19.54,19.54,0,0,0-19.54-19.54H110.88a19.54,19.54,0,0,0-19.54,19.54v12A19.54,19.54,0,0,0,110.88,478.88Z"/>
-            <text class="cls-53" transform="translate(110.31 451.22)">
-                ¿Y no c
-                <tspan class="cls-55" x="39.43" y="0">r</tspan>
-                <tspan x="43.46" y="0">ees en la coope</tspan>
-                <tspan class="cls-62" x="128.6" y="0">r</tspan>
-                <tspan x="132.51" y="0">ación interinstitucional, aunque sea en lo </tspan>
-                <tspan x="0" y="14.72">que </tspan>
-                <tspan class="cls-55" x="23.27" y="14.72">r</tspan>
-                <tspan x="27.3" y="14.72">especta a la capacitación?</tspan>
-            </text>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 526 482.2" style="enable-background:new 0 0 526 482.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#ADADAD;}
+	.st1{fill:none;}
+	.st2{font-family:'Roboto-Bold';}
+	.st3{font-size:15.7706px;}
+	.st4{font-family:'Roboto-Regular';}
+	.st5{font-size:12.266px;}
+	.st6{fill:#6F8FA3;}
+</style>
+<g id="Enrique_x5F_03">
+	<title>notificacion_adicciones_02</title>
+	<g>
+		<path class="st0" d="M426.5,433.7h-322c0,0-22.3,23.4-66.3,23.4c30.8-4.2,31.5-23.4,31.5-23.4H39.8c-10.9,0-19.8-8.7-19.8-19.5
+			v-59.5c0-10.8,8.9-19.5,19.8-19.5h386.7c10.9,0,19.8,8.7,19.8,19.5v59.5C446.3,425,437.4,433.7,426.5,433.7z"/>
+		<rect x="41.3" y="346.3" class="st1" width="238.4" height="45.6"/>
+		<text transform="matrix(1 0 0 1 41.3418 358.1053)" class="st2 st3">Diputada Enrique</text>
+		<rect x="41.3" y="369.1" class="st1" width="399" height="134.1"/>
+		<text transform="matrix(1 0 0 1 41.3408 378.2556)"><tspan x="0" y="0" class="st4 st5">Es una pérdida de tiempo. Dada la idiosincrasia de nuestras fuerzas de </tspan><tspan x="0" y="14.7" class="st4 st5">seguridad, debe llegar un saneamiento antes de cualquier intento de </tspan><tspan x="0" y="29.4" class="st4 st5">formación.</tspan></text>
+	</g>
+</g>
+<g id="azul_x5F_02b">
+	<path class="st6" d="M110.9,308.1h317.5c0,0,22,23.4,65.4,23.4c-30.4-4.2-31-23.4-31-23.4h29.4c10.8,0,19.5-8.7,19.5-19.5v-12
+		c0-10.8-8.7-19.5-19.5-19.5H110.9c-10.8,0-19.5,8.7-19.5,19.5v12C91.3,299.3,100.1,308.1,110.9,308.1z"/>
+	<rect x="110.3" y="271.2" class="st1" width="376.2" height="26.9"/>
+	<text transform="matrix(1 0 0 1 110.3145 280.4099)"><tspan x="0" y="0" class="st4 st5">¿Y no crees en la cooperación interinstitucional, aunque sea en lo </tspan><tspan x="0" y="14.7" class="st4 st5">que respecta a la capacitación?</tspan></text>
+</g>
+<g id="Enrique_x5F_02">
+	<g>
+		<path class="st0" d="M420.8,241.3H103.3c0,0-22,23.4-65.4,23.4c30.4-4.2,31-23.4,31-23.4H39.6c-10.8,0-19.5-8.7-19.5-19.5v-38.4
+			c0-10.8,8.7-19.5,19.5-19.5h381.2c10.8,0,19.5,8.7,19.5,19.5v38.4C440.3,232.5,431.6,241.3,420.8,241.3z"/>
+		<rect x="41.3" y="174.9" class="st1" width="238.4" height="45.6"/>
+		<text transform="matrix(1 0 0 1 41.3418 186.6936)" class="st2 st3">Diputada Enrique</text>
+		<rect x="41.3" y="197.6" class="st1" width="376.2" height="60.7"/>
+		<text transform="matrix(1 0 0 1 41.3408 206.8445)"><tspan x="0" y="0" class="st4 st5">No sirve importar fórmulas exitosas del exterior. Hay que concentrar</tspan><tspan x="371.6" y="0" class="st4 st5">-</tspan><tspan x="0" y="14.7" class="st4 st5">se en combatir la corrupción</tspan></text>
+	</g>
+</g>
+<g id="azul_x5F_01b">
+	<path class="st6" d="M112.1,147.1h317.5c0,0,22,23.4,65.4,23.4c-30.4-4.2-31-23.4-31-23.4h29.4c10.8,0,19.5-8.7,19.5-19.5v-8
+		c0-10.8-8.7-19.5-19.5-19.5H112.1c-10.8,0-19.5,8.7-19.5,19.5v8C92.6,138.4,101.3,147.1,112.1,147.1z"/>
+	<rect x="111.6" y="113.3" class="st1" width="376.2" height="26.9"/>
+	<text transform="matrix(1 0 0 1 111.5527 122.4529)"><tspan x="0" y="0" class="st4 st5">¡Estamos avanzando! Con respecto a las fuerzas de seguridad y la </tspan><tspan x="0" y="14.7" class="st4 st5">narcocriminalidad… ¿Qué opinas?</tspan></text>
+</g>
+<g id="Enrique_x5F_01">
+	<g>
+		<path class="st0" d="M420.8,85H103.3c0,0-22,23.4-65.4,23.4C68.3,104.3,69,85,69,85H39.6C28.8,85,20,76.3,20,65.5V47
+			c0-10.8,8.7-19.5,19.5-19.5h381.2c10.8,0,19.5,8.7,19.5,19.5v18.4C440.3,76.3,431.6,85,420.8,85z"/>
+		<rect x="41.3" y="38.6" class="st1" width="238.4" height="45.6"/>
+		<text transform="matrix(1 0 0 1 41.3418 50.45)" class="st2 st3">Diputada Enrique</text>
+		<rect x="41.3" y="61.4" class="st1" width="376.2" height="60.7"/>
+		<text transform="matrix(1 0 0 1 41.3408 70.6018)" class="st4 st5">¡Hola! ¿Cómo va el armado del plan de la organización?</text>
+	</g>
+</g>
 </svg>
