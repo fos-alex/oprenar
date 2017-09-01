@@ -9,7 +9,7 @@ import { AppStorage } from '../storage/app-storage';
 export class Cuaderno implements OnInit {
 
     pagina: string;
-    defaultPage: string = "mision";
+    defaultPage: string = "ong";
     svgStyle: any;
 
     constructor(protected route: ActivatedRoute,
@@ -17,6 +17,7 @@ export class Cuaderno implements OnInit {
         AppStorage.addToState('viewCuaderno', true);
 
     }
+
 
     switchPage(pagina) {
         this.router.navigate(['/cuaderno', pagina]);
