@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Desk } from './desk';
 import AsesorModule from '../asesor';
 import BienvenidoModule from '../bienvenido';
+import OverlayModule from '../overlay';
 
 export const ROUTER_CONFIG = [
     { path: '', component: Desk, pathMatch: 'full' },
@@ -20,6 +21,7 @@ export const ROUTER_CONFIG = [
         RouterModule.forChild(ROUTER_CONFIG),
         CommonModule,
         AsesorModule,
+        OverlayModule,
         BienvenidoModule
     ]
 })

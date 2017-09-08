@@ -9,5 +9,5 @@
   <img class="desk-object ob-anotador" src="/assets/pantallas_02-10-anotador.svg" />
   <img class="desk-object ob-lapices" src="/assets/pantallas_02-11-lapices.svg" />
 </div>
-<div class="bg-overlay" (click)="overlayClick()" [ngStyle]="{'display': displayOverlay}"></div>
-<asesor *ngIf="showSusi" [exclude]="'escritorio'"></asesor>
+<overlay (overlayClick)="overlayClick()"></overlay>
+<asesor [showColumna]="showAsesorColumna" [exclude]="'escritorio'"></asesor>

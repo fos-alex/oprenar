@@ -30,15 +30,19 @@
     height: 100%;
 
     .email-selection {
+      width: 100%;
       box-sizing: border-box;
       display: inline-block;
+      border-bottom: 2px solid $gray-dark;
       .email-link {
         float: left;
         width: 50%;
         box-sizing: border-box;
         padding: 0 5px;
-        border-bottom: 2px solid $gray-dark;
         font-size: 14px;
+        @media screen and (max-width: 10233px) {
+          font-size: 12px;
+        }
         cursor: pointer;
         min-height: 52px;
         img {
@@ -49,6 +53,9 @@
         p {
           @extend .font-roboto;
           font-size: 14px;
+          @media screen and (max-width: 1023px) {
+            font-size: 12px;
+          }
           max-width: 74%;
           margin: 9px 0 9px 5%;
           float: left;
@@ -82,6 +89,9 @@
         p {
           @extend .font-roboto;
           font-size: 15px;
+          @media screen and (max-width: 1023px) {
+            font-size: 13px;
+          }
           margin: 0;
         }
       }
@@ -116,6 +126,9 @@
       p {
         @extend .font-roboto;
         font-size: 15px;
+        @media screen and (max-width: 1023px) {
+          font-size: 14px;
+        }
       }
 
       .email-body-article-container {
@@ -127,7 +140,7 @@
     }
   }
 
-  img {
+  img, object {
     max-width: 100%;
   }
 }
@@ -136,11 +149,17 @@
 .email-body.notificacion-quote {
   p.top-email-text {
     font-size: 15px;
+    @media screen and (max-width: 1023px) {
+      font-size: 14px;
+    }
   }
 
   p.quote {
     padding: 3% 10%;
     font-size: 17px;
+    @media screen and (max-width: 1023px) {
+      font-size: 15px;
+    }
     line-height: 1.5;
     font-style: italic;
   }
@@ -167,7 +186,7 @@
 }
 
 .email-body.svg-body {
-  img {
+  img, object {
     position: absolute;
     height: 95%;
     bottom: 0;
@@ -180,27 +199,41 @@
 
 .email-body.svg-body-only {
   @extend .svg-body;
-  img {
+  img, object {
     max-width: 80%;
     bottom: 14%;
     height: auto;
   }
   &.shorter-svg {
-    img {
+    img, object {
       max-width: 72%;
     }
   }
 }
 
+.email-body.svg-body-post {
+  @extend .svg-body;
+  img, object {
+    height: 85%;
+    @media screen and (max-width: 1280px) {
+      height: 70%;
+    }
+    @media screen and (max-width: 1023px) {
+      height: 60%;
+    }
+  }
+
+}
+
 .email-body.svg-trimmed-body {
   @extend .email-body.svg-body;
-  img {
+  img, object {
     height: 70%;
   }
 }
 
 .email-body.svg-body-on-side {
-  img {
+  img, object {
     width: 43%;
   }
   .side {

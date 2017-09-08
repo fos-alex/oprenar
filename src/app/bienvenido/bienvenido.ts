@@ -8,6 +8,7 @@ import { AppStorage } from '../storage/app-storage';
 export class Bienvenido {
 
     @Input() callback: Function;
+    sonido: boolean = false;
 
     constructor(private router: Router) {
     }
@@ -15,5 +16,9 @@ export class Bienvenido {
     go(where) {
         AppStorage.addToState('viewObjetivo', true);
         this.router.navigate([where]);
+    }
+
+    toggleSonido() {
+        this.sonido = !this.sonido;
     }
 }

@@ -1,27 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppStorage } from '../storage/app-storage';
 
+import { AppStorage } from '../storage/app-storage';
+import { Overlay } from '../overlay/overlay';
+import { Asesor } from '../asesor/asesor';
 
 @Component({
     styleUrls: ['./desk.scss']
 })
 
-export class Desk {
+export class Desk implements OnInit {
 
-    showSusi: boolean;
+    showAsesorColumna: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
-    displayOverlay: string = 'none';
+
+    @ViewChild(Asesor)
+    private asesor: Asesor;
+
+    @ViewChild(Overlay)
+    private overlay: Overlay;
 
     constructor(private router: Router) {
+    }
+
+    ngOnInit() {
         let state = AppStorage.getState();
 
         if (!state || !state['viewObjetivo']) {
+            // Bienvenida
             this.go('/bienvenido');
-        } else if (!state['mensaje-1']) {
-            this.showOverlay();
-            this.showSusi = true;
+        } else if (!state['asesor']) {
+            // Redirect to desk to choose asesor
+            this.showAsesorColumna = true;
         } else if (!state['viewCuaderno']) {
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
@@ -35,21 +46,13 @@ export class Desk {
     }
 
     highlightCarpetas() {
-        this.showOverlay();
+        this.overlay.show();
         this.carpetaStyle = 'highlight';
     }
     
     highlightCuaderno() {
-        this.showOverlay();
+        this.overlay.show();
         this.cuadernoStyle = 'highlight';
-    }
-
-    showOverlay() {
-        this.displayOverlay = 'block';
-    }
-
-    hideOverlay() {
-        this.displayOverlay = 'none';
     }
 
     cuadernoClick() {
@@ -65,9 +68,9 @@ export class Desk {
     }
 
     overlayClick() {
-        if (this.showSusi) {
-            this.hideOverlay();
-            this.showSusi = false;
+        if (this.showAsesorColumna) {
+            this.overlay.hide();
+            this.showAsesorColumna = false;
             AppStorage.addToState('mensaje-1', true);
 
             let state = AppStorage.getState();
@@ -81,7 +84,7 @@ export class Desk {
     }
 
     closeBienvenido() {
-        this.showSusi = true;
+        this.showAsesorColumna = true;
         return false;
     }
 }

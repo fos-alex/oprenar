@@ -1,4 +1,4 @@
-import { Component, ViewChild, Input, NgModule, ViewContainerRef, Compiler, ViewEncapsulation } from '@angular/core';
+import { Component, ViewChild, Input, OnInit, OnChanges, NgModule, ViewContainerRef, Compiler, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Http } from '@angular/http';
 
@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
     styleUrls: ['./notificaciones-popup.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class NotificacionesPopup {
+export class NotificacionesPopup implements OnInit, OnChanges {
     @Input() propuestaSeleccionada: number;
     @Input() proyecto: string;
     @ViewChild('messageBody', {read: ViewContainerRef}) viewContainer: ViewContainerRef;
@@ -31,7 +31,6 @@ export class NotificacionesPopup {
                 {title: 'En drogas... No perder por goleada', icon: 'envelope.png'}],
             '3': [{title: 'Lucha contra el Narcotráfico', icon: 'envelope.png'},
                 {title: 'El director de otra ONG realiza una publicación', icon: 'envelope.png'}]
-
         },
         pe: {
             '1': [{title: 'Es clave combatir la demanda', icon: 'envelope.png'},
@@ -97,6 +96,11 @@ export class NotificacionesPopup {
                     this.viewContainer.createComponent(compFactory);
                 });
         });
+    }
+
+    ngOnChanges(changes) {
+        // Display first message after change
+        this.displayMessage('1');
     }
 
     getTemplate(html) {

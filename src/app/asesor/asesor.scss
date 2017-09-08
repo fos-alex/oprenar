@@ -7,7 +7,8 @@ $susi-border: #163D57;
   top: 0;
   right: 0;
   height: 100%;
-  width: 174px;
+  max-width: 174px;
+  width: 12%;
   background: rgba(black, .55);
   padding: 10px 0;
 
@@ -23,12 +24,41 @@ $susi-border: #163D57;
       }
     }
 
+    .mensaje-asesor {
+      pre {
+        @extend .font-roboto;
+        white-space: pre-line;
+      }
+      .mensaje-btn-container {
+        text-align: center;
+        .mensaje-btn {
+          display: inline-block;
+          padding: 7px;
+          min-height: 20px;
+          line-height: 20px;
+          min-width: 20px;
+          margin: 6px 15px;
+          border-radius: 50%;
+          color: white;
+          cursor: pointer;
+          &.btn-green {
+            background-color: #7AAD38;
+          }
+          &.btn-red {
+            background-color: #8C2B2B;
+          }
+
+        }
+      }
+    }
+
     .asesor-item-name {
       color: white;
       font-weight: bold;
       display: block;
       opacity: 0;
       transition: opacity .5s ease;
+      text-transform: uppercase;
     }
 
     &:hover {
@@ -38,8 +68,6 @@ $susi-border: #163D57;
     }
 
     .susi-border {
-      border: 6px solid $susi-border;
-      border-radius: 100%;
       max-width: 90px;
     }
 
@@ -49,14 +77,14 @@ $susi-border: #163D57;
   }
 }
 
-.mensaje-susi {
+.mensaje-asesor {
   position: absolute;
   right: 200px;
   width: 350px;
   background: white;
-  padding: 25px 40px 25px 25px;
+  padding: 20px 30px 20px 20px;
   border: 1px solid gray;
-  border-radius: 35px;
+  border-radius: 30px;
   bottom: 20px;
   @extend .font-roboto;
   text-align: left;

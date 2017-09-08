@@ -24,7 +24,7 @@ export class Propuestas implements OnInit {
         this.propuestas = {
             1: 'ob-propuesta-izq',
             2: 'ob-propuesta-cen',
-            3: 'ob-propuesta-der',
+            3: 'ob-propuesta-der'
         };
     }
 
@@ -35,8 +35,10 @@ export class Propuestas implements OnInit {
                 let state = AppStorage.getState();
                 this.propuestaSeleccionada = state.propuestas[this.proyecto];
 
-                this.detallePropuesta(params.get('id'));
+                // Llevar a la primer propuesta si no hay ninguna seleccionada
+                this.detallePropuesta(params.get('id') || '1');
             });
+
     }
 
     propuestaClick(idPropuesta, event) {

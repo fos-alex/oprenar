@@ -1,7 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import HomeModule from './home';
 import PropuestasModule from './propuestas';
 import CuadernoModule from './cuaderno';
 import CarpetasModule from './carpetas';
@@ -10,6 +9,7 @@ import AsesorModule from './asesor';
 import BienvenidoModule from './bienvenido';
 import FinalModule from './final';
 import ResumenModule from './resumen';
+import OverlayModule from './overlay';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
@@ -30,6 +30,7 @@ export const ROUTER_CONFIG = [
     CarpetasModule,
     FinalModule,
     ResumenModule,
+    OverlayModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
 })

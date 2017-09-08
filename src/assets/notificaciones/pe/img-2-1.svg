@@ -1,6 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579 699">
     <defs>
-        <style>.cls-1,.cls-28,.cls-34,.cls-38,.cls-40,.cls-41,.cls-48,.cls-50,.cls-62,.cls-69{fill:none;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{opacity:0.09;mix-blend-mode:multiply;}.cls-5{font-size:15px;font-family:Roboto-Regular, Roboto;}.cls-6{letter-spacing:-0.01em;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:-0.02em;}.cls-9{letter-spacing:-0.01em;}.cls-10{letter-spacing:-0.01em;}.cls-11{letter-spacing:-0.01em;}.cls-12,.cls-30,.cls-46{fill:#fff;}.cls-12,.cls-37,.cls-38,.cls-40,.cls-41{stroke:#b3b3b3;}.cls-12,.cls-28,.cls-34,.cls-37,.cls-38,.cls-40,.cls-41,.cls-42,.cls-46,.cls-48,.cls-50,.cls-62,.cls-69{stroke-miterlimit:10;}.cls-12{stroke-width:0.88px;}.cls-13{letter-spacing:-0.05em;}.cls-14{letter-spacing:0.02em;}.cls-15{letter-spacing:0em;}.cls-16{letter-spacing:-0.01em;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:-0.01em;}.cls-19{letter-spacing:-0.02em;}.cls-20{letter-spacing:-0.01em;}.cls-21{fill:#81a6bf;}.cls-22{clip-path:url(#clip-path-2);}.cls-23{fill:#1a1a1a;}.cls-24{fill:#997b5b;}.cls-25,.cls-37{fill:#b3b3b3;}.cls-26{fill:#ad8b66;}.cls-27{fill:#3a83b5;}.cls-28{stroke:#36739c;}.cls-28,.cls-34{stroke-width:1.19px;}.cls-29,.cls-31{fill:#2d4454;}.cls-29{opacity:0.46;}.cls-31{opacity:0.16;}.cls-32{fill:#8c5e62;}.cls-33,.cls-49{fill:#e6e6e6;}.cls-33{opacity:0.67;}.cls-34,.cls-46{stroke:#4d4d4d;}.cls-35,.cls-71{fill:#333;}.cls-36{fill:#36739c;}.cls-37{stroke-width:0.83px;}.cls-38,.cls-40,.cls-48,.cls-62,.cls-69{stroke-linecap:round;}.cls-38{stroke-width:4.03px;}.cls-39{fill:#f2f2f2;}.cls-40{stroke-width:2.42px;}.cls-41{stroke-width:2px;}.cls-42,.cls-44{fill:#d3bd18;}.cls-42,.cls-48{stroke:#e6e6e6;}.cls-42{stroke-width:0.79px;}.cls-43{fill:#bfab16;}.cls-45{font-size:12px;}.cls-45,.cls-65,.cls-66{font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-46{stroke-width:0.9px;}.cls-47{fill:#662d91;}.cls-48,.cls-50{stroke-width:2.7px;}.cls-50{stroke:#512473;}.cls-51{clip-path:url(#clip-path-3);}.cls-52{fill:#b7b7ad;}.cls-53{fill:#c2b6b1;}.cls-54{fill:#979694;}.cls-55{fill:#896d61;}.cls-56{fill:#201e6d;}.cls-57{fill:#eaae99;}.cls-58{fill:#f2ccc0;}.cls-59{fill:#1f114e;}.cls-60{fill:#58105d;}.cls-61{fill:#733380;}.cls-62,.cls-69{stroke:#eaae99;}.cls-62{stroke-width:4.51px;}.cls-63{fill:#ea99c2;}.cls-64{fill:#1c1a5e;}.cls-65{font-size:11.23px;}.cls-65,.cls-66,.cls-70{fill:#93278f;}.cls-66{font-size:11.71px;}.cls-67{clip-path:url(#clip-path-4);}.cls-68{fill:#999;}.cls-69{stroke-width:1.8px;}.cls-71{font-size:15.32px;font-family:Roboto-Medium, Roboto;}.cls-72{letter-spacing:-0.01em;}.cls-73{letter-spacing:-0.02em;}.cls-74{letter-spacing:-0.01em;}.cls-75{letter-spacing:-0.01em;}.cls-76{letter-spacing:-0.01em;}.cls-77{letter-spacing:-0.02em;}.cls-78{letter-spacing:-0.01em;}.cls-79{letter-spacing:-0.01em;}</style>
+        <style>
+            @font-face {
+            font-family: 'Roboto-Regular';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Roboto-Regular'), local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+            font-family: 'Roboto-Bold';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Roboto-Bold'), local('Roboto-Regular'), local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            .cls-1,.cls-28,.cls-34,.cls-38,.cls-40,.cls-41,.cls-48,.cls-50,.cls-62,.cls-69{fill:none;}.cls-2{isolation:isolate;}.cls-3{clip-path:url(#clip-path);}.cls-4{opacity:0.09;mix-blend-mode:multiply;}.cls-5{font-size:15px;font-family:Roboto-Regular, Roboto;}.cls-6{letter-spacing:-0.01em;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:-0.02em;}.cls-9{letter-spacing:-0.01em;}.cls-10{letter-spacing:-0.01em;}.cls-11{letter-spacing:-0.01em;}.cls-12,.cls-30,.cls-46{fill:#fff;}.cls-12,.cls-37,.cls-38,.cls-40,.cls-41{stroke:#b3b3b3;}.cls-12,.cls-28,.cls-34,.cls-37,.cls-38,.cls-40,.cls-41,.cls-42,.cls-46,.cls-48,.cls-50,.cls-62,.cls-69{stroke-miterlimit:10;}.cls-12{stroke-width:0.88px;}.cls-13{letter-spacing:-0.05em;}.cls-14{letter-spacing:0.02em;}.cls-15{letter-spacing:0em;}.cls-16{letter-spacing:-0.01em;}.cls-17{letter-spacing:-0.01em;}.cls-18{letter-spacing:-0.01em;}.cls-19{letter-spacing:-0.02em;}.cls-20{letter-spacing:-0.01em;}.cls-21{fill:#81a6bf;}.cls-22{clip-path:url(#clip-path-2);}.cls-23{fill:#1a1a1a;}.cls-24{fill:#997b5b;}.cls-25,.cls-37{fill:#b3b3b3;}.cls-26{fill:#ad8b66;}.cls-27{fill:#3a83b5;}.cls-28{stroke:#36739c;}.cls-28,.cls-34{stroke-width:1.19px;}.cls-29,.cls-31{fill:#2d4454;}.cls-29{opacity:0.46;}.cls-31{opacity:0.16;}.cls-32{fill:#8c5e62;}.cls-33,.cls-49{fill:#e6e6e6;}.cls-33{opacity:0.67;}.cls-34,.cls-46{stroke:#4d4d4d;}.cls-35,.cls-71{fill:#333;}.cls-36{fill:#36739c;}.cls-37{stroke-width:0.83px;}.cls-38,.cls-40,.cls-48,.cls-62,.cls-69{stroke-linecap:round;}.cls-38{stroke-width:4.03px;}.cls-39{fill:#f2f2f2;}.cls-40{stroke-width:2.42px;}.cls-41{stroke-width:2px;}.cls-42,.cls-44{fill:#d3bd18;}.cls-42,.cls-48{stroke:#e6e6e6;}.cls-42{stroke-width:0.79px;}.cls-43{fill:#bfab16;}.cls-45{font-size:12px;}.cls-45,.cls-65,.cls-66{font-family:Roboto-Bold, Roboto;font-weight:700;}.cls-46{stroke-width:0.9px;}.cls-47{fill:#662d91;}.cls-48,.cls-50{stroke-width:2.7px;}.cls-50{stroke:#512473;}.cls-51{clip-path:url(#clip-path-3);}.cls-52{fill:#b7b7ad;}.cls-53{fill:#c2b6b1;}.cls-54{fill:#979694;}.cls-55{fill:#896d61;}.cls-56{fill:#201e6d;}.cls-57{fill:#eaae99;}.cls-58{fill:#f2ccc0;}.cls-59{fill:#1f114e;}.cls-60{fill:#58105d;}.cls-61{fill:#733380;}.cls-62,.cls-69{stroke:#eaae99;}.cls-62{stroke-width:4.51px;}.cls-63{fill:#ea99c2;}.cls-64{fill:#1c1a5e;}.cls-65{font-size:11.23px;}.cls-65,.cls-66,.cls-70{fill:#93278f;}.cls-66{font-size:11.71px;}.cls-67{clip-path:url(#clip-path-4);}.cls-68{fill:#999;}.cls-69{stroke-width:1.8px;}.cls-71{font-size:15.32px;font-family:Roboto-Medium, Roboto;}.cls-72{letter-spacing:-0.01em;}.cls-73{letter-spacing:-0.02em;}.cls-74{letter-spacing:-0.01em;}.cls-75{letter-spacing:-0.01em;}.cls-76{letter-spacing:-0.01em;}.cls-77{letter-spacing:-0.02em;}.cls-78{letter-spacing:-0.01em;}.cls-79{letter-spacing:-0.01em;}</style>
         <clipPath id="clip-path">
             <path class="cls-1" d="M-218.88,1500.61l-19-694c-219,13.94-542.11,14-545,14v-.31l-517.69-13.9-27.69,19.75-1.19,151,26.24,14.84-7.41,499.52c141-6.49,522.71,14.09,522.71,14.09v-.54C-781,1504.79-502.33,1493.7-218.88,1500.61Z"/>
         </clipPath>
@@ -67,28 +82,11 @@
             <path class="cls-70" d="M142.13,556.35h0a3.75,3.75,0,0,0,.94-2.5,3.48,3.48,0,0,0-3.33-3.6,3.33,3.33,0,0,0-3.05,2.17,3.33,3.33,0,0,0-3.05-2.17,3.48,3.48,0,0,0-3.33,3.6,3.75,3.75,0,0,0,.94,2.5h0c.07.08.15.14.22.21l5.22,4.94,5.26-5,.17-.16Z"/>
             <text class="cls-71" transform="translate(132.42 579.87)">
                 ¿
-                <tspan class="cls-72" x="7.45" y="0">P</tspan>
-                <tspan x="17.14" y="0">or qué los p</tspan>
-                <tspan class="cls-73" x="97.29" y="0">r</tspan>
-                <tspan x="102.41" y="0">o</tspan>
-                <tspan class="cls-74" x="111.13" y="0">f</tspan>
-                <tspan x="116.38" y="0">es no nos hablan </tspan>
-                <tspan x="0" y="18.02">sob</tspan>
-                <tspan class="cls-75" x="25.25" y="18.02">r</tspan>
-                <tspan x="30.5" y="18.02">e los hábi</tspan>
-                <tspan class="cls-76" x="96.21" y="18.02">t</tspan>
-                <tspan x="101.08" y="18.02">os de vida saludables? </tspan>
-                <tspan x="0" y="36.04">¿Qué saben nuest</tspan>
-                <tspan class="cls-77" x="122.2" y="36.04">r</tspan>
-                <tspan x="127.32" y="36.04">os docentes sob</tspan>
-                <tspan class="cls-78" x="240.17" y="36.04">r</tspan>
-                <tspan x="245.42" y="36.04">e </tspan>
+                <tspan class="cls-72" x="7.45" y="0">Por qué los profes no nos hablan </tspan>
+                <tspan x="0" y="18.02">sobre los hábitos de vida saludables? </tspan>
+                <tspan x="0" y="36.04">¿Qué saben nuestros docentes sobre</tspan>
                 <tspan x="0" y="54.07">adicciones? </tspan>
-                <tspan x="0" y="72.09">#26dejunio #luchacont</tspan>
-                <tspan class="cls-79" x="157.89" y="72.09">r</tspan>
-                <tspan x="163.05" y="72.09">alasd</tspan>
-                <tspan class="cls-77" x="200.09" y="72.09">r</tspan>
-                <tspan x="205.21" y="72.09">ogas</tspan>
+                <tspan x="0" y="72.09">#26dejunio #luchacontralasdrogas</tspan>
             </text>
         </g>
     </g>

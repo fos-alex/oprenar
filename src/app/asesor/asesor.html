@@ -24,10 +24,18 @@
     </a>
   </div>
   <div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi'">
-    <a href="#" (click)="showMensajeSusi()">
-      <img class="susi-border" src="/assets/menu-lateral/menu-lateral-08-08.svg">
-      <span class="asesor-item-name">SUSI</span>
+    <a href="#" (click)="showMensajeActual()">
+      <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
+      <span class="asesor-item-name">{{nombre}}</span>
     </a>
-    <div class="mensaje-susi text-left" *ngIf="mostrarMensajeSusi">{{mensajeSusi}}</div>
+    <div class="mensaje-asesor text-left" *ngIf="mostrarMensaje">
+      <pre>{{mensaje.texto}}</pre>
+      <div class="mensaje-btn-container">
+        <div class="mensaje-btn" *ngFor="let btn of mensaje.btn" [ngClass]="btn.style" (click)="btn.cb()">
+          {{btn.text}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<elegir-asesor *ngIf="!nombre" (asesorNameChange)="getAsesorNombre($event)"></elegir-asesor>

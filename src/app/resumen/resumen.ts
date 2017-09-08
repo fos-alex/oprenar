@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
@@ -6,20 +6,114 @@ import { AppStorage } from '../storage/app-storage';
     styleUrls: ['./resumen.scss']
 })
 
-export class Resumen {
+export class Resumen implements OnInit {
+
+
+    private state: any;
+    resultado: string;
+    private resultados = {
+        REALISTA: 'realista',
+        AUDAZ: 'audaz',
+        EMPRENDEDOR: 'emprendedor',
+        DINAMICO: 'dinámico',
+        TRANSFORMADOR: 'transformador',
+        TRANSGRESOR: 'transgresor',
+    };
 
     constructor(private router: Router) {}
 
-    go(where) {
+    ngOnInit() {
+        this.state = AppStorage.getState();
+        this.resultado = this.calcularResultado(this.state.propuestas);
+    }
+
+    go(where: string) {
         this.router.navigate([where]);
     }
 
     restart() {
-        let state = AppStorage.getState();
-        for (let key in state.propuestas) {
-            state.propuestas[key] = null;
+        for (let key in this.state.propuestas) {
+            this.state.propuestas[key] = null;
         }
-        AppStorage.setState(state);
+        AppStorage.setState(this.state);
         this.go('desk');
+    }
+
+    calcularResultado(propuestas: object): string {
+        let pesos = {
+            fpj: {
+                '1': 'D',
+                '2': 'C',
+                '3': 'O'
+            },
+            pa: {
+                '1': 'C',
+                '2': 'D',
+                '3': 'O'
+            },
+            pe: {
+                '1': 'C',
+                '2': 'O',
+                '3': 'D'
+            },
+            pld: {
+                '1': 'D',
+                '2': 'C',
+                '3': 'O'
+            },
+            ps: {
+                '1': 'D',
+                '2': 'O',
+                '3': 'C'
+            }
+        };
+        let pesosPropuestas = Object.assign({}, propuestas);
+        for (let key in pesosPropuestas) {
+            pesosPropuestas[key] = pesos[key][pesosPropuestas[key]];
+        }
+
+        let pesosContados = this.contarPesos(pesosPropuestas);
+        if (pesosContados['C'] > pesosContados['D'] && pesosContados['C'] > pesosContados['O']) {
+            // Mayoría de C
+            return this.resultados.REALISTA;
+        }
+        if (pesosContados['D'] > pesosContados['C'] && pesosContados['D'] > pesosContados['O']) {
+            // Mayoría de D
+            return this.resultados.AUDAZ;
+        }
+        if (pesosContados['O'] > pesosContados['C'] && pesosContados['O'] > pesosContados['D']) {
+            // Mayoría de O
+            return this.resultados.EMPRENDEDOR;
+        }
+        if (pesosContados['O'] < pesosContados['C'] && pesosContados['O'] < pesosContados['D']) {
+            // Minoria de O
+            return this.resultados.DINAMICO;
+        }
+        if (pesosContados['C'] < pesosContados['D'] && pesosContados['C'] < pesosContados['O']) {
+            // Minoria de C
+            return this.resultados.TRANSGRESOR;
+        }
+        if (pesosContados['D'] < pesosContados['C'] && pesosContados['D'] < pesosContados['O']) {
+            // Minoria de D
+            return this.resultados.TRANSFORMADOR;
+        }
+
+        console.error('No tiene ningún resultado. Esto no debería suceder porque los resultados no son divisibles por 3.');
+    }
+
+    contarPesos(propuestas: any): object {
+        let elementsCounter = {
+            'C': 0, 'D': 0, 'O': 0
+        };
+        for (let key in propuestas) {
+            if (!propuestas[key]) continue;
+
+            if (!elementsCounter[propuestas[key]]) {
+                elementsCounter[propuestas[key]] = 0;
+            }
+
+            elementsCounter[propuestas[key]]++;
+        }
+        return elementsCounter;
     }
 }

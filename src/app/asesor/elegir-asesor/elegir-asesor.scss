@@ -1,0 +1,122 @@
+@import '../../sass/global';
+
+$susi-border: #163D57;
+$selected-asesor-border: #2B2D6B;
+
+.asesor-container {
+  z-index: 5;
+  display: inline-block;
+  width: 25%;
+  min-width: 350px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 35px;
+  left: 0;
+  top: 0;
+  transform: translateY(50%);
+  padding: 10px 40px;
+
+  .asesor-text {
+    @extend .font-roboto;
+    text-align: left;
+    margin: 12px 0 16px 0;
+  }
+
+  .asesor-box-container {
+    padding: 10px 15px;
+    border: solid 3px $gray-darker;
+    border-radius: 35px;
+    margin-bottom: 35px;
+    position: relative;
+    .asesor-seleccionar-text {
+      @extend .asesor-text;
+      color: $gray-darker;
+      margin-bottom: 25px;
+    }
+
+    .asesores {
+      position: absolute;
+      bottom: -75px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      width: 100%;
+      a.asesor-thumb {
+        padding: 8px;
+
+        img {
+          width: 100px;
+          border: 6px solid transparent;
+          border-radius: 50%;
+        }
+
+        &.active {
+          img {
+            border-radius: 50%;
+            border: 6px solid $selected-asesor-border;
+          }
+        }
+      }
+    }
+  }
+
+  .asesor-button-container {
+    text-align: center;
+    margin-top: 80px;
+    .asesor-button {
+      width: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.susi-container {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+  width: 10%;
+  .item-asesor {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    a {
+      display: block;
+      img {
+        max-height: 90px;
+      }
+    }
+
+    .susi-border {
+      border: 6px solid $susi-border;
+      border-radius: 100%;
+      max-width: 90px;
+    }
+
+    .sidebar-susi {
+      position: relative;
+    }
+  }
+  .mensaje-susi {
+    position: absolute;
+    right: 130px;
+    width: 300px;
+    background: white;
+    padding: 25px 40px 25px 25px;
+    border: 1px solid $gray-darker;
+    border-radius: 35px;
+    bottom: 15px;
+    @extend .font-roboto;
+    text-align: left;
+  }
+
+}
+
+.resumen-background {
+  background-image: url(/assets/desk-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

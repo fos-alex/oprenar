@@ -2,12 +2,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { Asesor } from './asesor';
+import { ElegirAsesor } from './elegir-asesor/elegir-asesor';
 import NotificacionesModule from '../notificaciones';
 
 @NgModule({
     declarations: [
         // Components / Directives/ Pipes
-        Asesor
+        Asesor,
+        ElegirAsesor
     ],
     imports: [
         CommonModule,
@@ -15,7 +17,8 @@ import NotificacionesModule from '../notificaciones';
         NotificacionesModule
     ],
     exports: [
-        Asesor
+        Asesor,
+        ElegirAsesor
     ]
 })
 export default class AsesorModule {
