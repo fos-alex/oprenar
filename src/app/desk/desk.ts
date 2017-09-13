@@ -26,6 +26,7 @@ export class Desk implements OnInit {
 
     ngOnInit() {
         let state = AppStorage.getState();
+        this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
 
         if (!state || !state['viewObjetivo']) {
             // Bienvenida
@@ -36,6 +37,8 @@ export class Desk implements OnInit {
         } else if (!state['viewCuaderno']) {
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
+            this.asesor.showMensaje(`¡Ya llegó el equipo. 
+            ¿Empezamos a evaluar las propuestas?`, {hideOnClick: true, showOnce: true});
             this.highlightCarpetas();
         }
     }
@@ -56,6 +59,7 @@ export class Desk implements OnInit {
     }
 
     cuadernoClick() {
+        this.asesor.hideMensaje();
         this.router.navigate(['cuaderno']);
     }
 
@@ -71,8 +75,6 @@ export class Desk implements OnInit {
         if (this.showAsesorColumna) {
             this.overlay.hide();
             this.showAsesorColumna = false;
-            AppStorage.addToState('mensaje-1', true);
-
             let state = AppStorage.getState();
 
             if (!state['viewCuaderno']) {
@@ -83,7 +85,12 @@ export class Desk implements OnInit {
         }
     }
 
+    getAsesorNombre() {
+        this.highlightCuaderno();
+    }
+
     closeBienvenido() {
+        this.overlay.show();
         this.showAsesorColumna = true;
         return false;
     }

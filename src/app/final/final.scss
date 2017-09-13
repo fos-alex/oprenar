@@ -7,14 +7,14 @@
 }
 
 .right-text {
-  font-family: $font-family-roboto;
+  @extend .font-roboto-regular;
   position: absolute;
-  top: 20%;
-  left: 58%;
-  width: 29%;
-  font-size: 14px;
+  top: 23%;
+  left: 61%;
+  width: 20%;
+  font-size: 16px;
   line-height: 1.15;
-  max-height: 67%;
+  max-height: 66%;
   overflow-y: hidden;
 }
 
@@ -25,5 +25,27 @@ svg {
 
   .btn {
     cursor: pointer;
+  }
+
+  .resultado-semaforo {
+    text-transform: uppercase;
+    &.alto {
+      fill: #008A49;
+    }
+    &.medio {
+      fill: #FBB03B;
+    }
+    &.bajo {
+      fill: #C1272D;
+    }
+
+    &.invertir-colores {
+      &.alto {
+        fill: #C1272D;
+      }
+      &.bajo {
+        fill: #008A49;
+      }
+    }
   }
 }

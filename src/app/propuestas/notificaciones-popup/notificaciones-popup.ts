@@ -20,7 +20,7 @@ export class NotificacionesPopup implements OnInit, OnChanges {
             '1': [{title: 'Artículo: Drogas y Ciudad de "nadies"', icon: 'envelope.png'},
                 {title: 'Entrevista radial a un funcionario', icon: 'envelope.png'}],
             '2': [{title: 'Senador Guadalupe', icon: 'globo.svg'},
-                {title: 'Entrevista radial a un funcionario', icon: 'envelope.png'}],
+                {title: '¡Un ex funcionario comenta!', icon: 'envelope.png'}],
             '3': [{title: 'Fiestas Electrónicas “RAVE”', icon: 'envelope.png'},
                 {title: 'Un influyente en los videos online subió un comentario', icon: 'envelope.png'}]
         },
@@ -65,7 +65,6 @@ export class NotificacionesPopup implements OnInit, OnChanges {
     ) {}
 
     ngOnInit() {
-        this.displayMessage('1');
     }
 
     displayMessage(id: string) {

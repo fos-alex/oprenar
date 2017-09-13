@@ -7,10 +7,11 @@ $susi-border: #163D57;
   top: 0;
   right: 0;
   height: 100%;
-  max-width: 174px;
-  width: 12%;
+  max-width: 140px;
+  width: 10%;
   background: rgba(black, .55);
   padding: 10px 0;
+  z-index: 10;
 
   .item-asesor {
     margin-top: 20px;
@@ -25,6 +26,16 @@ $susi-border: #163D57;
     }
 
     .mensaje-asesor {
+      &:before {
+        background: url(/assets/asesor/triangulo-dialogo.png) no-repeat;
+        position: absolute;
+        height: 30px;
+        bottom: -30px;
+        right: 40px;
+        width: 60px;
+        content: '';
+      }
+
       pre {
         @extend .font-roboto;
         white-space: pre-line;
@@ -71,21 +82,27 @@ $susi-border: #163D57;
       max-width: 90px;
     }
 
-    .sidebar-susi {
-      position: relative;
+    &.sidebar-susi {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      .item-asesor {
+        margin-bottom: 12px;
+      }
     }
   }
 }
 
 .mensaje-asesor {
   position: absolute;
-  right: 200px;
+  right: 130px;
   width: 350px;
   background: white;
-  padding: 20px 30px 20px 20px;
+  padding: 20px;
   border: 1px solid gray;
   border-radius: 30px;
-  bottom: 20px;
-  @extend .font-roboto;
+  bottom: 100px;
   text-align: left;
+  @extend .font-roboto;
 }

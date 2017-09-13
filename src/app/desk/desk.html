@@ -10,4 +10,4 @@
   <img class="desk-object ob-lapices" src="/assets/pantallas_02-11-lapices.svg" />
 </div>
 <overlay (overlayClick)="overlayClick()"></overlay>
-<asesor [showColumna]="showAsesorColumna" [exclude]="'escritorio'"></asesor>
+<asesor (asesorNameChange)="getAsesorNombre($event)" [showColumna]="showAsesorColumna" [exclude]="'escritorio'"></asesor>

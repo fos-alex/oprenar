@@ -1,5 +1,5 @@
-<cuaderno-ong *ngIf="pagina == 'ong'"></cuaderno-ong>
+<cuaderno-ong [asesor]="asesor" *ngIf="pagina == 'ong'"></cuaderno-ong>
 <cuaderno-mision *ngIf="pagina == 'mision'"></cuaderno-mision>
 <cuaderno-matriz *ngIf="pagina == 'matriz'"></cuaderno-matriz>
-<cuaderno-oprenar *ngIf="pagina == 'oprenar'"></cuaderno-oprenar>
+<cuaderno-oprenar [asesor]="asesor" *ngIf="pagina == 'oprenar'"></cuaderno-oprenar>
 <asesor [exclude]="'cuaderno'"></asesor>

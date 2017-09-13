@@ -1,5 +1,6 @@
 $font-family-kaushan: 'KaushanScript-Regular', cursive;
 $font-family-roboto: 'Roboto', sans-serif;
+$font-family-roboto-regular: 'Roboto-Regular', sans-serif;
 $font-family-zilla-slab: 'Zilla Slab', serif;
 
 
@@ -50,6 +51,11 @@ $font-family-zilla-slab: 'Zilla Slab', serif;
 .font-roboto {
   font-family: $font-family-roboto;
 }
+
+.font-roboto-regular {
+  font-family: $font-family-roboto-regular;
+}
+
 
 .font-zilla-slab {
   font-family: $font-family-zilla-slab;

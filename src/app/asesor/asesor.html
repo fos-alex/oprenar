@@ -23,8 +23,8 @@
       <span class="asesor-item-name">Escritorio</span>
     </a>
   </div>
-  <div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi'">
-    <a href="#" (click)="showMensajeActual()">
+  <div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi' || !nombre">
+    <a href="#" (click)="toggleMensajeActual()">
       <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
       <span class="asesor-item-name">{{nombre}}</span>
     </a>
@@ -39,3 +39,4 @@
   </div>
 </div>
 <elegir-asesor *ngIf="!nombre" (asesorNameChange)="getAsesorNombre($event)"></elegir-asesor>
+<overlay (overlayClick)="overlayClick()"></overlay>

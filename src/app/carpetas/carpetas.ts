@@ -19,6 +19,7 @@ export class Carpetas implements OnInit {
     ngOnInit() {
         this.state = AppStorage.getState();
         AppStorage.addToState('viewCarpetas', true);
+        this.asesor.showMensaje('Debes seleccionar sólo una propuesta por cada área.', {overlay: true, hideOnClick: true, showOnce: true});
 
         let restanSeleccionar = 0;
         for (let key in this.state.propuestas) {
@@ -36,7 +37,7 @@ export class Carpetas implements OnInit {
     propuestasSeleccionadas() {
         this.asesor.showMensaje(`Todavía hay tiempo para completar tus elecciones. 
         
-        Estás seguro que has seleccionado las propuestas que deseas integrar a tu plan?`,
+        ¿Estás seguro que has seleccionado las propuestas que deseas integrar a tu plan?`,
             {btn: [
                 {text: 'NO', style: this.asesor.btn.RED, cb: () => { this.asesor.hideMensaje() }},
                 {text: 'SI', style: this.asesor.btn.GREEN, cb: () => { this.router.navigate(['resumen']) }}

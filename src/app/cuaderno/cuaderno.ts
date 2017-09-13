@@ -1,6 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
+
+import { Asesor } from '../asesor/asesor';
+import { Overlay } from '../overlay/overlay';
 
 @Component({
     styleUrls: ['./cuaderno.scss'],
@@ -8,14 +11,18 @@ import { AppStorage } from '../storage/app-storage';
 })
 export class Cuaderno implements OnInit {
 
+    @ViewChild(Asesor)
+    protected asesor: Asesor;
+
+    @ViewChild(Overlay)
+    protected overlay: Overlay;
+
     pagina: string;
     defaultPage: string = "ong";
     svgStyle: any;
 
     constructor(protected route: ActivatedRoute,
                 protected router: Router) {
-        AppStorage.addToState('viewCuaderno', true);
-
     }
 
 
@@ -45,6 +52,8 @@ export class Cuaderno implements OnInit {
 
         this.route.paramMap
             .subscribe((params: ParamMap) => this.initPage(params.get('pagina') || this.defaultPage));
+
+        AppStorage.addToState('viewCuaderno', true);
     }
 
 

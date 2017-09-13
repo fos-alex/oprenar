@@ -1,9 +1,9 @@
 <div class="propuestas">
   <img class="propuestas-object ob-carpeta-fondo" src="/assets/propuestas/pantallas_05a-proyectos-pa_carpeta.svg" />
   <img class="propuestas-object ob-foto" src="/assets/propuestas/propuesta-{{proyecto}}/notificacion.svg" />
-  <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[1]" (click)="propuestaClick(1, $event)" src="/assets/propuestas/propuesta-vacia/1-bg.svg" />
-  <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[2]" (click)="propuestaClick(2, $event)" src="/assets/propuestas/propuesta-vacia/2-bg.svg" />
-  <img class="propuestas-object clickable-svg" *ngIf="proyecto" [ngClass]="propuestas[3]" (click)="propuestaClick(3, $event)" src="/assets/propuestas/propuesta-vacia/3-bg.svg" />
+  <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[1]" src="/assets/propuestas/propuesta-vacia/1-bg.svg" />
+  <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[2]" src="/assets/propuestas/propuesta-vacia/2-bg.svg" />
+  <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[3]" src="/assets/propuestas/propuesta-vacia/3-bg.svg" />
   <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [url]="propuestaUrl">
     <img class="flecha-cambiar-propuesta flecha-izq" *ngIf="propuesta > '1'" (click)="anteriorPropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta.svg">
     <img class="flecha-cambiar-propuesta flecha-der" *ngIf="propuesta < '3'" (click)="siguientePropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta-der.svg">

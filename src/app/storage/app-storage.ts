@@ -13,7 +13,8 @@ export class AppStorage {
             pe: null,
             pld: null,
             ps: null
-        }
+        },
+        mensajes: {}
     };
 
     // Called at the bottom of the file
@@ -26,6 +27,10 @@ export class AppStorage {
         let state = this.getState();
         state[key] = item;
         return this.setState(state);
+    }
+
+    static getStateItem(key) {
+        return this.getState()[key];
     }
 
     static getState() {

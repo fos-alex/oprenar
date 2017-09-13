@@ -1,5 +1,8 @@
-import { Component, AfterContentInit, Input, Renderer2 } from '@angular/core';
+import { Component, AfterContentInit, Input, Output, EventEmitter, Renderer2, ViewChild } from '@angular/core';
+import { Md5 } from 'ts-md5/dist/md5';
+
 import { AppStorage } from '../storage/app-storage';
+import { Overlay } from '../overlay/overlay';
 
 @Component({
     selector: 'asesor',
@@ -8,12 +11,16 @@ import { AppStorage } from '../storage/app-storage';
 export class Asesor implements AfterContentInit {
     @Input() exclude: string;
     @Input() showColumna: boolean;
+    @Output() asesorNameChange = new EventEmitter<string>();
+
+    @ViewChild(Overlay)
+    private overlay: Overlay;
 
     itemsStyle: any;
     showNotificaciones: boolean = false;
     mensaje: any = {};
     mostrarMensaje: boolean = false;
-    listenerClick;
+    listenerClick: any;
     protected nombre: string;
     protected nombres: object = {
         EL: 'dany',
@@ -22,6 +29,9 @@ export class Asesor implements AfterContentInit {
     btn: any = {
         'RED': 'btn-red',
         'GREEN': 'btn-green'
+    };
+    mensajes: any = {
+        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización."
     };
 
     constructor(private renderer: Renderer2) {
@@ -32,8 +42,8 @@ export class Asesor implements AfterContentInit {
 
         this.nombre = state.asesor;
 
-        if (!state['mensaje-1']) {
-            this.showMensaje("El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización.");
+        if (!state.asesor) {
+            return;
         } else if (!state['viewCarpetas']) {
             this.showEscritorio();
         }
@@ -58,10 +68,32 @@ export class Asesor implements AfterContentInit {
         return false;
     }
 
+    toggleMensajeActual() {
+        if (this.mostrarMensaje) {
+            this.hideMensaje();
+        } else {
+            this.showMensajeActual();
+        }
+        return false;
+    }
+
     showMensaje(mensaje: string, options?: any) {
         this.mostrarMensaje = true;
         if (mensaje) {
             this.mensaje.texto = mensaje;
+        }
+
+        if (!options) return;
+
+        if (options.showOnce) {
+            let mensajesVistos = AppStorage.getStateItem('mensajes');
+            let id = Md5.hashStr(this.mensaje.texto).toString();
+            if (mensajesVistos[id]) {
+                return this.mostrarMensaje = false;
+            }
+
+            mensajesVistos[id] = true;
+            AppStorage.addToState('mensajes', mensajesVistos);
         }
 
         if (options.btn) {
@@ -69,25 +101,40 @@ export class Asesor implements AfterContentInit {
             this.mensaje.btn = options.btn;
         }
 
-        if (options.hideOnClick) {
-            this.listenerClick = this.renderer.listen('document', 'click', (evt) => {
-                this.hideMensaje();
-            });
+        if (options.overlay) {
+            this.overlay.show();
+
         }
-        return false;
+
+        if (options.hideOnClick) {
+            setTimeout(() => {
+                this.listenerClick = this.renderer.listen('document', 'click', (evt) => {
+                    this.hideMensaje();
+                });
+            }, 0);
+        }
     }
 
     hideMensaje(): void {
         if (!this.mostrarMensaje) return;
 
         this.mostrarMensaje = false;
-        AppStorage.addToState('mensaje-1', true);
-        this.listenerClick();
+
+        if (this.listenerClick) // hideOnClick
+            this.listenerClick();
+
+        this.overlay.hide();
     }
 
     getAsesorNombre(nombre) {
         this.nombre = nombre;
         AppStorage.addToState('asesor', this.nombre);
+        this.showMensaje(this.mensajes['MENSAJE-1']);
+        this.asesorNameChange.emit(this.nombre);
+    }
+
+    overlayClick() {
+
     }
 
 }
