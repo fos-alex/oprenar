@@ -34,15 +34,15 @@ export class Desk implements OnInit {
             return this.go('/bienvenido');
         } else if (!state['eula']) {
             // Eula not accepted
+            this.overlay.show();
             return;
         }
-
-        this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
 
         if (!state['asesor']) {
             // Redirect to desk to choose asesor
             this.showAsesorColumna = true;
         } else if (!state['viewCuaderno']) {
+            this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
             this.asesor.showMensaje(`¡Ya llegó el equipo. 
@@ -100,6 +100,7 @@ export class Desk implements OnInit {
 
     eulaAceptado() {
         this.eula = true;
+        this.overlay.hide();
         //Re-run init function
         this.ngOnInit();
     }
