@@ -25,6 +25,12 @@ $susi-border: #163D57;
       }
     }
 
+    &.item-asesor-small {
+      img {
+        max-width: 85%;
+      }
+    }
+
     .mensaje-asesor {
       &:before {
         background: url(/assets/asesor/triangulo-dialogo.png) no-repeat;

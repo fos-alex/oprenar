@@ -41,7 +41,7 @@ export class NotificacionesPopup implements OnInit, OnChanges {
                 {title: 'Un diario digital masivo publica una estadística', icon: 'envelope.png'}]
         },
         pld: {
-            '1': [{title: 'Radiografía de la unidad de información Financiera', icon: 'envelope.png'},
+            '1': [{title: 'Radiografía de la Unidad de Información Financiera', icon: 'envelope.png'},
                 {title: 'Cómo funcionan los ROS', icon: 'envelope.png'}],
             '2': [{title: 'Avances en lucha contra el narcotráfico', icon: 'envelope.png'},
                 {title: 'Investigación sobre narcotráfico y drogas', icon: 'envelope.png'}],

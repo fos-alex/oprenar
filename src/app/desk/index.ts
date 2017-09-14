@@ -6,6 +6,7 @@ import { Desk } from './desk';
 import AsesorModule from '../asesor';
 import BienvenidoModule from '../bienvenido';
 import OverlayModule from '../overlay';
+import EulaModule from '../eula';
 
 export const ROUTER_CONFIG = [
     { path: '', component: Desk, pathMatch: 'full' },
@@ -22,6 +23,7 @@ export const ROUTER_CONFIG = [
         CommonModule,
         AsesorModule,
         OverlayModule,
+        EulaModule,
         BienvenidoModule
     ]
 })

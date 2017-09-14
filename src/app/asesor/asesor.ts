@@ -23,8 +23,8 @@ export class Asesor implements AfterContentInit {
     listenerClick: any;
     protected nombre: string;
     protected nombres: object = {
-        EL: 'dany',
-        ELLA: 'susi'
+        EL: 'Dany',
+        ELLA: 'Susi'
     };
     btn: any = {
         'RED': 'btn-red',
@@ -43,6 +43,7 @@ export class Asesor implements AfterContentInit {
         this.nombre = state.asesor;
 
         if (!state.asesor) {
+            this.overlay.show();
             return;
         } else if (!state['viewCarpetas']) {
             this.showEscritorio();
@@ -131,6 +132,7 @@ export class Asesor implements AfterContentInit {
         AppStorage.addToState('asesor', this.nombre);
         this.showMensaje(this.mensajes['MENSAJE-1']);
         this.asesorNameChange.emit(this.nombre);
+        this.overlay.hide();
     }
 
     overlayClick() {

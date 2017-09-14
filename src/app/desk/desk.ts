@@ -14,6 +14,7 @@ export class Desk implements OnInit {
     showAsesorColumna: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
+    eula: boolean = false;
 
     @ViewChild(Asesor)
     private asesor: Asesor;
@@ -26,9 +27,15 @@ export class Desk implements OnInit {
 
     ngOnInit() {
         let state = AppStorage.getState();
+        if (!state || !state['eula']) {
+            // Eula not accepted
+            return;
+        }
+        this.eula = true;
+
         this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
 
-        if (!state || !state['viewObjetivo']) {
+        if (!state['viewObjetivo']) {
             // Bienvenida
             this.go('/bienvenido');
         } else if (!state['asesor']) {
@@ -87,6 +94,12 @@ export class Desk implements OnInit {
 
     getAsesorNombre() {
         this.highlightCuaderno();
+    }
+
+    eulaAceptado() {
+        this.eula = true;
+        //Re-run init function
+        this.ngOnInit();
     }
 
     closeBienvenido() {

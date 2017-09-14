@@ -10,6 +10,7 @@ import BienvenidoModule from './bienvenido';
 import FinalModule from './final';
 import ResumenModule from './resumen';
 import OverlayModule from './overlay';
+import EulaModule from './eula';
 
 export const ROUTER_CONFIG = [
   { path: '', loadChildren: () => System.import('./desk') },
@@ -31,6 +32,7 @@ export const ROUTER_CONFIG = [
     FinalModule,
     ResumenModule,
     OverlayModule,
+    EulaModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
 })
