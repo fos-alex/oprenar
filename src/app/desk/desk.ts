@@ -14,7 +14,7 @@ export class Desk implements OnInit {
     showAsesorColumna: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
-    eula: boolean = false;
+    eula: boolean = true;
 
     @ViewChild(Asesor)
     private asesor: Asesor;
@@ -26,19 +26,20 @@ export class Desk implements OnInit {
     }
 
     ngOnInit() {
-        let state = AppStorage.getState();
-        if (!state || !state['eula']) {
+        let state = AppStorage.getState() || {};
+        this.eula = state['eula'];
+
+        if (!state || !state['viewObjetivo']) {
+            // Bienvenida
+            return this.go('/bienvenido');
+        } else if (!state['eula']) {
             // Eula not accepted
             return;
         }
-        this.eula = true;
 
         this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
 
-        if (!state['viewObjetivo']) {
-            // Bienvenida
-            this.go('/bienvenido');
-        } else if (!state['asesor']) {
+        if (!state['asesor']) {
             // Redirect to desk to choose asesor
             this.showAsesorColumna = true;
         } else if (!state['viewCuaderno']) {
@@ -48,6 +49,7 @@ export class Desk implements OnInit {
             ¿Empezamos a evaluar las propuestas?`, {hideOnClick: true, showOnce: true});
             this.highlightCarpetas();
         }
+
     }
 
     go(where) {

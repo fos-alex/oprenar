@@ -10,5 +10,5 @@
   <img class="desk-object ob-lapices" src="/assets/pantallas_02-11-lapices.svg" />
 </div>
 <overlay (overlayClick)="overlayClick()"></overlay>
-<asesor (asesorNameChange)="getAsesorNombre($event)" [showColumna]="showAsesorColumna" [exclude]="'escritorio'" *ngIf="eula"></asesor>
+<asesor (asesorNameChange)="getAsesorNombre($event)" [showColumna]="showAsesorColumna" [exclude]="'escritorio'" [ngClass]="{'hide': !eula}"></asesor>
 <eula (eulaAceptado)="eulaAceptado()" *ngIf="!eula"></eula>
