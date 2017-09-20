@@ -9,3 +9,11 @@ p {
 span {
   @extend .font-roboto;
 }
+
+$xs-max-width: 575px;
+$sm-max-width: 767px;
+$md-max-width: 991px;
+$lg-max-width: 1199px;
+
+$susi-border: #163D57;
+$selected-asesor-border: #2B2D6B;

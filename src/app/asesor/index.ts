@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { Asesor } from './asesor';
 import { ElegirAsesor } from './elegir-asesor/elegir-asesor';
+import { AudioService } from './audio/audio';
+import { AudioDirective } from './audio/audio-directive';
 
 import NotificacionesModule from '../notificaciones';
 import OverlayModule from '../overlay';
@@ -12,7 +14,9 @@ import OverlayModule from '../overlay';
     declarations: [
         // Components / Directives/ Pipes
         Asesor,
-        ElegirAsesor
+        ElegirAsesor,
+        AudioService,
+        AudioDirective
     ],
     imports: [
         CommonModule,
@@ -22,7 +26,9 @@ import OverlayModule from '../overlay';
     ],
     exports: [
         Asesor,
-        ElegirAsesor
+        ElegirAsesor,
+        AudioService,
+        AudioDirective
     ]
 })
 export default class AsesorModule {

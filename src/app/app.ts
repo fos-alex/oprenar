@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { AppStore } from './app-store';
+import { AudioService } from './asesor/audio/audio';
 
 @Component({
   styleUrls: ['./sass/global.scss'],
@@ -12,7 +13,8 @@ import { AppStore } from './app-store';
 export class App {
   bodyStyle: any;
 
-  constructor(public appStore: AppStore) {}
+  constructor(public appStore: AppStore,
+              private audio: AudioService) {}
 
   onOrientationChange() {
 /*      if (typeof screen.orientation.angle !== 'undefined') {

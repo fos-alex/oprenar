@@ -1,23 +1,23 @@
 <div class="columna-asesor">
   <div class="item-asesor">
-    <a (click)="toggleNotificaciones()" [ngStyle]="itemsStyle" *ngIf="exclude !== 'celular'">
+    <a (click)="toggleNotificaciones()" [ngStyle]="itemsStyle" *ngIf="exclude !== 'celular'" [ngClass]="{'destacado': destacado === 'celular'}">
       <img src="/assets/menu-lateral/menu-lateral-03.svg">
       <span class="asesor-item-name">Celular</span>
     </a>
   </div>
-  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'carpetas'">
+  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'carpetas'" [ngClass]="{'destacado': destacado == 'carpetas'}">
     <a [routerLink]="'/carpetas'">
       <img src="/assets/menu-lateral/menu-lateral-06.svg">
       <span class="asesor-item-name">Carpetas</span>
     </a>
   </div>
-  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'cuaderno'">
+  <div class="item-asesor" [ngStyle]="itemsStyle" *ngIf="exclude !== 'cuaderno'" [ngClass]="{'destacado': destacado == 'cuaderno'}">
     <a [routerLink]="'/cuaderno'">
       <img src="/assets/menu-lateral/menu-lateral-05.svg">
       <span class="asesor-item-name">Cuaderno</span>
     </a>
   </div>
-  <div class="item-asesor item-asesor-small" *ngIf="exclude !== 'escritorio'">
+  <div class="item-asesor item-asesor-small" *ngIf="exclude !== 'escritorio'" [ngClass]="{'destacado': destacado =='escritorio'}">
     <a [routerLink]="'/'">
       <img src="/assets/menu-lateral/menu-lateral-07.svg">
       <span class="asesor-item-name">Escritorio</span>
@@ -29,7 +29,7 @@
       <span class="asesor-item-name">{{nombres.EL}}</span>
     </a>
     <div class="mensaje-asesor text-left" *ngIf="mostrarMensaje">
-      <pre>{{mensaje.texto}}</pre>
+      <pre [innerHTML]="mensaje.texto"></pre>
       <div class="mensaje-btn-container">
         <div class="mensaje-btn" *ngFor="let btn of mensaje.btn" [ngClass]="btn.style" (click)="btn.cb()">
           {{btn.text}}

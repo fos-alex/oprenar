@@ -1,12 +1,14 @@
-import { Component, AfterContentInit, Input, Output, EventEmitter, Renderer2, ViewChild } from '@angular/core';
+import { Component, AfterContentInit, HostListener, Input, Output, EventEmitter, Renderer2, ViewChild } from '@angular/core';
 import { Md5 } from 'ts-md5/dist/md5';
 
 import { AppStorage } from '../storage/app-storage';
 import { Overlay } from '../overlay/overlay';
+import { AudioService } from './audio/audio';
 
 @Component({
     selector: 'asesor',
-    styleUrls: ['./asesor.scss']
+    styleUrls: ['./asesor.scss'],
+    providers: [ AudioService ]
 })
 export class Asesor implements AfterContentInit {
     @Input() exclude: string;
@@ -21,7 +23,8 @@ export class Asesor implements AfterContentInit {
     mensaje: any = {};
     mostrarMensaje: boolean = false;
     listenerClick: any;
-    protected nombre: string;
+    destacado: string;
+    nombre: string;
     protected nombres: object = {
         EL: 'Dany',
         ELLA: 'Susi'
@@ -31,16 +34,18 @@ export class Asesor implements AfterContentInit {
         'GREEN': 'btn-green'
     };
     mensajes: any = {
-        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización."
+        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización. <b>Haga click en el cuaderno para continuar</b>"
     };
 
-    constructor(private renderer: Renderer2) {
+    constructor(private renderer: Renderer2,
+                private audio: AudioService) {
     }
 
     ngAfterContentInit() {
         let state = AppStorage.getState();
 
         this.nombre = state.asesor;
+        this.audio.initAsesor(this.nombre);
 
         if (!state.asesor) {
             this.overlay.show();
@@ -90,11 +95,17 @@ export class Asesor implements AfterContentInit {
             let mensajesVistos = AppStorage.getStateItem('mensajes');
             let id = Md5.hashStr(this.mensaje.texto).toString();
             if (mensajesVistos[id]) {
-                return this.mostrarMensaje = false;
+                this.mostrarMensaje = false;
+                return false;
             }
 
             mensajesVistos[id] = true;
             AppStorage.addToState('mensajes', mensajesVistos);
+        }
+
+        this.audio.playSonido('popup1', {extension: 'mp3'});
+        if (options.audio) {
+            this.audio.playAsesor(options.audio);
         }
 
         if (options.btn) {
@@ -104,7 +115,6 @@ export class Asesor implements AfterContentInit {
 
         if (options.overlay) {
             this.overlay.show();
-
         }
 
         if (options.hideOnClick) {
@@ -114,6 +124,8 @@ export class Asesor implements AfterContentInit {
                 });
             }, 0);
         }
+
+        return true;
     }
 
     hideMensaje(): void {
@@ -130,9 +142,18 @@ export class Asesor implements AfterContentInit {
     getAsesorNombre(nombre) {
         this.nombre = nombre;
         AppStorage.addToState('asesor', this.nombre);
-        this.showMensaje(this.mensajes['MENSAJE-1']);
         this.asesorNameChange.emit(this.nombre);
         this.overlay.hide();
+        this.audio.initAsesor(this.nombre);
+        this.showMensaje(this.mensajes['MENSAJE-1'], {audio: 'el-tiempo-vuela'});
+    }
+
+    destacarItem(item) {
+        this.destacado = item;
+    }
+
+    quitarDestacado() {
+        this.destacado = null;
     }
 
     overlayClick() {

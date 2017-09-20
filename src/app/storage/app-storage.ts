@@ -19,6 +19,10 @@ export class AppStorage {
 
     // Called at the bottom of the file
     static init() {
+
+        /* @TODO: Dev purposes, restart state*/
+        //return AppStorage.setState(AppStorage.defaultState);
+
         if (!AppStorage.getState())
             return AppStorage.setState(AppStorage.defaultState);
     }

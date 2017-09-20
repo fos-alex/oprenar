@@ -46,7 +46,7 @@ export class Desk implements OnInit {
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
             this.asesor.showMensaje(`¡Ya llegó el equipo. 
-            ¿Empezamos a evaluar las propuestas?`, {hideOnClick: true, showOnce: true});
+            ¿Empezamos a evaluar las propuestas?`, {hideOnClick: true, showOnce: true, audio: 'llego-el-equipo'});
             this.highlightCarpetas();
         }
 

@@ -1,8 +1,5 @@
 @import '../../sass/global';
 
-$susi-border: #163D57;
-$selected-asesor-border: #2B2D6B;
-
 .asesor-container {
   z-index: 5;
   display: inline-block;
@@ -15,13 +12,22 @@ $selected-asesor-border: #2B2D6B;
   border-radius: 35px;
   left: 0;
   top: 0;
-  transform: translateY(50%);
+  transform: translateY(35%);
+  @media (max-width: $sm-max-width) {
+    transform: translateY(3%);
+    width: 75%;
+  }
   padding: 10px 40px;
 
   .asesor-text {
     @extend .font-roboto;
     text-align: left;
     margin: 12px 0 16px 0;
+    @media (max-width: $sm-max-width) {
+      margin: 3px 0 5px 0;
+      font-size: 18px;
+      text-align: center;
+    }
   }
 
   .asesor-box-container {
@@ -29,22 +35,35 @@ $selected-asesor-border: #2B2D6B;
     border: solid 3px $gray-darker;
     border-radius: 35px;
     margin-bottom: 35px;
+    @media (max-width: $sm-max-width) {
+      margin-bottom: 0;
+      padding-bottom: 45px;
+    }
     position: relative;
     .asesor-seleccionar-text {
       @extend .asesor-text;
       color: $gray-darker;
       margin-bottom: 25px;
+      @media (max-width: $sm-max-width) {
+        margin-bottom: 10px;
+      }
     }
 
     .asesores {
       position: absolute;
-      bottom: -75px;
+      bottom: -85px;
+      @media (max-width: $sm-max-width) {
+        bottom: -70px;
+      }
       text-align: center;
       left: 0;
       right: 0;
       width: 100%;
       a.asesor-thumb {
         padding: 8px;
+        @media (max-width: $sm-max-width) {
+          float: left;
+        }
 
         img {
           width: 100px;
@@ -64,9 +83,18 @@ $selected-asesor-border: #2B2D6B;
 
   .asesor-button-container {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 90px;
+    @media (max-width: $sm-max-width) {
+      margin-top: 0;
+      float: right;
+      position: relative;
+      bottom: 20px;
+    }
     .asesor-button {
       width: 50%;
+      @media (max-width: $sm-max-width) {
+        width: 65%;
+      }
       cursor: pointer;
     }
   }

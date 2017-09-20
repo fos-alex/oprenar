@@ -10,6 +10,6 @@ export class CuadernoOng extends Cuaderno implements AfterViewInit {
     @Input() asesor: Asesor;
 
     ngAfterViewInit() {
-        this.asesor.showMensaje('Recomiendo repasar todo aquello con lo que cuenta nuestra O.N.G.', {overlay: true, hideOnClick: true, showOnce: true});
+        this.asesor.showMensaje('Recomiendo repasar todo aquello con lo que cuenta nuestra O.N.G.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'repasar-todo-aquello'});
     }
 }

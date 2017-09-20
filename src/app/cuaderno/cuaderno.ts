@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
 import { Asesor } from '../asesor/asesor';
+import { AudioService } from '../asesor/audio/audio';
 import { Overlay } from '../overlay/overlay';
 
 @Component({
@@ -22,11 +23,13 @@ export class Cuaderno implements OnInit {
     svgStyle: any;
 
     constructor(protected route: ActivatedRoute,
-                protected router: Router) {
+                protected router: Router,
+                private audio: AudioService) {
     }
 
 
     switchPage(pagina) {
+        this.audio.playSonido('papel1', {noClick: true});
         this.router.navigate(['/cuaderno', pagina]);
     }
 

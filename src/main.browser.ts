@@ -8,7 +8,10 @@ import { removeNgStyles, createNewHosts, createInputTransfer, bootloader } from 
 
 import { App } from './app/app';
 import { AppStore } from './app/app-store';
+import AsesorModule from './app/asesor/';
 import appModule from './app';
+
+import { AudioService } from './app/asesor/audio/audio';
 
 @NgModule({
   bootstrap: [
@@ -22,6 +25,7 @@ import appModule from './app';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AsesorModule,
     RouterModule.forRoot([], {
       useHash: true
     }),
@@ -30,7 +34,8 @@ import appModule from './app';
     // vendors
   ],
   providers: [
-    AppStore
+    AppStore,
+    AudioService
   ]
 })
 class MainModule {
