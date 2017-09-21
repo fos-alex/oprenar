@@ -1,3 +1,5 @@
+@import '../sass/global';
+
 .btn {
   cursor: pointer;
 }
@@ -6,4 +8,9 @@
   background-image: url(/assets/desk-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  svg {
+    @media (max-width: $sm-max-width) {
+      transform: scale(1.4);
+    }
+  }
 }

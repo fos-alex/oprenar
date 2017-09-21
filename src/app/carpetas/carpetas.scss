@@ -1,3 +1,5 @@
+@import '../sass/global';
+
 .carpetas {
   background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
   background-size: cover;
@@ -8,6 +10,9 @@
   .carpeta-object {
     position: absolute;
     max-width: 22.5%;
+    @media (max-width: $sm-max-width) {
+      transform: scale(1.15);
+    }
   }
 
   div.carpeta-object {

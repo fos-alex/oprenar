@@ -38,5 +38,18 @@
     </div>
   </div>
 </div>
+<div class="standalone-susi" *ngIf="(exclude !== 'susi' || !nombre) && mostrarMensaje">
+  <a href="#" (click)="toggleMensajeActual()">
+    <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
+  </a>
+  <div class="mensaje-asesor text-left">
+    <pre [innerHTML]="mensaje.texto"></pre>
+    <div class="mensaje-btn-container">
+      <div class="mensaje-btn" *ngFor="let btn of mensaje.btn" [ngClass]="btn.style" (click)="btn.cb()">
+        {{btn.text}}
+      </div>
+    </div>
+  </div>
+</div>
 <elegir-asesor *ngIf="!nombre" (asesorNameChange)="getAsesorNombre($event)"></elegir-asesor>
 <overlay (overlayClick)="overlayClick()"></overlay>

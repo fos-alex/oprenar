@@ -1,81 +1,147 @@
+@import '../sass/global';
+
 cuaderno {
+  background: url('/assets/desk-bg.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  svg {
     background: url('/assets/desk-bg.png') no-repeat;
     background-size: cover;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-
-    svg {
-      background: url('/assets/desk-bg.png') no-repeat;
-      background-size: cover;
-      .switch-texto {
-        cursor: pointer;
-      }
-    }
-
-    .cuaderno-object {
-      position: absolute;
+    .switch-texto {
       cursor: pointer;
     }
 
-    .ob-carpeta {
-      bottom: 0;
-      left: 0;
-      max-width: 12%;
+    @media (max-width: $sm-max-width) {
+      transform: scale(1.1);
     }
 
-    .ob-lapicera {
-      top: 14%;
-      left: -4%;
-      max-width: 12%;
-    }
-
-    .ob-clips {
-      bottom: 2%;
-      right: 0;
-      max-width: 20%;
-    }
-
-    .cuaderno-container {
-      position: absolute;
-      bottom: -3%;
-      right: 18%;
-      width: 67%;
-
-      .ob-cuaderno {
-        position: relative;
-      }
-
-      .title-container {
-        position: absolute;
-        top: 135px;
-        left: 10%;
-
-        .cuaderno-subtitle {
-          margin-top: 30px;
+    @media (max-width: $sm-max-width) {
+      // Adjustments for mobile
+      // Cuaderno ONG
+      #texto-d_x5F_03a {
+        transform: translateX(-25px);
+        text {
+          font-size: 31px;
         }
       }
 
-      .text-right-container {
-        position: absolute;
-        top: 135px;
-        right: 23%;
-        width: 200px;
-        text-align: left;
+      // Cuaderno Mision
+      #_x30_3b_x5F_mision,
+      #_x30_3b_x5F_accion,
+      #_x30_3b_x5F_recursos {
+        text {
+          font-size: 26px;
+          &.st49 {
+            font-size: 32px;
+          }
+        }
       }
 
-      .text-right-bottom-container {
-        position: absolute;
-        bottom: 250px;
-        right: 23%;
-        width: 200px;
-        text-align: left;
+      //Cuaderno Dimensiones
+      #postit_x5F_03c {
+        .st50 {
+          font-size: 17px;
+        }
+      }
+      .switch-texto {
+        .st52 {
+          font-size: 23px;
+        }
+      }
+      #texto-d_x5F_03c-01 {
+        .st52 {
+          font-size: 25px;
+        }
+        .st56 {
+          font-size: 22px;
+        }
+      }
+      #texto-d_x5F_03c-02,
+      #texto-d_x5F_03c-03,
+      #texto-d_x5F_03c-04 {
+        .st49 {
+          font-size: 25px;
+        }
+        .st56 {
+          font-size: 22px;
+        }
+      }
+
+      // Cuaderno oprenar
+      #texto-i_x5F_03d, #texto-d_x5F_03d {
+        .st51, .st49 {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  .cuaderno-object {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .ob-carpeta {
+    bottom: 0;
+    left: 0;
+    max-width: 12%;
+  }
+
+  .ob-lapicera {
+    top: 14%;
+    left: -4%;
+    max-width: 12%;
+  }
+
+  .ob-clips {
+    bottom: 2%;
+    right: 0;
+    max-width: 20%;
+  }
+
+  .cuaderno-container {
+    position: absolute;
+    bottom: -3%;
+    right: 18%;
+    width: 67%;
+
+    .ob-cuaderno {
+      position: relative;
+    }
+
+    .title-container {
+      position: absolute;
+      top: 135px;
+      left: 10%;
+
+      .cuaderno-subtitle {
+        margin-top: 30px;
       }
     }
 
-    .cuaderno-title {
-      text-transform: uppercase;
-      font-size: 20px;
+    .text-right-container {
+      position: absolute;
+      top: 135px;
+      right: 23%;
+      width: 200px;
+      text-align: left;
     }
+
+    .text-right-bottom-container {
+      position: absolute;
+      bottom: 250px;
+      right: 23%;
+      width: 200px;
+      text-align: left;
+    }
+  }
+
+  .cuaderno-title {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
 
 }

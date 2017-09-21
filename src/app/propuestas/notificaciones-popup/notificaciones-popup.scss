@@ -27,6 +27,9 @@
     background-color: white;
     box-sizing: border-box;
     padding: 10px 15px;
+    @media (max-width: $sm-max-width) {
+      padding: 5px 10px;
+    }
     height: 100%;
 
     .email-selection {
@@ -40,7 +43,7 @@
         box-sizing: border-box;
         padding: 0 5px;
         font-size: 14px;
-        @media screen and (max-width: 10233px) {
+        @media screen and (max-width: 1023px) {
           font-size: 12px;
         }
         cursor: pointer;
@@ -73,6 +76,10 @@
       padding-bottom: 15px;
       border-bottom: 2px solid $gray-dark;
       margin-top: 8px;
+      @media (max-width: $sm-max-width) {
+        margin-top: 3px;
+        padding-bottom: 3px;
+      }
 
       .email-from-pic-container {
         float: left;
@@ -102,6 +109,9 @@
           @extend .font-roboto;
           font-weight: bold;
           padding: 5px 8px;
+          @media (max-width: $sm-max-width) {
+            padding-left: 0;
+          }
           font-size: 11px;
           margin-left: 20px;
           position: relative;
@@ -112,6 +122,9 @@
             left: -21px;
             background-size: contain;
             width: 20px;
+            @media (max-width: $sm-max-width) {
+              width: 15px;
+            }
             top: -1px;
             background-repeat: no-repeat;
             height: 25px;
@@ -128,6 +141,9 @@
         font-size: 15px;
         @media screen and (max-width: 1023px) {
           font-size: 14px;
+        }
+        @media screen and (max-width: $sm-max-width) {
+          margin-top: 0;
         }
       }
 
@@ -152,6 +168,9 @@
     @media screen and (max-width: 1023px) {
       font-size: 14px;
     }
+    @media screen and (max-width: $sm-max-width) {
+      margin-top: 0;
+    }
   }
 
   p.quote {
@@ -162,12 +181,19 @@
     }
     line-height: 1.5;
     font-style: italic;
+    @media screen and (max-width: $sm-max-width) {
+      padding: 1% 10%;
+      margin: 0;
+    }
   }
 
   p.bottom {
     position: absolute;
     bottom: 5px;
     font-size: 13px;
+    @media screen and (max-width: $sm-max-width) {
+      display: none;
+    }
   }
 }
 
@@ -175,6 +201,9 @@
   @extend .notificacion-quote;
   p.quote {
     padding: 2%;
+    @media screen and (max-width: $sm-max-width) {
+      padding: 1%;
+    }
   }
 }
 

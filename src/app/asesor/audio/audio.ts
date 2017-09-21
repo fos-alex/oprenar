@@ -13,7 +13,7 @@ export class AudioService {
     repoMusica: string;
     repoSonido: string;
     asesorNombre: string;
-    muted: boolean;
+    public static muted: boolean;
 
     skipNextClick: boolean = false;
 
@@ -21,7 +21,7 @@ export class AudioService {
         let state = AppStorage.getState();
 
         this.asesorNombre = state.asesor;
-        this.muted = state.muted;
+        AudioService.muted = state.muted;
         this.repoMusica = this.repo + 'musica/';
         this.repoSonido = this.repo + 'sonido/';
     }
@@ -59,12 +59,12 @@ export class AudioService {
     }
 
     mute(muted: boolean) {
-        this.muted = muted;
-        AppStorage.addToState('muted', this.muted);
+        AudioService.muted = muted;
+        AppStorage.addToState('muted', AudioService.muted);
     }
 
     play(sound: string, options?: any) {
-        if (this.muted) return;
+        if (AudioService.muted) return;
 
         let defaultOptions = {
             extension: 'mp3'
