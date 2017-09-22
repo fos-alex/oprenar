@@ -55,7 +55,7 @@ export class Carpetas implements OnInit {
             {btn: [
                 {text: 'NO', style: this.asesor.btn.RED, cb: () => { this.asesor.hideMensaje() }},
                 {text: 'SI', style: this.asesor.btn.GREEN, cb: () => { this.router.navigate(['resumen']) }}
-            ], overlay: true});
+            ], overlay: true, audio: 'felicitaciones'});
     }
 
     carpetasClick(id) {

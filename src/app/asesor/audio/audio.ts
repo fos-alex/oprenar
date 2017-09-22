@@ -14,6 +14,7 @@ export class AudioService {
     repoSonido: string;
     asesorNombre: string;
     public static muted: boolean;
+    public static musica: any;
 
     skipNextClick: boolean = false;
 
@@ -40,7 +41,11 @@ export class AudioService {
     }
 
     playMusica(sound: string) {
-        this.play(this.repoMusica + sound)
+        AudioService.musica = this.play(this.repoMusica + sound);
+    }
+
+    stopMusica() {
+        AudioService.musica.stop();
     }
 
     playSonido(sound: string, options: any = {}) {
@@ -75,5 +80,7 @@ export class AudioService {
         audio.src = sound + '.' + options.extension;
         audio.load();
         audio.play();
+
+        return audio;
     }
 }

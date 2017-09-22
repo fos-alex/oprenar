@@ -1,4 +1,6 @@
-<div class="columna-asesor">
+<img class="hamburguer" [ngClass]="{'visible': !asesorVisibleXS}" (click)="hamburguerClick()" src="/assets/asesor/hamburguer.png">
+
+<div class="columna-asesor" [ngClass]="{'visible': asesorVisibleXS}">
   <div class="item-asesor">
     <a (click)="toggleNotificaciones()" [ngStyle]="itemsStyle" *ngIf="exclude !== 'celular'" [ngClass]="{'destacado': destacado === 'celular'}">
       <img src="/assets/menu-lateral/menu-lateral-03.svg">

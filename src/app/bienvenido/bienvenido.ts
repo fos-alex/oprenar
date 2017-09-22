@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppStorage } from '../storage/app-storage';
@@ -8,7 +8,7 @@ import { AudioService } from '../asesor/audio/audio';
     styleUrls: ['./bienvenido.scss'],
     providers: [ AudioService ]
 })
-export class Bienvenido {
+export class Bienvenido implements OnInit {
 
     @Input() callback: Function;
     sonido: boolean = true;
@@ -22,8 +22,18 @@ export class Bienvenido {
         this.router.navigate([where]);
     }
 
+    ngOnInit() {
+        this.audio.playMusica('jazz1');
+        this.sonido = !AudioService.muted;
+    }
+
     toggleSonido() {
         this.sonido = !this.sonido;
         this.audio.mute(!this.sonido);
+        if(this.sonido) {
+            this.audio.playMusica('jazz1');
+        } else {
+            this.audio.stopMusica();
+        }
     }
 }

@@ -3,7 +3,7 @@ import { AppStore } from './app-store';
 import { AudioService } from './asesor/audio/audio';
 
 @Component({
-  styleUrls: ['./sass/global.scss'],
+  styleUrls: ['./sass/normalize.scss', './sass/global.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
     '(window:orientationchange)': 'onOrientationChange()'

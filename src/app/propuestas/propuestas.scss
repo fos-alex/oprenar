@@ -1,3 +1,5 @@
+@import '../sass/global';
+
 .propuestas {
   background: url('/assets/cuaderno/pantallas_03c-cuaderno_fondo.png') no-repeat;
   background-size: cover;
@@ -67,9 +69,22 @@
 
       &.flecha-izq {
         left: 12%;
+
+        @media (max-width: $sm-max-width) {
+          bottom: 2.5%;
+          right: -8%;
+          left: auto;
+          top: auto;
+        }
       }
       &.flecha-der {
         right: -4%;
+
+        @media (max-width: $sm-max-width) {
+          bottom: 2%;
+          right: -33%;
+          top: auto;
+        }
       }
     }
   }
@@ -80,6 +95,12 @@
     width: 33%;
     top: 5%;
     left: 7%;
+
+    @media (max-width: $sm-max-width) {
+      transform: scale(1.9);
+      top: 42%;
+      left: 13%;
+    }
 
     svg {
       width: 100%;
@@ -104,6 +125,12 @@
       margin-right: auto;
       right: 0;
       left: 0;
+
+      @media (max-width: $sm-max-width) {
+        top: 3%;
+        right: 20%;
+        left: auto;
+      }
     }
   }
 

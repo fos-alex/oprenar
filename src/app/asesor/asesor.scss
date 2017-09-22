@@ -13,7 +13,11 @@ $susi-border: #163D57;
   padding: 10px 0;
   z-index: 10;
   @media (max-width: $sm-max-width) {
-    display: none;
+    right: -100%;
+    transition: right .3s ease-in-out;
+    &.visible {
+      right: 0;
+    }
   }
 
   .item-asesor {
@@ -144,4 +148,22 @@ $susi-border: #163D57;
     display: inline-block;
   }
 
+}
+
+.hamburguer {
+  display: none;
+  @media (max-width: $sm-max-width) {
+    display: inline-block;
+  }
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  width: 26px;
+  height: 26px;
+  z-index: 12;
+  transition: transform .3s ease-in-out;
+  transform: rotate(90deg);
+  &.visible {
+    transform: rotate(0);
+  }
 }

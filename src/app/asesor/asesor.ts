@@ -25,6 +25,7 @@ export class Asesor implements AfterContentInit {
     listenerClick: any;
     destacado: string;
     nombre: string;
+    asesorVisibleXS: boolean;
     protected nombres: object = {
         EL: 'Dany',
         ELLA: 'Susi'
@@ -158,6 +159,10 @@ export class Asesor implements AfterContentInit {
 
     overlayClick() {
 
+    }
+
+    hamburguerClick() {
+        this.asesorVisibleXS = !this.asesorVisibleXS;
     }
 
 }
