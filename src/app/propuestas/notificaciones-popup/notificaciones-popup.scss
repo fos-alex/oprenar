@@ -59,9 +59,6 @@
           width: 20%;
           float: left;
           margin-top: 6px;
-          @media (max-width: $sm-max-width) {
-            display: none;
-          }
         }
         p {
           @extend .font-roboto;
@@ -118,6 +115,9 @@
 
       .email-tag-container {
         margin-top: 3px;
+        @media (max-width: $sm-max-width) {
+          display: none;
+        }
         .email-tag {
           @extend .font-roboto;
           font-weight: bold;
