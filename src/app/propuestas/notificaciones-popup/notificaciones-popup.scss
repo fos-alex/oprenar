@@ -59,6 +59,9 @@
           width: 20%;
           float: left;
           margin-top: 6px;
+          @media (max-width: $sm-max-width) {
+            display: none;
+          }
         }
         p {
           @extend .font-roboto;
