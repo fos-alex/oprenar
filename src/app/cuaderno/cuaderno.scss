@@ -4,7 +4,6 @@ cuaderno {
   background: url('/assets/desk-bg.png') no-repeat;
   background-size: cover;
   height: 100vh;
-  position: relative;
   overflow: hidden;
 
   svg {
@@ -79,11 +78,6 @@ cuaderno {
     }
   }
 
-  .cuaderno-object {
-    position: absolute;
-    cursor: pointer;
-  }
-
   .ob-carpeta {
     bottom: 0;
     left: 0;
@@ -100,48 +94,6 @@ cuaderno {
     bottom: 2%;
     right: 0;
     max-width: 20%;
-  }
-
-  .cuaderno-container {
-    position: absolute;
-    bottom: -3%;
-    right: 18%;
-    width: 67%;
-
-    .ob-cuaderno {
-      position: relative;
-    }
-
-    .title-container {
-      position: absolute;
-      top: 135px;
-      left: 10%;
-
-      .cuaderno-subtitle {
-        margin-top: 30px;
-      }
-    }
-
-    .text-right-container {
-      position: absolute;
-      top: 135px;
-      right: 23%;
-      width: 200px;
-      text-align: left;
-    }
-
-    .text-right-bottom-container {
-      position: absolute;
-      bottom: 250px;
-      right: 23%;
-      width: 200px;
-      text-align: left;
-    }
-  }
-
-  .cuaderno-title {
-    text-transform: uppercase;
-    font-size: 20px;
   }
 
 }

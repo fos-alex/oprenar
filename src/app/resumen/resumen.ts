@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
+import { Compartir } from './compartir/compartir';
+
 @Component({
     styleUrls: ['./resumen.scss']
 })
@@ -10,6 +12,7 @@ export class Resumen implements OnInit {
 
 
     private state: any;
+    private compartir: boolean;
     resultado: string;
     private resultados = {
         REALISTA: 'realista',
@@ -25,18 +28,15 @@ export class Resumen implements OnInit {
     ngOnInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
+        this.resultado = this.resultados.AUDAZ;
     }
 
     go(where: string) {
         this.router.navigate([where]);
     }
 
-    restart() {
-        for (let key in this.state.propuestas) {
-            this.state.propuestas[key] = null;
-        }
-        AppStorage.setState(this.state);
-        this.go('desk');
+    showCompartir() {
+        this.compartir = true;
     }
 
     calcularResultado(propuestas: object): string {

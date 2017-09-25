@@ -49,9 +49,9 @@ export class NotificacionesPopup implements OnInit, OnChanges {
                 {title: 'Un diario digital masivo publica una estadística', icon: 'envelope.png'}]
         },
         fpj: {
-            '1': [{title: 'Publicaciones', icon: 'envelope.png'},
+            '1': [{title: 'Informe', icon: 'envelope.png'},
                 {title: 'Un funcionario comenta', icon: 'envelope.png'}],
-            '2': [{title: 'Consumo en adolescentes', icon: 'envelope.png'},
+            '2': [{title: 'Decodificación de la acción judicial', icon: 'envelope.png'},
                 {title: 'Expertos internacionales en narcotráfico', icon: 'envelope.png'}],
             '3': [{title: 'Un estudio de CEPAL aparece en la web', icon: 'envelope.png'},
                 {title: 'Diputada Enrique', icon: 'globo.svg'}]

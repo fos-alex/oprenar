@@ -45,7 +45,7 @@ export class AudioService {
     }
 
     stopMusica() {
-        AudioService.musica.stop();
+        AudioService.musica.pause();
     }
 
     playSonido(sound: string, options: any = {}) {

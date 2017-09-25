@@ -76,10 +76,6 @@ export class Desk implements OnInit {
         this.router.navigate(['carpetas']);
     }
 
-    iphoneClick() {
-        this.router.navigate(['notificaciones']);
-    }
-
     overlayClick() {
         if (this.showAsesorColumna) {
             this.overlay.hide();

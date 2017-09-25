@@ -60,9 +60,9 @@ const RESULTADOS = {
         '1': {
             texto: `<strong>Objetivo</strong>: Trabajo con adolescentes  en ámbitos comunitarios<br>
 <strong>Estrategia</strong>: Talleres sobre prevención del consumo de drogas<br>
-<strong>Ámbito de incidencia</strong>: Parroquias, organizaciones barriales<br>
+<strong>Ámbito de incidencia</strong>: Organizaciones religiosas, organizaciones barriales<br>
 <br>
-La organización tiene experiencia en esta clase de talleres con adolescentes. Si el esfuerzo se concentra en lograr que los gobiernos locales declaren esta iniciativa de interés municipal, se puede lograr una llegada interesante a las asociaciones barriales. Además, lograr la adhesión de las parroquias es clave.<br>
+La organización tiene experiencia en esta clase de talleres con adolescentes. Si el esfuerzo se concentra en lograr que los gobiernos locales declaren esta iniciativa de interés municipal, se puede lograr una llegada interesante a las asociaciones barriales. Además, lograr la adhesión de las organizaciones religiosas es clave.<br>
 Los costos financieros son altos, sobre todo en términos de transporte por la gran cantidad de recursos humanos voluntarios y profesionales. Sin embargo, no hay necesidad de recaudar fondos especiales ni de efectuar investigaciones adicionales al know how con el que ya cuenta la organización y sus expertos.<br>
 Si bien el proyecto puede desarrollarse de forma sustentable, los problemas pueden provenir de las dificultades para lograr una difusión acorde a la convocatoria esperada y un cronograma viable con las distintas organizaciones barriales.<br>
 El abordaje de los contextos es importante cuando nos proponemos trabajar la problemática de las adicciones en los adolescentes. Fundamentalmente, los talleres deben hacer hincapié en valores como la alegría, la amistad, el encuentro y los deportes.  La notoriedad pública de la iniciativa en los barrios está asegurada.`,
@@ -99,53 +99,6 @@ Los obstáculos para establecer un cronograma pueden relacionarse a la poca expe
             impacto: 'alto',
             presupuesto: 'medio',
             factibilidad: 'medio',
-            oportunidad: 'alto'
-        }
-    },
-    'ps': {
-        '1': {
-            texto: `<strong>Objetivo</strong>: Contacto con legisladores<br>
-<strong>Estrategia</strong>: Mesa de debate sobre legislación vigente de narcomenudeo<br>
-<strong>Ámbito de incidencia</strong>: Comisión Unicameral de Seguridad Interior y Narcotráfico<br> 
-<br>
-La organización tiene experiencia en esta clase de jornadas. Por otra parte, la temática del narcomenudeo se presta a interesantes debates, por lo que se podrá captar el interés de los legisladores con facilidad.<br><br>
-Los costos financieros son bajos, pues se puede aprovechar el auditorio de la organización como sede de la mesa de debate. O incluso, si la Comisión Unicameral adhiere, el ámbito más apropiado para realizar el encuentro sería el edificio anexo al Congreso, pudiendo requerirse la cooperación de OPRENAR.<br>
-Los voluntarios de la organización pueden trabajar invitando a los legisladores a participar como oradores.<br>
-La atareada agenda de diputados y senadores puede ser un escollo para disponer una fecha para el evento.<br>
-La presentación del tema debe ser atractiva. Se deben generar incentivos poderosos para la participación e idear mecanismos para favorecer la participación. Se puede fundamentar la importancia de la asistencia al evento en la implicancia que tiene actualmente este flagelo en la seguridad.<br>
-La notoriedad pública posible es limitada, aunque los esfuerzos de esta iniciativa por instalar el debate pueden devenir en futuros proyectos legislativos que trabajen en función de combatir el narcomenudeo. Además, como es un tema complejo y que requiere múltiples visiones, su abordaje debe exceder el ámbito legislativo en el futuro.`,
-            impacto: 'medio',
-            presupuesto: 'medio',
-            factibilidad: 'medio',
-            oportunidad: 'alto'
-        },
-        '2': {
-            texto: `<strong>Objetivo</strong>: Trabajo con asesores legislativos<br>
-<strong>Estrategia</strong>: Encuesta de percepciones sobre la inteligencia criminal<br>
-<strong>Ámbito de incidencia</strong>: Instituto de Capacitación Parlamentaria de la Cámara de Diputados<br>
-<br>
-La organización no tiene experiencia en la realización de encuestas. Sin embargo, cuenta con profesionales que pueden conducir el proceso.<br>
-Puede haber necesidad de cooperar con otras organizaciones de modo de adquirir competencias en el procesamiento de los datos. También resulta altamente necesaria la investigación con expertos sobre las tareas de inteligencia criminal.<br>
-El proyecto puede ser sustentable porque el cuestionario puede distribuirse en línea, sin existir costos de impresión.<br>
-La notoriedad pública de la iniciativa es limitada, por la tónica específicamente parlamentaria que asume. Sin embargo, el debate sobre el rol de la inteligencia criminal puede interesar a públicos amplios y esta iniciativa tiene el potencial de importarse a otros ámbitos.`,
-            impacto: 'bajo',
-            presupuesto: 'medio',
-            factibilidad: 'medio',
-            oportunidad: 'alto'
-        },
-        '3': {
-            texto: `<strong>Objetivo</strong>: Concientización en barrios <br>
-<strong>Estrategia</strong>: Asesoramiento de consejos barriales de participación ciudadana<br>
-<strong>Ámbito de incidencia</strong>: Gobiernos locales<br>
-<br>
-<br>
-La organización tiene experiencia en esta clase de jornadas. Sin embargo, puede ser dificultoso abarcar un número significativo de municipios interesados en gestionar consejos ciudadanos.<br>
-Los costos financieros son altos, sobre todo en concepto de transporte de los asesores. Sin embargo, no hay necesidad de recaudar fondos especiales ni de reclutar personal más allá de los cuerpos profesionales con los que ya cuenta la organización.<br>
-Va en la línea de fomentar el involucramiento de todas las instancias del Estado y de la sociedad en su conjunto. Este es un gran tema, dado que trabaja en dirección a evitar que todo lo relacionado con la lucha contra las drogas recaiga en el Estado, en particular en lo referente a la prevención.<br>
-Si bien el proyecto puede pensarse de una forma sustentable, los problemas pueden provenir de las dificultades para armar un cronograma viable con los distintos municipios. La notoriedad pública de la iniciativa está asegurada por la oportunidad que representa para los gobiernos locales poder acercarse a los vecinos. A su vez, el debate sobre la participación ciudadana puede obtener cierta repercusión en los medios.`,
-            impacto: 'medio',
-            presupuesto: 'alto',
-            factibilidad: 'bajo',
             oportunidad: 'alto'
         }
     },
@@ -195,6 +148,53 @@ Más allá del posicionamiento del tema del lavado de activos en las encuestas s
             impacto: 'bajo',
             presupuesto: 'alto',
             factibilidad: 'medio',
+            oportunidad: 'alto'
+        }
+    },
+    'ps': {
+        '1': {
+            texto: `<strong>Objetivo</strong>: Contacto con legisladores<br>
+<strong>Estrategia</strong>: Mesa de debate sobre legislación vigente de narcomenudeo<br>
+<strong>Ámbito de incidencia</strong>: Comisión Unicameral de Seguridad Interior y Narcotráfico<br> 
+<br>
+La organización tiene experiencia en esta clase de jornadas. Por otra parte, la temática del narcomenudeo se presta a interesantes debates, por lo que se podrá captar el interés de los legisladores con facilidad.<br><br>
+Los costos financieros son bajos, pues se puede aprovechar el auditorio de la organización como sede de la mesa de debate. O incluso, si la Comisión Unicameral adhiere, el ámbito más apropiado para realizar el encuentro sería el edificio anexo al Congreso, pudiendo requerirse la cooperación de OPRENAR.<br>
+Los voluntarios de la organización pueden trabajar invitando a los legisladores a participar como oradores.<br>
+La atareada agenda de diputados y senadores puede ser un escollo para disponer una fecha para el evento.<br>
+La presentación del tema debe ser atractiva. Se deben generar incentivos poderosos para la participación e idear mecanismos para favorecer la participación. Se puede fundamentar la importancia de la asistencia al evento en la implicancia que tiene actualmente este flagelo en la seguridad.<br>
+La notoriedad pública posible es limitada, aunque los esfuerzos de esta iniciativa por instalar el debate pueden devenir en futuros proyectos legislativos que trabajen en función de combatir el narcomenudeo. Además, como es un tema complejo y que requiere múltiples visiones, su abordaje debe exceder el ámbito legislativo en el futuro.`,
+            impacto: 'medio',
+            presupuesto: 'medio',
+            factibilidad: 'medio',
+            oportunidad: 'alto'
+        },
+        '2': {
+            texto: `<strong>Objetivo</strong>: Trabajo con asesores legislativos<br>
+<strong>Estrategia</strong>: Encuesta de percepciones sobre la inteligencia criminal<br>
+<strong>Ámbito de incidencia</strong>: Instituto de Capacitación Parlamentaria de la Cámara de Diputados<br>
+<br>
+La organización no tiene experiencia en la realización de encuestas. Sin embargo, cuenta con profesionales que pueden conducir el proceso.<br>
+Puede haber necesidad de cooperar con otras organizaciones de modo de adquirir competencias en el procesamiento de los datos. También resulta altamente necesaria la investigación con expertos sobre las tareas de inteligencia criminal.<br>
+El proyecto puede ser sustentable porque el cuestionario puede distribuirse en línea, sin existir costos de impresión.<br>
+La notoriedad pública de la iniciativa es limitada, por la tónica específicamente parlamentaria que asume. Sin embargo, el debate sobre el rol de la inteligencia criminal puede interesar a públicos amplios y esta iniciativa tiene el potencial de importarse a otros ámbitos.`,
+            impacto: 'bajo',
+            presupuesto: 'medio',
+            factibilidad: 'medio',
+            oportunidad: 'alto'
+        },
+        '3': {
+            texto: `<strong>Objetivo</strong>: Concientización en barrios <br>
+<strong>Estrategia</strong>: Asesoramiento de consejos barriales de participación ciudadana<br>
+<strong>Ámbito de incidencia</strong>: Gobiernos locales<br>
+<br>
+<br>
+La organización tiene experiencia en esta clase de jornadas. Sin embargo, puede ser dificultoso abarcar un número significativo de municipios interesados en gestionar consejos ciudadanos.<br>
+Los costos financieros son altos, sobre todo en concepto de transporte de los asesores. Sin embargo, no hay necesidad de recaudar fondos especiales ni de reclutar personal más allá de los cuerpos profesionales con los que ya cuenta la organización.<br>
+Va en la línea de fomentar el involucramiento de todas las instancias del Estado y de la sociedad en su conjunto. Este es un gran tema, dado que trabaja en dirección a evitar que todo lo relacionado con la lucha contra las drogas recaiga en el Estado, en particular en lo referente a la prevención.<br>
+Si bien el proyecto puede pensarse de una forma sustentable, los problemas pueden provenir de las dificultades para armar un cronograma viable con los distintos municipios. La notoriedad pública de la iniciativa está asegurada por la oportunidad que representa para los gobiernos locales poder acercarse a los vecinos. A su vez, el debate sobre la participación ciudadana puede obtener cierta repercusión en los medios.`,
+            impacto: 'medio',
+            presupuesto: 'alto',
+            factibilidad: 'bajo',
             oportunidad: 'alto'
         }
     },

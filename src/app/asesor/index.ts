@@ -7,7 +7,6 @@ import { ElegirAsesor } from './elegir-asesor/elegir-asesor';
 import { AudioService } from './audio/audio';
 import { AudioDirective } from './audio/audio-directive';
 
-import NotificacionesModule from '../notificaciones';
 import OverlayModule from '../overlay';
 
 @NgModule({
@@ -21,7 +20,6 @@ import OverlayModule from '../overlay';
     imports: [
         CommonModule,
         RouterModule,
-        NotificacionesModule,
         OverlayModule,
     ],
     exports: [

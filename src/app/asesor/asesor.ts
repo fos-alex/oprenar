@@ -35,7 +35,7 @@ export class Asesor implements AfterContentInit {
         'GREEN': 'btn-green'
     };
     mensajes: any = {
-        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, le recomiendo repasar todo aquello con lo que cuenta nuestra organización. <b>Haga click en el cuaderno para continuar</b>"
+        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, te recomiendo repasar todo aquello con lo que cuenta nuestra organización. <b>Haz click en el cuaderno para continuar</b>"
     };
 
     constructor(private renderer: Renderer2,

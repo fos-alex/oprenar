@@ -30,7 +30,7 @@
       <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
       <span class="asesor-item-name">{{nombres.EL}}</span>
     </a>
-    <div class="mensaje-asesor text-left" *ngIf="mostrarMensaje">
+    <div class="mensaje-asesor text-left mensaje-asesor-desktop" *ngIf="mostrarMensaje">
       <pre [innerHTML]="mensaje.texto"></pre>
       <div class="mensaje-btn-container">
         <div class="mensaje-btn" *ngFor="let btn of mensaje.btn" [ngClass]="btn.style" (click)="btn.cb()">

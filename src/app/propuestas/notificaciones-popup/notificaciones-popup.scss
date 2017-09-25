@@ -247,6 +247,9 @@
   img, object {
     max-width: 80%;
     bottom: 14%;
+    @media (max-width: $sm-max-width) {
+      bottom: 0%;
+    }
     height: auto;
   }
   &.shorter-svg {

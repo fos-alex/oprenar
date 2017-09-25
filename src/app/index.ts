@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import PropuestasModule from './propuestas';
 import CuadernoModule from './cuaderno';
 import CarpetasModule from './carpetas';
-import NotificacionesModule from './notificaciones';
 import AsesorModule from './asesor';
 import BienvenidoModule from './bienvenido';
 import FinalModule from './final';
@@ -23,7 +22,6 @@ export const ROUTER_CONFIG = [
     // Components / Directives/ Pipes
   ],
   imports: [
-    NotificacionesModule,
     AsesorModule,
     BienvenidoModule,
     PropuestasModule,

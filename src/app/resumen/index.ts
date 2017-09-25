@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { Resumen } from './resumen';
+import { Compartir } from './compartir/compartir';
 
 export const ROUTER_CONFIG = [
     { path: 'resumen', component: Resumen, pathMatch: 'full' }
@@ -11,11 +12,15 @@ export const ROUTER_CONFIG = [
 @NgModule({
     declarations: [
         // Components / Directives/ Pipes
-        Resumen
+        Resumen,
+        Compartir
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),
         CommonModule
+    ],
+    exports: [
+        Compartir
     ]
 })
 export default class ResumenModule {

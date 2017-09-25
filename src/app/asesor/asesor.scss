@@ -29,7 +29,7 @@ $susi-border: #163D57;
       display: block;
       img {
         max-height: 90px;
-        max-width: 90%;
+        max-width: 85%;
       }
     }
 
@@ -45,7 +45,12 @@ $susi-border: #163D57;
 
     .mensaje-asesor {
       @extend .mensaje-asesor;
-
+      &.mensaje-asesor-desktop {
+        @media (max-width: $sm-max-width) {
+          display: none;
+        }
+      }
+      
       .mensaje-btn-container {
         text-align: center;
         .mensaje-btn {
@@ -93,6 +98,9 @@ $susi-border: #163D57;
       bottom: 20px;
       left: 0;
       right: 0;
+      @media (max-width: $sm-max-width) {
+        bottom: 0px;
+      }
       .item-asesor {
         margin-bottom: 12px;
       }
@@ -142,9 +150,9 @@ $susi-border: #163D57;
   display: none;
   position: absolute;
   bottom: 1%;
-  right: 1%;
+  right: 0;
   width: 15%;
-  z-index: 2;
+  z-index: 12;
   @media (max-width: $sm-max-width) {
     display: inline-block;
   }
