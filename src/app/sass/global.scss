@@ -1,6 +1,15 @@
 @import '_fonts';
 @import '_colors';
 
+$xs-max-width: 575px;
+$sm-max-width: 767px;
+$md-max-width: 991px;
+$lg-max-width: 1199px;
+
+$susi-border: #163D57;
+$selected-asesor-border: #2B2D6B;
+$desk-color: #5C432F;
+
 p {
   @extend .font-kaushan;
 }
@@ -9,10 +18,16 @@ span {
   @extend .font-roboto;
 }
 
-$xs-max-width: 575px;
-$sm-max-width: 767px;
-$md-max-width: 991px;
-$lg-max-width: 1199px;
+main {
+  @media (max-width: $sm-max-width) {
+    overflow: hidden;
+  }
 
-$susi-border: #163D57;
-$selected-asesor-border: #2B2D6B;
+  .portrait-popup {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    background-color: white;
+  }
+}

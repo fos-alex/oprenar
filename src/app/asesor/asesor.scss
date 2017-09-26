@@ -45,33 +45,6 @@ $susi-border: #163D57;
 
     .mensaje-asesor {
       @extend .mensaje-asesor;
-      &.mensaje-asesor-desktop {
-        @media (max-width: $sm-max-width) {
-          display: none;
-        }
-      }
-      
-      .mensaje-btn-container {
-        text-align: center;
-        .mensaje-btn {
-          display: inline-block;
-          padding: 7px;
-          min-height: 20px;
-          line-height: 20px;
-          min-width: 20px;
-          margin: 6px 15px;
-          border-radius: 50%;
-          color: white;
-          cursor: pointer;
-          &.btn-green {
-            background-color: #7AAD38;
-          }
-          &.btn-red {
-            background-color: #8C2B2B;
-          }
-
-        }
-      }
     }
 
     .asesor-item-name {
@@ -81,6 +54,10 @@ $susi-border: #163D57;
       opacity: 0;
       transition: opacity .5s ease;
       text-transform: uppercase;
+
+      @media (max-width: $sm-max-width) {
+        font-size: 11px;
+      }
     }
 
     &:hover {
@@ -143,6 +120,34 @@ $susi-border: #163D57;
     right: 40px;
     width: 60px;
     content: '';
+  }
+
+  &.mensaje-asesor-desktop {
+    @media (max-width: $sm-max-width) {
+      display: none;
+    }
+  }
+
+  .mensaje-btn-container {
+    text-align: center;
+    .mensaje-btn {
+      display: inline-block;
+      padding: 7px;
+      min-height: 20px;
+      line-height: 20px;
+      min-width: 20px;
+      margin: 6px 15px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      &.btn-green {
+        background-color: #7AAD38;
+      }
+      &.btn-red {
+        background-color: #8C2B2B;
+      }
+
+    }
   }
 }
 

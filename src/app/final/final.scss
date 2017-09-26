@@ -1,4 +1,4 @@
-@import '../sass/fonts';
+@import '../sass/global';
 
 .resumen-background {
   background-image: url(/assets/desk-bg.png);
@@ -16,9 +16,20 @@
   line-height: 1.15;
   max-height: 66%;
   overflow-y: hidden;
+  @media (max-width: $sm-max-width) {
+    top: 10%;
+    left: 59%;
+    width: 30%;
+    max-height: 72%;
+    overflow-y: scroll;
+  }
 }
 
 svg {
+  @media (max-width: $sm-max-width) {
+    transform: scale(1.13);
+  }
+
   #btn_x5F_comenzar_x5F_14 {
     cursor: pointer;
   }

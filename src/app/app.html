@@ -1,4 +1,7 @@
 <main [ngStyle]="bodyStyle" audioDirective>
-  <router-outlet></router-outlet>
+  <router-outlet *ngIf="!portrait"></router-outlet>
+  <div class="portrait-popup" *ngIf="portrait">
+    Para poder utilizar el simulador, coloque el dispositivo de forma horizontal.
+  </div>
 
 </main>

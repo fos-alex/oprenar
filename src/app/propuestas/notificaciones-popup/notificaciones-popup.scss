@@ -12,7 +12,7 @@
     height: 93%;
     top: 7%;
     right: 1%;
-    width: 45%;
+    width: 48%;
   }
 
   &:before {
@@ -151,6 +151,10 @@
 
     .email-body {
       height: 70%;
+      @media screen and (max-width: $sm-max-width) {
+        overflow-y: scroll;
+        height: 64%;
+      }
 
       p {
         @extend .font-roboto;
@@ -182,7 +186,7 @@
   p.top-email-text {
     font-size: 15px;
     @media screen and (max-width: 1023px) {
-      font-size: 14px;
+      font-size: 13px;
     }
     @media screen and (max-width: $sm-max-width) {
       margin-top: 0;
@@ -200,6 +204,7 @@
     @media screen and (max-width: $sm-max-width) {
       padding: 1% 10%;
       margin: 0;
+      font-size: 13px;
     }
   }
 
@@ -239,6 +244,16 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    @media screen and (max-width: $sm-max-width) {
+      top: 24%;
+    }
+  }
+  &.svg-bottom {
+    img, object {
+      @media screen and (max-width: $sm-max-width) {
+        top: initial;
+      }
+    }
   }
 }
 
@@ -275,8 +290,15 @@
 
 .email-body.svg-trimmed-body {
   @extend .email-body.svg-body;
+  position: relative;
   img, object {
-    height: 70%;
+    height: 100%;
+    @media (max-width: $sm-max-width) {
+      height: 130%;
+      transform: scale(1.1);
+      position: relative;
+      top: 0;
+    }
   }
 }
 

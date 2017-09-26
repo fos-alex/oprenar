@@ -1,4 +1,4 @@
-$desk-color: #5C432F;
+@import '../sass/global';
 
 .desk {
   background-image: url(/assets/desk-bg.png);
@@ -25,54 +25,90 @@ $desk-color: #5C432F;
     top: -25%;
     left: -24%;
     max-width: 72%;
+    @media (max-width: $sm-max-width) {
+      max-width: 76%;
+    }
   }
 
   .ob-cuaderno {
     top: 33px;
     right: 7%;
     max-width: 20%;
+    @media (max-width: $sm-max-width) {
+      max-width: 25%;
+      right: 3%;
+    }
   }
 
   .ob-lapicera {
     top: 135px;
     right: 26%;
     max-width: 67px;
+    @media (max-width: $sm-max-width) {
+      max-width: 60px;
+      bottom: 4px;
+      top: auto;
+      right: 22%;
+    }
   }
 
   .ob-telefono {
     bottom: 8%;
     left: 5%;
     max-width: 160px;
+    @media (max-width: $sm-max-width) {
+      max-width: 130px;
+      left: 0;
+    }
   }
 
   .ob-cafe {
     bottom: 6%;
     right: 6%;
-    max-width: 17%;
+    max-width: 18%;
+    @media (max-width: $sm-max-width) {
+      bottom: 0;
+      right: 2%;
+    }
   }
 
   .ob-carpetas {
     bottom: 13px;
     right: 31%;
     max-width: 45%;
+    @media (max-width: $sm-max-width) {
+      max-width: 55%;
+      right: 27%;
+      bottom: -8px;
+    }
   }
 
   .ob-clips {
-    top: 40px;
+    top: 1%;
     left: 32%;
     max-width: 100px;
+    @media (max-width: $sm-max-width) {
+      left: 28%;
+      top: -10%;
+    }
   }
 
   .ob-anotador {
     top: 20px;
     right: 30%;
     max-width: 26%;
+    @media (max-width: $sm-max-width) {
+      top: 0;
+    }
   }
 
   .ob-lapices {
     top: 230px;
     left: 4%;
     max-width: 175px;
+    @media (max-width: $sm-max-width) {
+      display: none;
+    }
   }
 }
 
