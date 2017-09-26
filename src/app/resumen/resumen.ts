@@ -28,7 +28,6 @@ export class Resumen implements OnInit {
     ngOnInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
-        this.resultado = this.resultados.AUDAZ;
     }
 
     go(where: string) {
