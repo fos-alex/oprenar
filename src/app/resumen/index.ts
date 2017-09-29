@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { Resumen } from './resumen';
+import AsesorModule from '../asesor';
 import { Compartir } from './compartir/compartir';
 
 export const ROUTER_CONFIG = [
@@ -17,7 +18,8 @@ export const ROUTER_CONFIG = [
     ],
     imports: [
         RouterModule.forChild(ROUTER_CONFIG),
-        CommonModule
+        CommonModule,
+        AsesorModule
     ],
     exports: [
         Compartir

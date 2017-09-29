@@ -15,8 +15,14 @@ $susi-border: #163D57;
   @media (max-width: $sm-max-width) {
     right: -100%;
     transition: right .3s ease-in-out;
-    &.visible {
+    &.visible-xs {
       right: 0;
+    }
+  }
+  @media (min-width: $sm-max-width + 1) {
+    display: none;
+    &.visible {
+      display: block;
     }
   }
 
@@ -152,15 +158,24 @@ $susi-border: #163D57;
 }
 
 .standalone-susi {
-  display: none;
+  display: inline-block;
   position: absolute;
-  bottom: 1%;
-  right: 0;
-  width: 15%;
+  bottom: 3%;
+  right: 3%;
+  width: 10%;
   z-index: 12;
   @media (max-width: $sm-max-width) {
-    display: inline-block;
+    width: 15%;
+    bottom: 1%;
+    right: 0;
   }
+
+  @media (min-width: $sm-max-width + 1) {
+    &.columna-visible {
+      display: none;
+    }
+  }
+
 
 }
 
@@ -177,7 +192,7 @@ $susi-border: #163D57;
   z-index: 12;
   transition: transform .3s ease-in-out;
   transform: rotate(90deg);
-  &.visible {
+  &.visible-xs {
     transform: rotate(0);
   }
 }

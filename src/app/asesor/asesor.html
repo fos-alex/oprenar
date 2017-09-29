@@ -1,6 +1,6 @@
-<img class="hamburguer" [ngClass]="{'visible': !asesorVisibleXS}" (click)="hamburguerClick()" src="/assets/asesor/hamburguer.png">
+<img class="hamburguer" [ngClass]="{'visible-xs': !columnaVisibleXS}" (click)="hamburguerClick()" src="/assets/asesor/hamburguer.png">
 
-<div class="columna-asesor" [ngClass]="{'visible': asesorVisibleXS}">
+<div class="columna-asesor" [ngClass]="{'visible': asesorVisible, 'visible-xs': columnaVisibleXS}">
 <!--  <div class="item-asesor">
     <a (click)="toggleNotificaciones()" [ngStyle]="itemsStyle" *ngIf="exclude !== 'celular'" [ngClass]="{'destacado': destacado === 'celular'}">
       <img src="/assets/menu-lateral/menu-lateral-03.svg">
@@ -40,8 +40,8 @@
     </div>
   </div>
 </div>
-<div class="standalone-susi" *ngIf="(exclude !== 'susi' || !nombre) && mostrarMensaje">
-  <a href="#" (click)="toggleMensajeActual()">
+<div class="standalone-susi" [ngClass]="{'columna-visible': asesorVisible}" *ngIf="(exclude !== 'susi' || !nombre) && mostrarMensaje">
+  <a href="#" onclick="return false;">
     <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
   </a>
   <div class="mensaje-asesor text-left">

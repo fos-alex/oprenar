@@ -11,7 +11,7 @@ import { Asesor } from '../asesor/asesor';
 
 export class Desk implements OnInit {
 
-    showAsesorColumna: boolean;
+    showElegirAsesor: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
     eula: boolean = true;
@@ -40,7 +40,7 @@ export class Desk implements OnInit {
 
         if (!state['asesor']) {
             // Redirect to desk to choose asesor
-            this.showAsesorColumna = true;
+            this.showElegirAsesor = true;
         } else if (!state['viewCuaderno']) {
             this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
             this.highlightCuaderno();
@@ -77,9 +77,9 @@ export class Desk implements OnInit {
     }
 
     overlayClick() {
-        if (this.showAsesorColumna) {
+        if (this.showElegirAsesor) {
             this.overlay.hide();
-            this.showAsesorColumna = false;
+            this.showElegirAsesor = false;
             let state = AppStorage.getState();
 
             if (!state['viewCuaderno']) {
@@ -103,7 +103,7 @@ export class Desk implements OnInit {
 
     closeBienvenido() {
         this.overlay.show();
-        this.showAsesorColumna = true;
+        this.showElegirAsesor = true;
         return false;
     }
 }

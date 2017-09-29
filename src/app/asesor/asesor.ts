@@ -25,7 +25,8 @@ export class Asesor implements AfterContentInit {
     listenerClick: any;
     destacado: string;
     nombre: string;
-    asesorVisibleXS: boolean;
+    asesorVisible: boolean;
+    columnaVisibleXS: boolean = false;
     protected nombres: object = {
         EL: 'Dany',
         ELLA: 'Susi'
@@ -35,7 +36,7 @@ export class Asesor implements AfterContentInit {
         'GREEN': 'btn-green'
     };
     mensajes: any = {
-        'MENSAJE-1': "El tiempo vuela! Antes de empezar a tomar decisiones, te recomiendo repasar todo aquello con lo que cuenta nuestra organización. <b>Haz click en el cuaderno para continuar</b>"
+        'MENSAJE-1': "¡El tiempo vuela! Lideras una O.N.G y debes seleccionar propuestas para integrar el plan de incidencia anual. <b>Haz click en el cuaderno para continuar</b>"
     };
 
     constructor(private renderer: Renderer2,
@@ -47,8 +48,10 @@ export class Asesor implements AfterContentInit {
 
         this.nombre = state.asesor;
         this.audio.initAsesor(this.nombre);
+        this.asesorVisible = true;
 
         if (!state.asesor) {
+            this.asesorVisible = false;
             this.overlay.show();
             return;
         } else if (!state['viewCarpetas']) {
@@ -162,7 +165,11 @@ export class Asesor implements AfterContentInit {
     }
 
     hamburguerClick() {
-        this.asesorVisibleXS = !this.asesorVisibleXS;
+        this.columnaVisibleXS = !this.columnaVisibleXS;
+    }
+
+    ocultarColumna() {
+        this.asesorVisible = false;
     }
 
 }

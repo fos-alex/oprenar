@@ -21,25 +21,23 @@ export class Carpetas implements OnInit {
     ngOnInit() {
         this.state = AppStorage.getState();
         AppStorage.addToState('viewCarpetas', true);
-        if (!this.asesor.showMensaje('Debes seleccionar sólo una propuesta por cada área.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'seleccionar-una-propuesta'})) {
-            if (!this.asesor.showMensaje('Estamos logrando completar nuestro plan', {overlay: true, hideOnClick: true, showOnce: true})) {
-                if (!this.asesor.showMensaje('Puedes continuar por el área que desees', {overlay: true, hideOnClick: true, showOnce: true, audio: 'continuar-por-el-area'})) {
-                    if (!this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos!', {overlay: true, hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'})) {
-                        if (!this.asesor.showMensaje('Siempre debes tener en cuenta la experiencia y los recursos de nuestra O.N.G.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'siempre-debes-tener-en-cuenta'})) {
-                            if (!this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'})) {
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
-        let restanSeleccionar = 0;
+        let restanSeleccionar:number = 0;
         for (let key in this.state.propuestas) {
             let propuesta = this.state.propuestas[key];
             if (!propuesta) {
                 restanSeleccionar++;
             }
+        }
+        let propuestasSeleccionadas:number = Object.keys(this.state.propuestas).length - restanSeleccionar;
+
+        if (!this.asesor.showMensaje('Debes seleccionar sólo una propuesta por cada área.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'seleccionar-una-propuesta'})) {
+            if (propuestasSeleccionadas === 1) {
+                this.asesor.showMensaje('Puedes continuar por el área que desees', {overlay: true, hideOnClick: true, showOnce: true, audio: 'continuar-por-el-area'});
+            } else if (propuestasSeleccionadas === 3) {
+                this.asesor.showMensaje('Estamos logrando completar nuestro plan', {overlay: true, hideOnClick: true, showOnce: true});
+            }
+            //this.asesor.showMensaje('Siempre debes tener en cuenta la experiencia y los recursos de nuestra O.N.G.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'siempre-debes-tener-en-cuenta'});
         }
 
         if (restanSeleccionar === 0) {

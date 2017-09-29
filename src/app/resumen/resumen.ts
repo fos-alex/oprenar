@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
-import { Compartir } from './compartir/compartir';
+import { Asesor } from '../asesor/asesor';
+
 
 @Component({
     styleUrls: ['./resumen.scss']
@@ -23,11 +24,15 @@ export class Resumen implements OnInit {
         TRANSGRESOR: 'transgresor',
     };
 
+    @ViewChild(Asesor)
+    private asesor: Asesor;
+
     constructor(private router: Router) {}
 
     ngOnInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
+        this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {overlay: true, hideOnClick: true, showOnce: true});
     }
 
     go(where: string) {

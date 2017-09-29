@@ -1,9 +1,10 @@
-import { Component, OnInit, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
 import 'rxjs/add/operator/switchMap';
 import { AudioService } from '../asesor/audio/audio';
+import { Asesor } from '../asesor/asesor';
 
 @Component({
     styleUrls: ['./propuestas.scss'],
@@ -18,6 +19,9 @@ export class Propuestas implements OnInit {
     propuestaSeleccionada: number;
     propuestaUrl: string;
     seleccionado: boolean;
+
+    @ViewChild(Asesor)
+    private asesor: Asesor;
 
     constructor(private route: ActivatedRoute,
                 private router: Router,
@@ -42,6 +46,7 @@ export class Propuestas implements OnInit {
                 this.detallePropuesta(params.get('id') || '1');
             });
 
+        this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
     }
 
     propuestaClick(idPropuesta, event) {
@@ -82,6 +87,7 @@ export class Propuestas implements OnInit {
         AppStorage.setState(state);
         this.propuestaSeleccionada = +event.id;
         this.audio.playSonido('escribe1', {noClick: true});
+        this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos! <b>Haga click en Carpetas para continuar</b>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'});
     }
 
     getPropuestaUrl() {
