@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, AfterContentInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
@@ -9,7 +9,7 @@ import { Asesor } from '../asesor/asesor';
     styleUrls: ['./resumen.scss']
 })
 
-export class Resumen implements OnInit {
+export class Resumen implements AfterContentInit {
 
 
     private state: any;
@@ -29,10 +29,11 @@ export class Resumen implements OnInit {
 
     constructor(private router: Router) {}
 
-    ngOnInit() {
+    ngAfterContentInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
         this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {overlay: true, hideOnClick: true, showOnce: true});
+        this.asesor.ocultarColumna();
     }
 
     go(where: string) {

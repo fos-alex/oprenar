@@ -25,7 +25,7 @@ export class Asesor implements AfterContentInit {
     listenerClick: any;
     destacado: string;
     nombre: string;
-    asesorVisible: boolean;
+    asesorVisible: boolean = true;
     columnaVisibleXS: boolean = false;
     protected nombres: object = {
         EL: 'Dany',
@@ -48,7 +48,6 @@ export class Asesor implements AfterContentInit {
 
         this.nombre = state.asesor;
         this.audio.initAsesor(this.nombre);
-        this.asesorVisible = true;
 
         if (!state.asesor) {
             this.asesorVisible = false;

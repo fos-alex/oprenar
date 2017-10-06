@@ -20,4 +20,8 @@ export class Eula {
         AppStorage.addToState('eula', true);
         this.eulaAceptado.emit(true);
     }
+
+    volver() {
+        this.go('bienvenido');
+    }
 }
