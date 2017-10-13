@@ -96,7 +96,7 @@ export class Asesor implements AfterViewInit {
         if (!options) return;
 
         if (options.showOnce) {
-            let mensajesVistos = AppStorage.getStateItem('mensajes');
+            let mensajesVistos = AppStorage.getStateItem('mensajes') || {};
             let id = Md5.hashStr(this.mensaje.texto).toString();
             if (mensajesVistos[id]) {
                 this.mostrarMensaje = false;
