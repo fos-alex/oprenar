@@ -6,6 +6,7 @@ import { Asesor } from './asesor';
 import { ElegirAsesor } from './elegir-asesor/elegir-asesor';
 import { AudioService } from './audio/audio';
 import { AudioDirective } from './audio/audio-directive';
+import { Reloj } from './reloj/reloj';
 
 import OverlayModule from '../overlay';
 
@@ -15,6 +16,7 @@ import OverlayModule from '../overlay';
         Asesor,
         ElegirAsesor,
         AudioService,
+        Reloj,
         AudioDirective
     ],
     imports: [

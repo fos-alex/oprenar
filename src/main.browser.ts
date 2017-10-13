@@ -1,5 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -23,6 +24,7 @@ import { AudioService } from './app/asesor/audio/audio';
   imports: [
     // Angular 2
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     AsesorModule,

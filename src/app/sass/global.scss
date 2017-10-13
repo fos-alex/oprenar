@@ -10,6 +10,10 @@ $susi-border: #163D57;
 $selected-asesor-border: #2B2D6B;
 $desk-color: #5C432F;
 
+main {
+  height: 100vh;
+}
+
 p {
   @extend .font-kaushan;
 }

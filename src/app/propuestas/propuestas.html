@@ -4,7 +4,7 @@
   <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[1]" src="/assets/propuestas/propuesta-vacia/1-bg.svg" />
   <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[2]" src="/assets/propuestas/propuesta-vacia/2-bg.svg" />
   <img class="propuestas-object" *ngIf="proyecto" [ngClass]="propuestas[3]" src="/assets/propuestas/propuesta-vacia/3-bg.svg" />
-  <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [url]="propuestaUrl">
+  <detalle-propuesta class="propuestas-object ob-propuesta-descripcion" *ngIf="detalle" (propuestaSeleccionada)="seleccionarPropuesta($event)" [seleccionado]="seleccionado" [id]="propuesta" [url]="propuestaUrl">
     <img class="flecha-cambiar-propuesta flecha-izq" *ngIf="propuesta > '1'" (click)="anteriorPropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta.svg">
     <img class="flecha-cambiar-propuesta flecha-der" *ngIf="propuesta < '3'" (click)="siguientePropuesta()" src="/assets/notificaciones/flecha-pasar-propuesta-der.svg">
   </detalle-propuesta>

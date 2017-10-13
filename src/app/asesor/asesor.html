@@ -25,6 +25,9 @@
       <span class="asesor-item-name">Escritorio</span>
     </a>
   </div>
+  <div class="item-asesor item-asesor-small item-reloj" *ngIf="exclude !== 'reloj'">
+    <reloj></reloj>
+  </div>
   <div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi' || !nombre">
     <a href="#" (click)="toggleMensajeActual()">
       <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">

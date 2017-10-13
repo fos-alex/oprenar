@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AppStorage } from '../storage/app-storage';
+import { PerfectScrollbarComponent } from 'angular2-perfect-scrollbar';
 
 @Component({
-    styleUrls: ['./final.scss']
+    styleUrls: ['./final.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class Final {
@@ -12,10 +15,19 @@ export class Final {
     state: any;
     keyPropuestas: any;
     resultados = RESULTADOS;
+    config: any;
+
+    @ViewChild(PerfectScrollbarComponent)
+    private perfectScrollbar;
 
     constructor(private router: Router) {
         this.state = AppStorage.getState();
         this.keyPropuestas = Object.keys(this.state.propuestas);
+        this.config = {
+            wheelSpeed: 1,
+            wheelPropagation: true,
+            maxScrollbarLength: 10
+        };
     }
 
     go(where) {
@@ -53,6 +65,18 @@ export class Final {
 
     mostrarCarpeta(id: string) {
         this.carpetaMostrada = id;
+    }
+
+    volver() {
+        this.go('/');
+    }
+
+    scrollDown() {
+        this.perfectScrollbar.elementRef.nativeElement.scrollTop += 10;
+    }
+
+    scrollUp() {
+        this.perfectScrollbar.elementRef.nativeElement.scrollTop -= 10;
     }
 }
 const RESULTADOS = {

@@ -3,13 +3,13 @@
 cuaderno {
   background: url('/assets/desk-bg.png') no-repeat;
   background-size: cover;
-  height: 100vh;
   overflow: hidden;
 
   position: relative;
   svg {
     background: url('/assets/desk-bg.png') no-repeat;
     background-size: cover;
+    //height: 100%;
 
     .switch-texto {
       cursor: pointer;

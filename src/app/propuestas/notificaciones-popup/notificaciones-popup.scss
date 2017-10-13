@@ -150,9 +150,10 @@
     }
 
     .email-body {
-      height: 70%;
-      @media screen and (max-width: $sm-max-width) {
-        overflow-y: scroll;
+      height: 71%;
+      overflow-y: auto;
+      @media screen and (max-width: $lg-max-width) {
+        overflow-y: auto;
         height: 64%;
       }
 
@@ -212,6 +213,7 @@
     position: absolute;
     bottom: 5px;
     font-size: 13px;
+    margin-bottom: 0;
     @media screen and (max-width: $sm-max-width) {
       display: none;
     }
@@ -238,12 +240,14 @@
 .email-body.svg-body {
   img, object {
     position: absolute;
-    height: 95%;
+    height: auto;
+    width: 100%;
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 3%;
     @media screen and (max-width: $sm-max-width) {
       top: 24%;
     }
@@ -259,9 +263,12 @@
 
 .email-body.svg-body-only {
   @extend .svg-body;
+  position: relative;
   img, object {
-    max-width: 80%;
-    bottom: 14%;
+    top: auto;
+    width: 90%;
+    max-width: 100%;
+    bottom: 19%;
     @media (max-width: $sm-max-width) {
       bottom: 0%;
     }
@@ -277,7 +284,9 @@
 .email-body.svg-body-post {
   @extend .svg-body;
   img, object {
-    height: 85%;
+    top: auto;
+    height: 90%;
+    bottom: -10px;
     @media screen and (max-width: 1280px) {
       height: 70%;
     }
@@ -291,8 +300,11 @@
 .email-body.svg-trimmed-body {
   @extend .email-body.svg-body;
   position: relative;
+  overflow-y: scroll;
   img, object {
-    height: 100%;
+    height: auto;
+    width: 100%;
+    position: relative;
     @media (max-width: $sm-max-width) {
       height: 130%;
       transform: scale(1.1);
