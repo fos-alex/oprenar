@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppStorage } from '../storage/app-storage';
@@ -9,7 +9,7 @@ import { Asesor } from '../asesor/asesor';
     styleUrls: ['./desk.scss']
 })
 
-export class Desk implements OnInit {
+export class Desk implements AfterViewInit {
 
     showElegirAsesor: boolean;
     carpetaStyle: string;
@@ -25,7 +25,7 @@ export class Desk implements OnInit {
     constructor(private router: Router) {
     }
 
-    ngOnInit() {
+    ngAfterViewInit() {
         let state = AppStorage.getState() || {};
         this.eula = state['eula'];
 
@@ -98,7 +98,7 @@ export class Desk implements OnInit {
         this.eula = true;
         this.overlay.hide();
         //Re-run init function
-        this.ngOnInit();
+        this.ngAfterViewInit();
     }
 
     closeBienvenido() {

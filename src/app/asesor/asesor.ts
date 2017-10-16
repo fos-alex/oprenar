@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input, Output, EventEmitter, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Renderer2, ViewChild } from '@angular/core';
 import { Md5 } from 'ts-md5/dist/md5';
 
 import { AppStorage } from '../storage/app-storage';
@@ -10,7 +10,7 @@ import { AudioService } from './audio/audio';
     styleUrls: ['./asesor.scss'],
     providers: [ AudioService ]
 })
-export class Asesor implements AfterViewInit {
+export class Asesor implements OnInit {
     @Input() exclude: string;
     @Input() showColumna: boolean;
     @Output() asesorNameChange = new EventEmitter<string>();
@@ -43,11 +43,10 @@ export class Asesor implements AfterViewInit {
                 private audio: AudioService) {
     }
 
-    ngAfterViewInit() {
+    ngOnInit() {
         let state = AppStorage.getState();
 
         this.nombre = state.asesor;
-        this.audio.initAsesor(this.nombre);
 
         if (!state.asesor) {
             this.asesorVisible = false;
@@ -55,6 +54,7 @@ export class Asesor implements AfterViewInit {
                 this.overlay.show();
             return;
         } else if (!state['viewCarpetas']) {
+            this.audio.initAsesor(this.nombre);
             this.showEscritorio();
         }
 

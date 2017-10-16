@@ -1,4 +1,4 @@
-<div class="notificaciones-popup">
+<div class="notificaciones-popup" [@slidePopup]="state">
   <div class="email-screen">
     <div class="email-selection">
       <div class="email-link" [ngClass]="{active: displayedMessage == '1'}" (click)="displayMessage('1')">

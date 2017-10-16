@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579 698">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 579 498">
     <defs>
         <style>
             @font-face {
@@ -24,7 +24,7 @@
         </clipPath>
     </defs>
     <title>notificacion_juridico_01</title>
-    <g class="cls-2">
+    <g class="cls-2" transform="translate(0 -110)">
         <g id="fondo_05a">
             <rect class="cls-51" x="44.88" y="324.85" width="448.9" height="198.84" rx="27.55" ry="27.55"/>
             <text class="cls-52" transform="translate(137.33 361.67)">

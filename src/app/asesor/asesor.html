@@ -29,7 +29,7 @@
     <reloj></reloj>
   </div>
   <div class="item-asesor sidebar-susi" *ngIf="exclude !== 'susi' || !nombre">
-    <a href="#" (click)="toggleMensajeActual()">
+    <a href="#" (click)="toggleMensajeActual()" *ngIf="nombre">
       <img class="susi-border" src="/assets/asesor/{{nombre}}-thumb.svg">
       <span class="asesor-item-name">{{nombres.EL}}</span>
     </a>
@@ -56,5 +56,5 @@
     </div>
   </div>
 </div>
-<elegir-asesor *ngIf="!nombre" (asesorNameChange)="getAsesorNombre($event)"></elegir-asesor>
+<!--<elegir-asesor *ngIf="!nombre" (asesorNameChange)="getAsesorNombre($event)"></elegir-asesor>-->
 <overlay (overlayClick)="overlayClick()"></overlay>

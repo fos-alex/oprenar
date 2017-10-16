@@ -41,7 +41,11 @@ export class Propuestas implements OnInit {
                 this.propuestaSeleccionada = state.propuestas[this.proyecto];
 
                 // Llevar a la primer propuesta si no hay ninguna seleccionada
-                this.detallePropuesta(params.get('id') || '1');
+                if (!params.get('id')) {
+                    return this.router.navigate(['/propuestas', this.proyecto, '1']);
+                }
+
+                this.detallePropuesta(params.get('id'));
             });
         this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
     }
@@ -84,7 +88,7 @@ export class Propuestas implements OnInit {
         AppStorage.setState(state);
         this.propuestaSeleccionada = +event.id;
         this.audio.playSonido('escribe1', {noClick: true});
-        this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos! <b>Haga click en Carpetas para continuar</b>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'});
+        this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos! <b>Haz click en Carpetas para continuar</b>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'});
     }
 
     getPropuestaUrl() {

@@ -1,4 +1,5 @@
 import { Component, ViewChild, Input, OnInit, OnChanges, NgModule, ViewContainerRef, Compiler, ViewEncapsulation } from '@angular/core';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 import { CommonModule } from '@angular/common'
 import { Http } from '@angular/http';
 
@@ -7,13 +8,26 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'notificaciones-popup',
     styleUrls: ['./notificaciones-popup.scss'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    animations: [
+        trigger(
+            'slidePopup',
+            [
+                transition(
+                    ':enter', [
+                        style({transform: 'translateX(140%)'}),
+                        animate('1s 1s ease-in', style({transform: 'translateX(0)'}))
+                    ]
+                )
+            ])
+    ],
 })
 export class NotificacionesPopup implements OnInit, OnChanges {
     @Input() propuestaSeleccionada: number;
     @Input() proyecto: string;
     @ViewChild('messageBody', {read: ViewContainerRef}) viewContainer: ViewContainerRef;
 
+    state: string;
     displayedMessage: string;
     headers: object = {
         pa: {
@@ -65,6 +79,7 @@ export class NotificacionesPopup implements OnInit, OnChanges {
     ) {}
 
     ngOnInit() {
+        this.state = 'shown';
     }
 
     displayMessage(id: string) {
@@ -73,10 +88,18 @@ export class NotificacionesPopup implements OnInit, OnChanges {
         const url = `app/propuestas/notificaciones-popup/${this.proyecto}/notificacion-${this.propuestaSeleccionada}-${id}.html`;
         if (!url) return;
         this.getTemplate(url).subscribe(html => {
-            let htmlPropuesta = html['_body'];
+            let htmlPropuesta = `<div class="email" [@fadeMessage]>${html['_body']}</div>`;
             @Component({
                 selector: 'mensaje-propuesta',
-                templateUrl: htmlPropuesta
+                templateUrl: htmlPropuesta,
+                animations: [trigger( 'fadeMessage',[
+                    transition(
+                        ':enter', [
+                            style({opacity: '0'}),
+                            animate('.6s ease-out', style({opacity: '1'}))
+                        ]
+                    )]
+                )]
             })
             class DynamicHtmlComponent  {
 

@@ -1,4 +1,4 @@
-import { Component, Directive, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Directive, OnInit, Input, Output, EventEmitter, NgModule, ViewContainerRef, Compiler, OnChanges } from '@angular/core';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Http } from '@angular/http';
@@ -59,11 +59,8 @@ export class DetallePropuesta implements OnChanges {
                             state('shown', style({
                                 transform: 'translateX(0)'
                             })),
-                            state('left', style({
-                            })),
-                            state('right', style({
-
-                            })),
+                            state('left', style({})),
+                            state('right', style({})),
                             transition('void => *', animate('1s ease-in-out')),
                             transition('* => right',
                                 animate('2s ease-in-out', keyframes([
@@ -82,7 +79,7 @@ export class DetallePropuesta implements OnChanges {
                         ])
                 ],
             })
-            class DynamicHtmlComponent  {
+            class DynamicHtmlComponent implements OnInit {
                 @Output() update = new EventEmitter<any>();
                 state: string;
                 seleccionada: boolean = seleccionado;
