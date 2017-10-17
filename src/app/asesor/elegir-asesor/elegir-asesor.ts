@@ -1,21 +1,24 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { AppStorage } from '../../storage/app-storage';
+import { Asesor } from '../asesor';
 
 @Component({
     selector: 'elegir-asesor',
     styleUrls: ['./elegir-asesor.scss']
 })
-export class ElegirAsesor {
+export class ElegirAsesor extends Asesor {
+
     @Output() asesorNameChange = new EventEmitter<string>();
-    nombre;
+    asesorNombre;
 
     elegirAsesor (nombre) {
-        this.nombre = nombre;
+        this.asesorNombre = nombre;
     }
 
     aceptar() {
-        if (!this.nombre) return;
+        if (!this.asesorNombre) return;
 
-        this.asesorNameChange.emit(this.nombre);
+        this.asesorNameChange.emit(this.asesorNombre);
     }
 
 }

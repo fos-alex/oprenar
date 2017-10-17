@@ -7,10 +7,10 @@
         <p class="asesor-text">Hola! Soy {{nombres.EL}} y a partir de este momento seré tu asistente.</p>
         <p class="asesor-seleccionar-text">- Por favor selecciona a tu asistente y haz click en "SIGUIENTE"</p>
         <div class="asesores">
-            <a class="asesor-thumb" href="#" (click)="elegirAsesor(nombres.ELLA)" [ngClass]="{'active': nombre == nombres.ELLA}">
+            <a class="asesor-thumb" href="#" (click)="elegirAsesor(nombres.ELLA)" [ngClass]="{'active': asesorNombre == nombres.ELLA}">
                 <img class="susi-border" src="/assets/asesor/Susi-thumb.svg" />
             </a>
-            <a class="asesor-thumb" href="#" (click)="elegirAsesor(nombres.EL)" [ngClass]="{'active': nombre == nombres.EL}">
+            <a class="asesor-thumb" href="#" (click)="elegirAsesor(nombres.EL)" [ngClass]="{'active': asesorNombre == nombres.EL}">
                 <img class="susi-border" src="/assets/asesor/Dany-thumb.svg" />
             </a>
         </div>
