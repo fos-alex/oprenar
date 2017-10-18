@@ -47,7 +47,7 @@ export class Propuestas implements OnInit {
 
                 this.detallePropuesta(params.get('id'));
             });
-        this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
+        this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará. <strong>Cada propuesta vendrá acompañada de dos datos, haz click en las solapas de la parte superior para verlos.</strong>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
     }
 
     propuestaClick(idPropuesta, event) {

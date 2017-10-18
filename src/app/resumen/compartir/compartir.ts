@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class Compartir {
 
-    @Output() eulaAceptado = new EventEmitter<boolean>();
+    @Output() respuestaCompartir = new EventEmitter<boolean>();
 
     constructor(private router: Router) {
     }
@@ -17,6 +17,10 @@ export class Compartir {
     }
 
     compartir() {
-        this.eulaAceptado.emit(true);
+        this.respuestaCompartir.emit(true);
+    }
+
+    noCompartir() {
+        this.respuestaCompartir.emit(false);
     }
 }

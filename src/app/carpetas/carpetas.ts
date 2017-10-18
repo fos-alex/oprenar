@@ -13,6 +13,7 @@ export class Carpetas implements OnInit {
 
     @ViewChild(Asesor)
     private asesor: Asesor;
+    progresoPropuestas: any = [];
 
     constructor(private router: Router,
                 private audio: AudioService) {
@@ -24,6 +25,7 @@ export class Carpetas implements OnInit {
 
         let restanSeleccionar:number = 0;
         for (let key in this.state.propuestas) {
+            this.progresoPropuestas.push(this.state.propuestas[key]);
             let propuesta = this.state.propuestas[key];
             if (!propuesta) {
                 restanSeleccionar++;

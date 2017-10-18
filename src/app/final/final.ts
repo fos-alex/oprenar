@@ -68,7 +68,7 @@ export class Final {
     }
 
     volver() {
-        this.go('/');
+        this.go('/resumen');
     }
 
     scrollDown() {

@@ -18,3 +18,9 @@
   <img class="carpeta-object ob-cafe" src="/assets/pantallas_02-05-cafe.svg" />
 </div>
 <asesor [exclude]="'carpetas'"></asesor>
+<div class="progress-bar">
+  <div class="folder" *ngFor="let propuesta of progresoPropuestas">
+    <img src="/assets/desk/folder-done.svg" *ngIf="propuesta"/>
+    <img src="/assets/desk/folder.svg" *ngIf="!propuesta"/>
+  </div>
+</div>

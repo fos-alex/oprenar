@@ -11,10 +11,11 @@ import { Asesor } from '../asesor/asesor';
 
 export class Desk implements AfterViewInit {
 
-    showElegirAsesor: boolean;
     carpetaStyle: string;
     cuadernoStyle: string;
     eula: boolean = true;
+    showElegirAsesor: boolean = false;
+    showObjetivos: boolean = false;
 
     @ViewChild(Asesor)
     private asesor: Asesor;
@@ -35,6 +36,11 @@ export class Desk implements AfterViewInit {
         } else if (!state['eula']) {
             // Eula not accepted
             this.overlay.show();
+            return;
+        } else if (!state['objetivos']) {
+            // Show objetivos
+            this.overlay.show();
+            this.showObjetivos = true;
             return;
         }
 
@@ -96,6 +102,13 @@ export class Desk implements AfterViewInit {
 
     eulaAceptado() {
         this.eula = true;
+        this.overlay.hide();
+        //Re-run init function
+        this.ngAfterViewInit();
+    }
+
+    objetivosAceptados() {
+        this.showObjetivos = false;
         this.overlay.hide();
         //Re-run init function
         this.ngAfterViewInit();

@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { AppStorage } from '../storage/app-storage';
 
 @Component({
+    selector: 'objetivos',
     styleUrls: ['./objetivos.scss']
 })
 export class Objetivos {
 
-    @Output() objetivosAceptado = new EventEmitter<boolean>();
+    @Output() objetivosAceptados = new EventEmitter<boolean>();
 
     constructor(private router: Router) {
     }
@@ -18,7 +19,7 @@ export class Objetivos {
 
     aceptar() {
         AppStorage.addToState('objetivos', true);
-        this.objetivosAceptado.emit(true);
+        this.objetivosAceptados.emit(true);
     }
 
     volver() {

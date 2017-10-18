@@ -83,102 +83,109 @@
       }
     }
 
-    .email-header {
-      overflow: hidden;
-      width: 100%;
-      padding-bottom: 15px;
-      border-bottom: 2px solid $gray-dark;
-      margin-top: 8px;
-      @media (max-width: $sm-max-width) {
-        margin-top: 3px;
-        padding-bottom: 3px;
+    mensaje-propuesta {
+
+      .email {
+        height: 100%;
       }
 
-      .email-from-pic-container {
-        float: left;
-        width: 15%;
-        img {
-          width: 100%;
+      .email-header {
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 15px;
+        border-bottom: 2px solid $gray-dark;
+        margin-top: 8px;
+        @media (max-width: $sm-max-width) {
+          margin-top: 3px;
+          padding-bottom: 3px;
+        }
+
+        .email-from-pic-container {
+          float: left;
+          width: 15%;
+          img {
+            width: 100%;
+          }
+        }
+
+        .email-data {
+          width: 80%;
+          float: left;
+          margin-left: 4%;
+          p {
+            @extend .font-roboto;
+            font-size: 15px;
+            @media screen and (max-width: 1023px) {
+              font-size: 13px;
+            }
+            margin: 0;
+          }
+        }
+
+        .email-tag-container {
+          margin-top: 3px;
+          @media (max-width: $sm-max-width) {
+            display: none;
+          }
+          .email-tag {
+            @extend .font-roboto;
+            font-weight: bold;
+            padding: 5px 8px;
+            @media (max-width: $sm-max-width) {
+              padding-left: 0;
+            }
+            font-size: 11px;
+            margin-left: 20px;
+            position: relative;
+            &:before {
+              content: "";
+              background-image: url(/assets/notificaciones/carpeta.png);
+              position: absolute;
+              left: -21px;
+              background-size: contain;
+              width: 20px;
+              @media (max-width: $sm-max-width) {
+                width: 15px;
+              }
+              top: -1px;
+              background-repeat: no-repeat;
+              height: 25px;
+            }
+          }
         }
       }
 
-      .email-data {
-        width: 80%;
-        float: left;
-        margin-left: 4%;
+      .email-body {
+        height: 71%;
+        overflow-y: auto;
+        @media screen and (max-width: $lg-max-width) {
+          overflow-y: auto;
+          height: 64%;
+        }
+
         p {
           @extend .font-roboto;
           font-size: 15px;
           @media screen and (max-width: 1023px) {
-            font-size: 13px;
+            font-size: 14px;
           }
-          margin: 0;
+          @media screen and (max-width: $sm-max-width) {
+            margin-top: 0;
+          }
         }
-      }
 
-      .email-tag-container {
-        margin-top: 3px;
-        @media (max-width: $sm-max-width) {
-          display: none;
-        }
-        .email-tag {
-          @extend .font-roboto;
-          font-weight: bold;
-          padding: 5px 8px;
-          @media (max-width: $sm-max-width) {
-            padding-left: 0;
-          }
-          font-size: 11px;
-          margin-left: 20px;
-          position: relative;
-          &:before {
-            content: "";
-            background-image: url(/assets/notificaciones/carpeta.png);
-            position: absolute;
-            left: -21px;
-            background-size: contain;
-            width: 20px;
-            @media (max-width: $sm-max-width) {
-              width: 15px;
-            }
-            top: -1px;
-            background-repeat: no-repeat;
-            height: 25px;
+        .email-body-article-container {
+          text-align: center;
+          .email-body-article {
+
           }
         }
       }
     }
 
-    .email-body {
-      height: 71%;
-      overflow-y: auto;
-      @media screen and (max-width: $lg-max-width) {
-        overflow-y: auto;
-        height: 64%;
-      }
-
-      p {
-        @extend .font-roboto;
-        font-size: 15px;
-        @media screen and (max-width: 1023px) {
-          font-size: 14px;
-        }
-        @media screen and (max-width: $sm-max-width) {
-          margin-top: 0;
-        }
-      }
-
-      .email-body-article-container {
-        text-align: center;
-        .email-body-article {
-
-        }
-      }
+    img, object {
+      max-width: 100%;
     }
-  }
-
-  img, object {
-    max-width: 100%;
   }
 }
 
