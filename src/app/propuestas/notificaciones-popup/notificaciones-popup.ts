@@ -16,7 +16,7 @@ import 'rxjs/add/operator/map';
                 transition(
                     ':enter', [
                         style({transform: 'translateX(140%)'}),
-                        animate('1s 1s ease-in', style({transform: 'translateX(0)'}))
+                        animate('1s 1.5s ease-in', style({transform: 'translateX(0)'}))
                     ]
                 )
             ])
@@ -96,7 +96,7 @@ export class NotificacionesPopup implements OnInit, OnChanges {
                     transition(
                         ':enter', [
                             style({opacity: '0'}),
-                            animate('.6s ease-out', style({opacity: '1'}))
+                            animate('.8s ease-in-out', style({opacity: '1'}))
                         ]
                     )]
                 )]

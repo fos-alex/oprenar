@@ -60,6 +60,7 @@
     width: 40%;
     height: 100%;
     .flecha-cambiar-propuesta {
+      @extend .animated-button;
       width: 45px;
       top: 52%;
       position: absolute;

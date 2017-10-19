@@ -31,10 +31,12 @@ svg {
   }
 
   #btn_x5F_comenzar_x5F_14 {
+    @extend .animated-button;
     cursor: pointer;
   }
 
   .btn {
+    @extend .animated-button;
     cursor: pointer;
   }
 

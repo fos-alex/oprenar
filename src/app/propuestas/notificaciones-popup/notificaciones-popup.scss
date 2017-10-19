@@ -43,13 +43,17 @@
       width: 100%;
       box-sizing: border-box;
       display: inline-block;
-      border-bottom: 2px solid $gray-dark;
       .email-link {
         float: left;
-        width: 50%;
+        width: 49%;
         box-sizing: border-box;
         padding: 0 5px;
         font-size: 14px;
+        background-color: $gray-light;
+        position: relative;
+        border: 2px solid $gray-dark;
+        border-bottom: 2px solid $blue;
+        border-radius: 2px;
         @media screen and (max-width: 1023px) {
           font-size: 12px;
         }
@@ -69,16 +73,35 @@
           @media screen and (max-width: 1023px) {
             font-size: 12px;
           }
-          max-width: 74%;
+          max-width: 76%;
           @media (max-width: $sm-max-width) {
             max-width: 100%;
           }
-          margin: 9px 0 9px 5%;
+          margin: 9px 0 9px 3%;
           float: left;
         }
 
+        &:first-child {
+          margin-right: 1%;
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: -5.7%;
+            width: 5%;
+            height: 3px;
+            z-index: 2;
+            border-bottom: 2px solid $blue;
+          }
+        }
+        &:last-child {
+          margin-left: 1%;
+        }
+
         &.active {
-          background-color: $gray-dark;
+          background-color: white;
+          border: 2px solid $blue;
+          border-bottom: 2px solid rgba($blue, .2);
         }
       }
     }
@@ -93,7 +116,7 @@
         overflow: hidden;
         width: 100%;
         padding-bottom: 15px;
-        border-bottom: 2px solid $gray-dark;
+        border-bottom: 2px solid $blue;
         margin-top: 8px;
         @media (max-width: $sm-max-width) {
           margin-top: 3px;

@@ -11,10 +11,12 @@ svg {
   }
 
   #btn_x5F_finalizar_x5F_13 {
+    @extend .animated-button;
     cursor: pointer;
   }
 
   .btn {
+    @extend .animated-button;
     cursor: pointer;
   }
 }
