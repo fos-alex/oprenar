@@ -58,7 +58,7 @@
           font-size: 12px;
         }
         cursor: pointer;
-        min-height: 52px;
+        min-height: 54px;
         img {
           width: 20%;
           float: left;
@@ -335,11 +335,11 @@
     height: auto;
     width: 100%;
     position: relative;
+    top: 0;
     @media (max-width: $sm-max-width) {
       height: 130%;
       transform: scale(1.1);
       position: relative;
-      top: 0;
     }
   }
 }

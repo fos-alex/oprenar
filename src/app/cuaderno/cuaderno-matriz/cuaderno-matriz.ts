@@ -15,7 +15,7 @@ export class CuadernoMatriz extends Cuaderno implements AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.asesor.showMensaje('Haz click en cada dimensión para conocer sus criterios', {overlay: true, hideOnClick: true, showOnce: true});
+        this.asesor.showMensaje('Haz click en cada dimensión para conocer sus criterios', {hideOnClick: true, showOnce: true});
     }
 
 }

@@ -44,7 +44,7 @@ export class Propuestas implements OnInit {
                 if (!params.get('id')) {
                     return this.router.navigate(['/propuestas', this.proyecto, '1']);
                 }
-                this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará. <strong>Cada propuesta vendrá acompañada de dos datos, haz click en las solapas de la parte superior para verlos.</strong>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
+                this.asesor.showMensaje('Permanece atento a la información de contexto que tu equipo te brindará. <strong>Cada propuesta vendrá acompañada de dos datos, haz click en las solapas de la parte superior para verlos.</strong>', {hideOnClick: true, showOnce: true, audio: 'permanece-atento'});
 
                 this.detallePropuesta(params.get('id'));
             });
@@ -88,7 +88,7 @@ export class Propuestas implements OnInit {
         AppStorage.setState(state);
         this.propuestaSeleccionada = +event.id;
         this.audio.playSonido('escribe1', {noClick: true});
-        this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos! <b>Haz click en Carpetas para continuar</b>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'});
+        this.asesor.showMensaje('¡Excelente! Ya lograste el primer paso. <br> ¡Continuemos! <b>Haz click en Carpetas para continuar</b>', {hideOnClick: true, showOnce: true, audio: 'excelente-primer-paso'});
     }
 
     getPropuestaUrl() {

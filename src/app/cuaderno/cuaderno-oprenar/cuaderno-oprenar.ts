@@ -9,7 +9,7 @@ export class CuadernoOprenar extends Cuaderno implements AfterViewInit {
     @Input() asesor: Asesor;
 
     ngAfterViewInit() {
-        this.asesor.showMensaje('Los lineamientos de OPRENAR siempre nos ayudan a establecer prioridades. <b>Haz click en la lámpara para continuar.</b>', {overlay: true, hideOnClick: true, showOnce: true, audio: 'lineamientos'});
+        this.asesor.showMensaje('Los lineamientos de OPRENAR siempre nos ayudan a establecer prioridades. <b>Haz click en la lámpara para continuar.</b>', {hideOnClick: true, showOnce: true, audio: 'lineamientos'});
         this.asesor.destacarItem('escritorio');
     }
 

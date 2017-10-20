@@ -10,9 +10,9 @@
   @extend .font-roboto-regular;
   position: absolute;
   top: 23%;
-  left: 61%;
-  width: 26%;
-  font-size: 16px;
+  left: 58.9%;
+  width: 28%;
+  font-size: 17px;
   line-height: 1.15;
   max-height: 66%;
   overflow-y: hidden;
@@ -67,7 +67,10 @@ svg {
 .ps-container.right-text {
   position: absolute;
   .text-container {
-    width: 80%;
+    width: 82%;
+    p {
+      font-family: "Roboto-Regular", "Roboto";
+    }
   }
   &> .ps-scrollbar-y-rail {
     opacity: 1 !important;
@@ -85,6 +88,7 @@ svg {
 }
 
 .btn-volver {
+  cursor: pointer;
   position: absolute;
   top: 10%;
   left: 5%;

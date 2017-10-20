@@ -33,11 +33,11 @@ export class Carpetas implements OnInit {
         }
         let propuestasSeleccionadas:number = Object.keys(this.state.propuestas).length - restanSeleccionar;
 
-        if (!this.asesor.showMensaje('Debes seleccionar sólo una propuesta por cada área.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'seleccionar-una-propuesta'})) {
+        if (!this.asesor.showMensaje('Debes seleccionar sólo una propuesta por cada área.', {hideOnClick: true, showOnce: true, audio: 'seleccionar-una-propuesta'})) {
             if (propuestasSeleccionadas === 1) {
-                this.asesor.showMensaje('Puedes continuar por el área que desees', {overlay: true, hideOnClick: true, showOnce: true, audio: 'continuar-por-el-area'});
+                this.asesor.showMensaje('Puedes continuar por el área que desees', {hideOnClick: true, showOnce: true, audio: 'continuar-por-el-area'});
             } else if (propuestasSeleccionadas === 3) {
-                this.asesor.showMensaje('Estamos logrando completar nuestro plan', {overlay: true, hideOnClick: true, showOnce: true});
+                this.asesor.showMensaje('Estamos logrando completar nuestro plan', {hideOnClick: true, showOnce: true});
             }
             //this.asesor.showMensaje('Siempre debes tener en cuenta la experiencia y los recursos de nuestra O.N.G.', {overlay: true, hideOnClick: true, showOnce: true, audio: 'siempre-debes-tener-en-cuenta'});
         }
@@ -55,7 +55,7 @@ export class Carpetas implements OnInit {
             {btn: [
                 {text: 'NO', style: this.asesor.btn.RED, cb: () => { this.asesor.hideMensaje() }},
                 {text: 'SI', style: this.asesor.btn.GREEN, cb: () => { this.router.navigate(['resumen']) }}
-            ], overlay: true, audio: 'felicitaciones'});
+            ], audio: 'felicitaciones'});
     }
 
     carpetasClick(id) {

@@ -32,7 +32,7 @@ export class Resumen implements AfterContentInit {
     ngAfterContentInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
-        this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {overlay: true, hideOnClick: true, showOnce: true});
+        this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
         this.asesor.ocultarColumna();
     }
 
