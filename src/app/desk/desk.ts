@@ -51,7 +51,7 @@ export class Desk implements AfterViewInit {
             this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});
             this.highlightCuaderno();
         } else if (!state['viewCarpetas']) {
-            this.asesor.showMensaje(`¡Ya llegó el equipo. 
+            this.asesor.showMensaje(`Ya llegó el equipo. 
             ¿Empezamos a evaluar las propuestas?`, {hideOnClick: true, showOnce: true, audio: 'llego-el-equipo'});
             this.highlightCarpetas();
         }

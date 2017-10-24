@@ -72,11 +72,11 @@ export class Final {
     }
 
     scrollDown() {
-        this.perfectScrollbar.elementRef.nativeElement.scrollTop += 10;
+        this.perfectScrollbar.elementRef.nativeElement.scrollTop += 30;
     }
 
     scrollUp() {
-        this.perfectScrollbar.elementRef.nativeElement.scrollTop -= 10;
+        this.perfectScrollbar.elementRef.nativeElement.scrollTop -= 30;
     }
 }
 const RESULTADOS = {
