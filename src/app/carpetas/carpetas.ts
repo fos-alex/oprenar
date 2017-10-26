@@ -54,7 +54,7 @@ export class Carpetas implements OnInit {
         ¿Estás seguro que has seleccionado las propuestas que deseas integrar a tu plan?`,
             {btn: [
                 {text: 'NO', style: this.asesor.btn.RED, cb: () => { this.asesor.hideMensaje() }},
-                {text: 'SI', style: this.asesor.btn.GREEN, cb: () => { this.router.navigate(['resumen']) }}
+                {text: 'SÍ', style: this.asesor.btn.GREEN, cb: () => { this.router.navigate(['resumen']) }}
             ], audio: 'felicitaciones'});
     }
 
