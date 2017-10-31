@@ -19,6 +19,7 @@
     "dll": "webpack --config webpack.dll.ts --env.ENV development",
     "prebuild": "rimraf dist/*.*",
     "build": "webpack --env.ENV development",
+    "build:prod": "webpack --env.ENV production",
     "build:hmr": "npm run build -- --env.HMR"
   },
   "dependencies": {
