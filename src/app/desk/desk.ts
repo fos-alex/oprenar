@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppStorage } from '../storage/app-storage';
@@ -9,7 +9,7 @@ import { Asesor } from '../asesor/asesor';
     styleUrls: ['./desk.scss']
 })
 
-export class Desk implements AfterViewInit {
+export class Desk implements OnInit {
 
     carpetaStyle: string;
     cuadernoStyle: string;
@@ -26,7 +26,7 @@ export class Desk implements AfterViewInit {
     constructor(private router: Router) {
     }
 
-    ngAfterViewInit() {
+    ngOnInit() {
         let state = AppStorage.getState() || {};
         this.eula = state['eula'];
 
@@ -104,14 +104,14 @@ export class Desk implements AfterViewInit {
         this.eula = true;
         this.overlay.hide();
         //Re-run init function
-        this.ngAfterViewInit();
+        this.ngOnInit();
     }
 
     objetivosAceptados() {
         this.showObjetivos = false;
         this.overlay.hide();
         //Re-run init function
-        this.ngAfterViewInit();
+        this.ngOnInit();
     }
 
     closeBienvenido() {

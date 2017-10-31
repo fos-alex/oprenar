@@ -52,10 +52,12 @@ main {
   transform-origin: 50% 50%;
   transition: .3s;
 
-  &:hover {
-    transform: scale(1.15);
-    transform-origin: 50% 50%;
-    transition: .3s;
+  @media (pointer: fine) {
+    &:hover {
+      transform: scale(1.15);
+      transform-origin: 50% 50%;
+      transition: .3s;
+    }
   }
 
   display: inline-block;
