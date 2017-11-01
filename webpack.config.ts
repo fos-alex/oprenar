@@ -14,6 +14,8 @@ const {
   }
 
 } = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 const { ConcatSource } = require('webpack-sources');
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 const AssetsPlugin = require('assets-webpack-plugin');
@@ -109,6 +111,8 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
       new TsConfigPathsPlugin(/* { tsconfig, compiler } */),
       new DefinePlugin(CONSTANTS),
       new ProgressPlugin({}),
+
+      new UglifyJsPlugin()
 
 
     ].concat(CONSTANTS.HMR ? new HotModuleReplacementPlugin() : []),
