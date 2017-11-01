@@ -1,9 +1,9 @@
 import { Component, AfterContentInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 import { AppStorage } from '../storage/app-storage';
 
 import { Asesor } from '../asesor/asesor';
-
 
 @Component({
     styleUrls: ['./resumen.scss']
@@ -27,11 +27,23 @@ export class Resumen implements AfterContentInit {
     @ViewChild(Asesor)
     private asesor: Asesor;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router,
+                private meta: Meta) {}
 
     ngAfterContentInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
+        this.meta.updateTag({
+                content: document.location.origin + '/assets/compartir/compartir-' + this.resultado + '.jpg'
+            },
+            "property='og:image'"
+        );
+        this.meta.updateTag({
+                content: document.location.href
+            },
+            "property='og:url'"
+        );
+
         this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
         this.asesor.ocultarColumna();
     }
