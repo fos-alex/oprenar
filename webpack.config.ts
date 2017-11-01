@@ -110,12 +110,12 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
 
       new TsConfigPathsPlugin(/* { tsconfig, compiler } */),
       new DefinePlugin(CONSTANTS),
-      new ProgressPlugin({}),
-
-      new UglifyJsPlugin()
+      new ProgressPlugin({})
 
 
-    ].concat(CONSTANTS.HMR ? new HotModuleReplacementPlugin() : []),
+
+    ].concat(CONSTANTS.HMR ? new HotModuleReplacementPlugin() : [])
+     .concat(isProd ? new UglifyJsPlugin() : []),
 
     resolve: {
       extensions: ['.ts', '.js', '.json'],

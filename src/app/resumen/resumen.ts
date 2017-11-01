@@ -1,5 +1,5 @@
 import { Component, AfterContentInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
 import { AppStorage } from '../storage/app-storage';
 
@@ -19,7 +19,7 @@ export class Resumen implements AfterContentInit {
         REALISTA: 'realista',
         AUDAZ: 'audaz',
         EMPRENDEDOR: 'emprendedor',
-        DINAMICO: 'dinámico',
+        DINAMICO: 'dinamico',
         TRANSFORMADOR: 'transformador',
         TRANSGRESOR: 'transgresor',
     };
@@ -28,24 +28,24 @@ export class Resumen implements AfterContentInit {
     private asesor: Asesor;
 
     constructor(private router: Router,
+                private route: ActivatedRoute,
                 private meta: Meta) {}
 
     ngAfterContentInit() {
         this.state = AppStorage.getState();
         this.resultado = this.calcularResultado(this.state.propuestas);
-        this.meta.updateTag({
-                content: document.location.origin + '/assets/compartir/compartir-' + this.resultado + '.jpg'
-            },
-            "property='og:image'"
-        );
-        this.meta.updateTag({
-                content: document.location.href
-            },
-            "property='og:url'"
-        );
+        this.route.paramMap
+            .subscribe((params: ParamMap) => {
+                // Llevar a la primer propuesta si no hay ninguna seleccionada
+                if (!params.get('resultado')) {
+                    return this.router.navigate(['/resumen', this.resultado]);
+                }
 
-        this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
-        this.asesor.ocultarColumna();
+                this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
+                this.asesor.ocultarColumna();
+            });
+
+
     }
 
     go(where: string) {

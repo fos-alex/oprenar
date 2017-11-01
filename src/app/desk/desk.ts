@@ -46,6 +46,7 @@ export class Desk implements OnInit {
 
         if (!state['asesor']) {
             // Redirect to desk to choose asesor
+            this.overlay.show();
             this.showElegirAsesor = true;
         } else if (!state['viewCuaderno']) {
             this.asesor.showMensaje('¡El tiempo vuela! Lideras una O.N.G. y debes seleccionar propuestas para integrar el plan de incidencia anual.', {overlay: true, hideOnClick: true, showOnce: true});

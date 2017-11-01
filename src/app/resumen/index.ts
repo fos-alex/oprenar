@@ -7,7 +7,8 @@ import AsesorModule from '../asesor';
 import { Compartir } from './compartir/compartir';
 
 export const ROUTER_CONFIG = [
-    { path: 'resumen', component: Resumen, pathMatch: 'full' }
+    { path: 'resumen', component: Resumen, pathMatch: 'full' },
+    { path: 'resumen/:resultado', component: Resumen }
 ];
 
 @NgModule({
