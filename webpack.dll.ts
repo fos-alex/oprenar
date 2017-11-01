@@ -22,6 +22,7 @@ const {
 const {ForkCheckerPlugin} = require('awesome-typescript-loader');
 const resolveNgRoute = require('@angularclass/resolve-angular-routes');
 const AssetsPlugin = require('assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const path = require('path');
 
@@ -101,6 +102,8 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
     },
 
     plugins: [
+      new UglifyJsPlugin(),
+        
       new AssetsPlugin({
         path: root('dist/dll'),
         filename: 'webpack-assets.json',
