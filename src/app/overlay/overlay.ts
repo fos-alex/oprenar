@@ -11,7 +11,7 @@ export class Overlay implements OnInit {
     display: string = 'none';
 
     ngOnInit() {
-        this.display = 'none';
+        //this.display = 'none';
     }
 
     show() {
