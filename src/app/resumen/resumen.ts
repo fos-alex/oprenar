@@ -48,6 +48,11 @@ export class Resumen implements AfterContentInit {
                     },
                     "property='og:image'"
                 );
+                this.meta.updateTag({
+                        content: document.location.origin + '/assets/compartir/compartir-' + this.resultado + '.jpg'
+                    },
+                    "property='og:image:url'"
+                );
 
                 this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
                 this.asesor.ocultarColumna();
