@@ -12,6 +12,7 @@ export class Bienvenido implements OnInit {
 
     @Input() callback: Function;
     sonido: boolean = true;
+    isSafari: boolean = false;
 
     constructor(private router: Router,
                 private audio: AudioService) {
@@ -25,6 +26,8 @@ export class Bienvenido implements OnInit {
     ngOnInit() {
         this.audio.playMusica('jazz1');
         this.sonido = !AudioService.muted;
+
+        this.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     }
 
     toggleSonido() {
