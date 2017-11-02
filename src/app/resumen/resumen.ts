@@ -14,6 +14,8 @@ export class Resumen implements AfterContentInit {
     private state: any;
     private showCompartir: boolean;
     resultado: string;
+    isSafari: boolean = false;
+
     private resultados = {
         REALISTA: 'realista',
         AUDAZ: 'audaz',
@@ -57,6 +59,7 @@ export class Resumen implements AfterContentInit {
                 this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
                 this.asesor.ocultarColumna();
             });
+        this.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     }
 
     go(where: string) {
