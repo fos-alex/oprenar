@@ -28,9 +28,7 @@ import { AudioService } from './app/asesor/audio/audio';
     FormsModule,
     HttpModule,
     AsesorModule,
-    RouterModule.forRoot([], {
-      useHash: true
-    }),
+    RouterModule.forRoot([]),
     // app
     appModule
     // vendors

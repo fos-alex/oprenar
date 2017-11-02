@@ -4,16 +4,15 @@ import { Meta } from '@angular/platform-browser';
 import { AppStorage } from '../storage/app-storage';
 
 import { Asesor } from '../asesor/asesor';
+import { Compartir } from './compartir/compartir';
 
 @Component({
     styleUrls: ['./resumen.scss']
 })
 
 export class Resumen implements AfterContentInit {
-
-
     private state: any;
-    private compartir: boolean;
+    private showCompartir: boolean;
     resultado: string;
     private resultados = {
         REALISTA: 'realista',
@@ -26,6 +25,9 @@ export class Resumen implements AfterContentInit {
 
     @ViewChild(Asesor)
     private asesor: Asesor;
+
+    @ViewChild(Compartir)
+    private compartir: Compartir;
 
     constructor(private router: Router,
                 private route: ActivatedRoute,
@@ -44,16 +46,18 @@ export class Resumen implements AfterContentInit {
                 this.asesor.showMensaje('Puedes acceder aquí al reporte final de cada una de tus propuestas seleccionadas', {hideOnClick: true, showOnce: true});
                 this.asesor.ocultarColumna();
             });
-
-
     }
 
     go(where: string) {
         this.router.navigate([where]);
     }
 
-    showCompartir() {
-        this.compartir = true;
+    compartirClick() {
+        this.showCompartir = true;
+    }
+
+    respuestaCompartir() {
+        this.showCompartir = false;
     }
 
     calcularResultado(propuestas: object): string {

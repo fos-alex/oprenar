@@ -103,7 +103,7 @@ function webpackConfig(options: EnvOptions = {}): WebpackConfig {
 
     plugins: [
       new UglifyJsPlugin(),
-        
+
       new AssetsPlugin({
         path: root('dist/dll'),
         filename: 'webpack-assets.json',
