@@ -13,6 +13,7 @@ export class AudioService {
     repoMusica: string;
     repoSonido: string;
     asesorNombre: string;
+    sonidoActual: any;
     public static muted: boolean;
     public static musica: any;
 
@@ -78,6 +79,10 @@ export class AudioService {
         this.play(this.repoSonido + sound, options)
     }
 
+    stopSonido() {
+        this.sonidoActual.pause();
+    }
+
     mute(muted: boolean) {
         AudioService.muted = muted;
         AppStorage.addToState('muted', AudioService.muted);
@@ -91,11 +96,11 @@ export class AudioService {
         };
         options = Object.assign(defaultOptions, options);
 
-        let audio = new Audio();
-        audio.src = sound + '.' + options.extension;
-        audio.load();
-        audio.play();
+        this.sonidoActual = new Audio();
+        this.sonidoActual.src = sound + '.' + options.extension;
+        this.sonidoActual.load();
+        this.sonidoActual.play();
 
-        return audio;
+        return this.sonidoActual;
     }
 }

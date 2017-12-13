@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { AppStore } from './app-store';
 import { AudioService } from './asesor/audio/audio';
+import { AppStorage } from './storage/app-storage';
+
 
 @Component({
   styleUrls: ['./sass/normalize.scss', './sass/global.scss'],
@@ -21,6 +23,19 @@ export class App implements OnInit {
 
   ngOnInit() {
     this.checkOrientation();
+    let state = AppStorage.getState();
+    let now = new Date();
+    if (state.lastAccessed) {
+        let timeDiff = Math.abs(now.getTime() - (new Date(state.lastAccessed)).getTime());
+        let resetTime = 24 * 60 * 60 * 1000; // 1 Day
+        if (timeDiff >= resetTime) {
+            AppStorage.restart();
+        }
+    }
+
+    AppStorage.addToState('lastAccessed', now);
+
+
   }
 
   checkOrientation() {

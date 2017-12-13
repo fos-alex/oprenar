@@ -14,17 +14,18 @@ export class AppStorage {
             pld: null,
             ps: null
         },
-        mensajes: {}
+        mensajes: {},
+        lastAccessed: null
     };
 
     // Called at the bottom of the file
     static init() {
-
-        /* @TODO: Dev purposes, restart state*/
-        //return AppStorage.setState(AppStorage.defaultState);
-
         if (!AppStorage.getState())
-            return AppStorage.setState(AppStorage.defaultState);
+            AppStorage.setState(AppStorage.defaultState);
+    }
+
+    static restart() {
+        return AppStorage.setState(AppStorage.defaultState);
     }
 
     static addToState(key, item) {

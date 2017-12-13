@@ -151,4 +151,8 @@ export class Resumen implements AfterContentInit {
         }
         return elementsCounter;
     }
+
+    oprenarClick() {
+        window.location.href = "https://oprenar.wordpress.com/";
+    }
 }

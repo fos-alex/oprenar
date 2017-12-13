@@ -125,6 +125,7 @@ export class Asesor implements OnInit {
             setTimeout(() => {
                 this.listenerClick = this.renderer.listen('document', 'click', (evt) => {
                     this.hideMensaje();
+                    this.audio.stopSonido();
                 });
             }, 0);
         }
