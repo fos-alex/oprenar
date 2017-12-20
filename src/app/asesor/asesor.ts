@@ -27,6 +27,7 @@ export class Asesor implements OnInit {
     nombre: string;
     asesorVisible: boolean = true;
     columnaVisibleXS: boolean = false;
+    isMuted: boolean;
     protected nombres: object = {
         EL: 'Dany',
         ELLA: 'Susi'
@@ -47,6 +48,7 @@ export class Asesor implements OnInit {
         let state = AppStorage.getState();
 
         this.nombre = state.asesor;
+        this.isMuted = AudioService.muted;
 
         if (!state.asesor) {
             this.asesorVisible = false;
@@ -151,6 +153,11 @@ export class Asesor implements OnInit {
         this.overlay.hide();
         this.audio.initAsesor(this.nombre);
         this.showMensaje(this.mensajes['MENSAJE-1'], {audio: 'el-tiempo-vuela'});
+    }
+
+    toggleMute() {
+        this.isMuted = !this.isMuted;
+        this.audio.mute(this.isMuted);
     }
 
     destacarItem(item) {

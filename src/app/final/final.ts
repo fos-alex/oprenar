@@ -34,6 +34,12 @@ export class Final {
         this.router.navigate([where]);
     }
 
+    restartPopup() {
+        if (window.confirm("¿Está seguro que desea volver a comenzar, se reiniciarán todos los datos?")) {
+            this.restart();
+        }
+    }
+
     restart() {
         let state = AppStorage.getState();
         for (let key in state.propuestas) {
