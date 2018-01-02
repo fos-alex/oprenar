@@ -85,6 +85,14 @@ export class AudioService {
 
     mute(muted: boolean) {
         AudioService.muted = muted;
+
+        if (muted) {
+            this.sonidoActual.pause();
+            this.stopMusica();
+        } else {
+            this.playMusica('jazz1');
+        }
+
         AppStorage.addToState('muted', AudioService.muted);
     }
 
