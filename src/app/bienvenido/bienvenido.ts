@@ -33,10 +33,5 @@ export class Bienvenido implements OnInit {
     toggleSonido() {
         this.sonido = !this.sonido;
         this.audio.mute(!this.sonido);
-        if(this.sonido) {
-            this.audio.playMusica('jazz1');
-        } else {
-            this.audio.stopMusica();
-        }
     }
 }
