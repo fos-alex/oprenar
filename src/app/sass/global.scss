@@ -49,7 +49,7 @@ main {
 
 .animated-button {
   transform: scale(1);
-  transform-origin: 50% 50%;
+/*  transform-origin: 50% 50%;
   transition: .3s;
 
   @media (pointer: fine) {
@@ -58,14 +58,13 @@ main {
       transform-origin: 56% 56%;
       transition: .3s;
     }
-  }
+  }*/
 
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
-  &:focus, &:active {
+/*  &:focus, &:active {
     -webkit-animation-name: hvr-push;
     animation-name: hvr-push;
     -webkit-animation-duration: 0.3s;
@@ -74,6 +73,6 @@ main {
     animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-  }
+  }*/
 
 }
